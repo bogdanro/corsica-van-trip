@@ -28,6 +28,12 @@ html = html.replace(
 html = html.replace('<link rel="stylesheet" href="assets/css/style.css">',
                     '<style>\n' + css + '\n</style>')
 
+# The 88 photos are far too large to base64-inline (~22 MB), so the single-file
+# build streams them from the published site instead. Everything else is inlined.
+PHOTO_BASE = "https://bogdanro.github.io/corsica-van-trip/assets/photos/"
+app = app.replace("var PDIR = 'assets/photos/';", "var PDIR = '%s';" % PHOTO_BASE)
+assert PHOTO_BASE in app, "photo base URL not injected"
+
 # inline the local scripts (guard against a stray </script> in the data)
 def guard(s): return s.replace('</script>', '<\\/script>')
 html = html.replace('<script src="assets/js/data.js"></script>',
@@ -35,10 +41,12 @@ html = html.replace('<script src="assets/js/data.js"></script>',
 html = html.replace('<script src="assets/js/app.js"></script>',
                     '<script>\n' + guard(app) + '\n</script>')
 
-assert 'assets/' not in html, "a local asset reference survived: " + \
-    str(re.findall(r'[^"\']*assets/[^"\']*', html))
+leftover = [m for m in re.findall(r'["\'][^"\']*assets/[^"\']*', html)
+            if PHOTO_BASE not in m]
+assert not leftover, "a local asset reference survived: " + str(leftover)
 assert 'unpkg.com' not in html, "unpkg reference survived"
 
 io.open("corsica-van-trip.html", "w", encoding="utf-8").write(html)
 print("corsica-van-trip.html  %.0f KB" % (len(html.encode()) / 1024))
-print("external deps left:", sorted(set(re.findall(r'https://([a-z0-9.-]+)/', html))))
+print("photos served from:", PHOTO_BASE)
+print("external hosts:", sorted(set(re.findall(r'https://([a-z0-9.-]+)/', html)))[:6], "...")

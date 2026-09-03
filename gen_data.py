@@ -2,6 +2,10 @@
 import json
 
 routes = json.load(open("data/routes_simplified.json"))
+try:
+    PHOTOS = json.load(open("data/photos.json"))
+except FileNotFoundError:
+    PHOTOS = {}
 
 # ---------------------------------------------------------------- POIs
 # cat: town | hike | beach | view | swim | heritage | camp | stay | port
@@ -443,7 +447,7 @@ DAY_META = {
           intro="Old town in the morning, granite plunge pools at midday, and as much of the Bonifatu cirque as your legs want."),
  6:  dict(base="Porto", theme="The wild west coast", vid="13:07–16:22",
           intro="The most spectacular driving day and, at 105 km in over 3 hours of moving time, a lesson in Corsican distances."),
- 7:  dict(base="Porto / Arone", theme="Calanches de Piana & Capo Rosso", vid="18:27–19:03",
+ 7:  dict(base="Porto / Arone", theme="Red granite at dawn, sand by lunchtime", vid="18:27–19:03",
           intro="UNESCO granite at dawn, a cliff-top Genoese tower by late morning, and the rest of the day horizontal on a beach."),
  8:  dict(base="Calacuccia", theme="Over the top into the Niolu", vid="20:51–22:02",
           intro="Leave the sea behind. Chestnut villages, the highest pass on the island, and a swim under a 2,700 m mountain."),
@@ -455,7 +459,7 @@ DAY_META = {
           intro="Snowmelt in the morning, an empty reservoir at lunch, Napoleon's old town in the afternoon, red islands at sunset — and the D1/D4 pass if you want one more mountain road."),
  12: dict(base="Bonifacio", theme="South through prehistory to the cliffs", vid="30:45–31:19",
           intro="The longest drive of the trip (180 km), broken by menhirs, granite towns and a lion-shaped rock, ending on the most dramatic clifftop in the Mediterranean."),
- 13: dict(base="Porto-Vecchio", theme="The white beaches", vid="29:19",
+ 13: dict(base="Porto-Vecchio", theme="A day off: sand, shallow water, a boat", vid="29:19",
           intro="A pure relax day. Three of the best beaches in Europe and a boat out to the Lavezzi if you want one."),
  14: dict(base="Zonza", theme="Up to the needles of Bavella", vid="26:30–29:56",
           intro="From sea level to 1,218 m: a waterfall, a Pisan church, and the granite spires that close the island's spine."),
@@ -468,7 +472,8 @@ for r in routes:
     m=DAY_META[r["day"]]
     days.append(dict(day=r["day"], title=r["title"], km=r["km"], min=r["min"],
                      geometry=r["geometry"], base=m["base"], theme=m["theme"],
-                     vid=m["vid"], intro=m["intro"]))
+                     vid=m["vid"], intro=m["intro"],
+                     photos=PHOTOS.get(str(r["day"]), [])))
 
 out = dict(pois=POIS, camps=CAMPS, stays=STAYS, days=days)
 with open("assets/js/data.js","w") as f:
@@ -476,7 +481,8 @@ with open("assets/js/data.js","w") as f:
     f.write("window.TRIP = ")
     json.dump(out, f, ensure_ascii=False, separators=(",",":"))
     f.write(";\n")
-print("pois",len(POIS),"camps",len(CAMPS),"stays",len(STAYS),"days",len(days))
+print("pois",len(POIS),"camps",len(CAMPS),"stays",len(STAYS),"days",len(days),
+      "photos",sum(len(d["photos"]) for d in days))
 import os
 print("data.js", round(os.path.getsize("assets/js/data.js")/1024,1),"KB")
 print("total km", round(sum(d["km"] for d in days),1), "total drive h", round(sum(d["min"] for d in days)/60,1))

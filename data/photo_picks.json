@@ -1,0 +1,560 @@
+{
+ "1": [
+  {
+   "poi": "erbalunga",
+   "poi_name": "Erbalunga & its Genoese tower",
+   "title": "File:Erbalunga la tour.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "bastia",
+   "poi_name": "Bastia — Vieux Port & Terra Vecchia",
+   "title": "File:Port of Bastia, Corsica, France (52723300062).jpg",
+   "score": 9.1
+  },
+  {
+   "poi": "erbalunga",
+   "poi_name": "Erbalunga & its Genoese tower",
+   "title": "File:Corsica Erbalunga Marina.jpg",
+   "score": 9.6
+  },
+  {
+   "poi": "bastia",
+   "poi_name": "Bastia — Vieux Port & Terra Vecchia",
+   "title": "File:Église Saint-Jean (Bastia) (1).jpg",
+   "score": 9.0
+  }
+ ],
+ "2": [
+  {
+   "poi": "barcaggio",
+   "poi_name": "Barcaggio & Cala Francese",
+   "title": "File:Rogliano-plage de Cala tour d'Agnello.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "nonza",
+   "poi_name": "Nonza — black beach & tower",
+   "title": "File:Nonza - st. Julia.JPG",
+   "score": 10.0
+  },
+  {
+   "poi": "centuri",
+   "poi_name": "Port de Centuri",
+   "title": "File:Centuri chapelle Saint-Roch d'Ortinola.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "patrimonio",
+   "poi_name": "Patrimonio vineyards",
+   "title": "File:Vue Village - Patrimonio (FR2B) - 2021-09-10 - 1.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "mattei",
+   "poi_name": "Moulin Mattei",
+   "title": "File:Corsica Cap Corse Col de la Serra.jpg",
+   "score": 7.6
+  },
+  {
+   "poi": "douaniers",
+   "poi_name": "Sentier des Douaniers (Customs Officers' Path)",
+   "title": "File:Panorama of Macinaggio.jpg",
+   "score": 7.0
+  }
+ ],
+ "3": [
+  {
+   "poi": "vezzu",
+   "poi_name": "Bocca di Vezzu",
+   "title": "File:Corsica Bocca di Vezu.jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "stflorent",
+   "poi_name": "Saint-Florent",
+   "title": "File:Citadelle - Saint-Florent (FR2B) - 2021-09-10 - 10.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "saleccia",
+   "poi_name": "Plage de Saleccia",
+   "title": "File:Plage de Saleccia .jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "ostriconi",
+   "poi_name": "Plage de l'Ostriconi",
+   "title": "File:Étang Foce - Palasca (FR2B) - 2021-09-10 - 2.jpg",
+   "score": 7.0
+  },
+  {
+   "poi": "lotu",
+   "poi_name": "Plage du Lotu",
+   "title": "File:Étang de Loto.jpg",
+   "score": 6.0
+  },
+  {
+   "poi": "vezzu",
+   "poi_name": "Bocca di Vezzu",
+   "title": "File:Paysage Sud Bocca Vezzu - San-Gavino-di-Tenda (FR2B) - 2021-09-10 - 1.jpg",
+   "score": 9.0
+  }
+ ],
+ "4": [
+  {
+   "poi": "pigna",
+   "poi_name": "Pigna",
+   "title": "File:Pigna, Corsica (8132732320).jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "lozari",
+   "poi_name": "Plage de Lozari",
+   "title": "File:Lozari le Régino en aval de son embouchure.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "ilerousse",
+   "poi_name": "L'Île-Rousse",
+   "title": "File:Streets of L'Île-Rousse-002.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "santantonino",
+   "poi_name": "Sant'Antonino",
+   "title": "File:Sant'Antonino Vi1JPG.jpg",
+   "score": 9.3
+  },
+  {
+   "poi": "bodri",
+   "poi_name": "Plage de Bodri",
+   "title": "File:Plage Bodri - Corbara (FR2B) - 2021-09-06 - 1.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "pigna",
+   "poi_name": "Pigna",
+   "title": "File:Pigna Vi1a JPG.jpg",
+   "score": 9.3
+  }
+ ],
+ "5": [
+  {
+   "poi": "bonifatu",
+   "poi_name": "Cirque de Bonifatu / Refuge de Carrozzu",
+   "title": "File:Mouflon corsica carrozzu.jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "calenzana",
+   "poi_name": "Calenzana — km 0 of the GR20",
+   "title": "File:Eglise Ste-Restitude, Calenzana, Haute-Corse.jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "calvi",
+   "poi_name": "Calvi — Citadelle & the bay",
+   "title": "File:Calvi Cerca 4.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "figarella",
+   "poi_name": "A Figarella river pools, Bonifatu",
+   "title": "File:Etape du Mare a Monti à Bunifatu.jpg",
+   "score": 7.0
+  },
+  {
+   "poi": "bonifatu",
+   "poi_name": "Cirque de Bonifatu / Refuge de Carrozzu",
+   "title": "File:Refuge-carozzu-1.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "calenzana",
+   "poi_name": "Calenzana — km 0 of the GR20",
+   "title": "File:Calenzana vallon de Frintogna.jpg",
+   "score": 10.0
+  }
+ ],
+ "6": [
+  {
+   "poi": "porto",
+   "poi_name": "Porto & the Genoese tower",
+   "title": "File:Corse Ota Porto tour genoise.jpg",
+   "score": 15.6
+  },
+  {
+   "poi": "scandola",
+   "poi_name": "Réserve Naturelle de Scandola",
+   "title": "File:Scandola Natural Reserve, Corsica (8132761623).jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "girolata",
+   "poi_name": "Girolata",
+   "title": "File:Girolata, Corsica (8132787078).jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "galeria",
+   "poi_name": "Galéria & the Fango valley",
+   "title": "File:Galeria-delta Fango.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "pianella",
+   "poi_name": "Pont de Pianella & Gorges de la Spelunca",
+   "title": "File:Corse Ota pont genois Pianella.jpg",
+   "score": 9.6
+  },
+  {
+   "poi": "porto",
+   "poi_name": "Porto & the Genoese tower",
+   "title": "File:Corse Ota Porto genoese tower sunset.jpg",
+   "score": 15.6
+  }
+ ],
+ "7": [
+  {
+   "poi": "calanches",
+   "poi_name": "Les Calanches de Piana",
+   "title": "File:01 Calanche Piana.jpg",
+   "score": 15.0
+  },
+  {
+   "poi": "piana",
+   "poi_name": "Piana village",
+   "title": "File:Calanques de piana 01.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "arone",
+   "poi_name": "Plage d'Arone",
+   "title": "File:Plage d'Arone.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "caporosso",
+   "poi_name": "Capo Rosso / Tour de Turghiu",
+   "title": "File:Vue depuis la tour de Capo Rosso.jpg",
+   "score": 8.5
+  },
+  {
+   "poi": "calanches",
+   "poi_name": "Les Calanches de Piana",
+   "title": "File:010 Calanques de Piana JPG.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "piana",
+   "poi_name": "Piana village",
+   "title": "File:Flickr - lo.tangelini - Calanche di PIana.jpg",
+   "score": 10.0
+  }
+ ],
+ "8": [
+  {
+   "poi": "evisa",
+   "poi_name": "Évisa & the chestnut forests",
+   "title": "File:Corse-du-Sud Evisa.jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "cristinacce",
+   "poi_name": "Cristinacce",
+   "title": "File:Cristinacce Chp1JPG.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "nino",
+   "poi_name": "Lac de Nino",
+   "title": "File:Lac de Nino 2011.JPG",
+   "score": 10.0
+  },
+  {
+   "poi": "calacuccia",
+   "poi_name": "Lac de Calacuccia",
+   "title": "File:Calacuccia dam 002.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "vergio",
+   "poi_name": "Col de Vergio (1,478 m)",
+   "title": "File:Castel de Vergio camping.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "ota",
+   "poi_name": "Ota",
+   "title": "File:Ota, Corsica (8132735947).jpg",
+   "score": 7.6
+  }
+ ],
+ "9": [
+  {
+   "poi": "scala",
+   "poi_name": "Scala di Santa Regina",
+   "title": "File:Scala di Santa Regina (8132729539).jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "corte",
+   "poi_name": "Corte — Citadelle & the old town",
+   "title": "File:Houses in Corte 002.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "hautasco",
+   "poi_name": "Haut-Asco (1,450 m) & Punta Muvrella",
+   "title": "File:Haut Asco Punta Stranciacone Punta Culaghia.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "scala",
+   "poi_name": "Scala di Santa Regina",
+   "title": "File:France - Corse - Haute-Corse - Scala di Santa Regina - prise de vue 2-4 (MédiHAL 1272643).jpg",
+   "score": 8.1
+  },
+  {
+   "poi": "corte",
+   "poi_name": "Corte — Citadelle & the old town",
+   "title": "File:Citadelle de Corte, Corte, Corsica, France.jpg",
+   "score": 9.6
+  },
+  {
+   "poi": "hautasco",
+   "poi_name": "Haut-Asco (1,450 m) & Punta Muvrella",
+   "title": "File:Mountains in Haut-Asco.jpg",
+   "score": 8.5
+  }
+ ],
+ "10": [
+  {
+   "poi": "restonica",
+   "poi_name": "Gorges de la Restonica",
+   "title": "File:Gorges Restonica - Corte (FR2B) - 2021-09-08 - 3.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "melo",
+   "poi_name": "Lac de Melo & Lac de Capitello",
+   "title": "File:Lac Melo.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "vizzavona",
+   "poi_name": "Vizzavona & the Cascade des Anglais",
+   "title": "File:Chapelle Notre-Dame de la Forêt Vizzavona2.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "restonica",
+   "poi_name": "Gorges de la Restonica",
+   "title": "File:Monte Leonardo - Corte (FR2B) - 2021-09-08 - 2.jpg",
+   "score": 3.0
+  },
+  {
+   "poi": "melo",
+   "poi_name": "Lac de Melo & Lac de Capitello",
+   "title": "File:Lac de Capitello Lombarduccio.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "vizzavona",
+   "poi_name": "Vizzavona & the Cascade des Anglais",
+   "title": "File:Grand Hôtel Vizzavona2.jpg",
+   "score": 9.0
+  }
+ ],
+ "11": [
+  {
+   "poi": "ajaccio",
+   "poi_name": "Ajaccio — old town & the market",
+   "title": "File:Ajaccio phare citadelle.jpg",
+   "score": 13.0
+  },
+  {
+   "poi": "tolla",
+   "poi_name": "Lac de Tolla",
+   "title": "File:Tolla Lac1 JPG.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "sanguinaires",
+   "poi_name": "Îles Sanguinaires & Pointe de la Parata",
+   "title": "File:Corsica Ajaccio Îles Sanguinaires.jpg",
+   "score": 9.1
+  },
+  {
+   "poi": "spusata",
+   "poi_name": "Cascata di u Velu di a Spusata (Bridal Veil Falls)",
+   "title": "File:Bocognano ruisseau de Trotto.jpg",
+   "score": 4.0
+  },
+  {
+   "poi": "ajaccio",
+   "poi_name": "Ajaccio — old town & the market",
+   "title": "File:Corsica Ajaccio Bibliothèque Fesch 2014.jpg",
+   "score": 10.6
+  },
+  {
+   "poi": "tolla",
+   "poi_name": "Lac de Tolla",
+   "title": "File:Corsica -Lac de Tolla- 2019 by-RaBoe 271.jpg",
+   "score": 9.6
+  }
+ ],
+ "12": [
+  {
+   "poi": "sartene",
+   "poi_name": "Sartène",
+   "title": "File:Sartène Paoli JPG1.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "roccapina",
+   "poi_name": "Plage de Roccapina & the Lion",
+   "title": "File:Roccapina Lion JPG.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "bonifacio",
+   "poi_name": "Bonifacio — the Haute Ville on the cliffs",
+   "title": "File:Corse du Sud, Bonifacio 109 la Halle devant l'église Sainte-Marie Majeur.jpg",
+   "score": 9.6
+  },
+  {
+   "poi": "filitosa",
+   "poi_name": "Filitosa",
+   "title": "File:Filitosa JPG2.jpg",
+   "score": 9.3
+  },
+  {
+   "poi": "stelucie",
+   "poi_name": "Sainte-Lucie-de-Tallano",
+   "title": "File:Sainte-Lucie-de-Tallano église paroissiale Sainte-Lucie.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "sartene",
+   "poi_name": "Sartène",
+   "title": "File:Corsica Sartene Place du Maggiu.jpg",
+   "score": 9.6
+  }
+ ],
+ "13": [
+  {
+   "poi": "santagiulia",
+   "poi_name": "Plage de Santa Giulia",
+   "title": "File:Plage de Sta-Giulia (8132718542).jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "palombaggia",
+   "poi_name": "Plage de Palombaggia & Tamaricciu",
+   "title": "File:Aerial view of the Tyrrhenian Sea at Palombaggia Beach, Corsica, France (52723806786).jpg",
+   "score": 9.6
+  },
+  {
+   "poi": "portovecchio",
+   "poi_name": "Porto-Vecchio old town",
+   "title": "File:Porto-Vecchio Harbour (2584366649).jpg",
+   "score": 9.3
+  },
+  {
+   "poi": "rondinara",
+   "poi_name": "Plage de Rondinara",
+   "title": "File:Rondinara Beach and Bay, France (52724277938).jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "lavezzi",
+   "poi_name": "Îles Lavezzi",
+   "title": "File:Bonifacio - Isola di Lavezzi (01).JPG",
+   "score": 8.5
+  },
+  {
+   "poi": "santagiulia",
+   "poi_name": "Plage de Santa Giulia",
+   "title": "File:Etang de Santa Giulia 01.JPG",
+   "score": 9.0
+  }
+ ],
+ "14": [
+  {
+   "poi": "ospedale",
+   "poi_name": "Forêt & Lac de l'Ospedale",
+   "title": "File:L'Ospédale Lac1 JPG.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "bavella",
+   "poi_name": "Col de Bavella (1,218 m)",
+   "title": "File:Bavella cross.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "aiguilles",
+   "poi_name": "Aiguilles de Bavella & the Trou de la Bombe",
+   "title": "File:Aiguilles de Bavelle JPG1.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "zonza",
+   "poi_name": "Zonza",
+   "title": "File:Église de Zonza.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "cucuruzzu",
+   "poi_name": "Casteddu di Cucuruzzu & Capula",
+   "title": "File:Cucuruzzu Capula JPG1.jpg",
+   "score": 9.3
+  },
+  {
+   "poi": "carbini",
+   "poi_name": "Carbini — San Giovanni Battista",
+   "title": "File:Entre Carbini et Orone.jpg",
+   "score": 5.5
+  }
+ ],
+ "15": [
+  {
+   "poi": "ghisoni",
+   "poi_name": "Ghisoni & the D69",
+   "title": "File:Le village de Ghisoni.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "campi",
+   "poi_name": "Campi",
+   "title": "File:Campi église Sainte-Marie.jpg",
+   "score": 10.0
+  },
+  {
+   "poi": "solenzara",
+   "poi_name": "Solenzara",
+   "title": "File:Port de plaisance de Solenzara Corsica.jpg",
+   "score": 9.9
+  },
+  {
+   "poi": "aleria",
+   "poi_name": "Situ Archeologicu d'Aleria",
+   "title": "File:Ville Antique d'Aléria.jpg",
+   "score": 9.0
+  },
+  {
+   "poi": "orezza",
+   "poi_name": "Couvent d'Orezza & the Castagniccia",
+   "title": "File:Couvent Saint François D Orezza (261544779).jpeg",
+   "score": 8.3
+  },
+  {
+   "poi": "ghisoni",
+   "poi_name": "Ghisoni & the D69",
+   "title": "File:Ghisoni église Santa Maria.jpg",
+   "score": 8.5
+  }
+ ]
+}

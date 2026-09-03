@@ -1,0 +1,736 @@
+{
+ "1": [
+  {
+   "f": "erbalunga-la-tour",
+   "cap": "Erbalunga la tour",
+   "poi": "erbalunga",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Erbalunga_la_tour.jpg"
+  },
+  {
+   "f": "port-of-bastia-corsica-france-52723300062",
+   "cap": "Port of Bastia, Corsica, France (52723300062)",
+   "poi": "bastia",
+   "by": "dronepicr",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Port_of_Bastia,_Corsica,_France_(52723300062).jpg"
+  },
+  {
+   "f": "corsica-erbalunga-marina",
+   "cap": "Corsica Erbalunga Marina",
+   "poi": "erbalunga",
+   "by": "Isiwal",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corsica_Erbalunga_Marina.jpg"
+  },
+  {
+   "f": "eglise-saint-jean-bastia-1",
+   "cap": "Église Saint-Jean (Bastia) (1)",
+   "poi": "bastia",
+   "by": "Gzen92",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:%C3%89glise_Saint-Jean_(Bastia)_(1).jpg"
+  }
+ ],
+ "2": [
+  {
+   "f": "rogliano-plage-de-cala-tour-d-agnello",
+   "cap": "Rogliano-plage de Cala tour d'Agnello",
+   "poi": "barcaggio",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Rogliano-plage_de_Cala_tour_d%27Agnello.jpg"
+  },
+  {
+   "f": "nonza-st-julia",
+   "cap": "Nonza - st. Julia",
+   "poi": "nonza",
+   "by": "JAn Dudík",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Nonza_-_st._Julia.JPG"
+  },
+  {
+   "f": "centuri-chapelle-saint-roch-d-ortinola",
+   "cap": "Centuri chapelle Saint-Roch d'Ortinola",
+   "poi": "centuri",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Centuri_chapelle_Saint-Roch_d%27Ortinola.jpg"
+  },
+  {
+   "f": "vue-village-patrimonio-fr2b-2021-09-10-1",
+   "cap": "Vue Village - Patrimonio (FR2B) - 2021-09-10 - 1",
+   "poi": "patrimonio",
+   "by": "Chabe01",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Vue_Village_-_Patrimonio_(FR2B)_-_2021-09-10_-_1.jpg"
+  },
+  {
+   "f": "corsica-cap-corse-col-de-la-serra",
+   "cap": "Corsica Cap Corse Col de la Serra",
+   "poi": "mattei",
+   "by": "Isiwal",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corsica_Cap_Corse_Col_de_la_Serra.jpg"
+  },
+  {
+   "f": "panorama-of-macinaggio",
+   "cap": "Panorama of Macinaggio",
+   "poi": "douaniers",
+   "by": "Ymblanter",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Panorama_of_Macinaggio.jpg"
+  }
+ ],
+ "3": [
+  {
+   "f": "corsica-bocca-di-vezu",
+   "cap": "Corsica Bocca di Vezu",
+   "poi": "vezzu",
+   "by": "Isiwal",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corsica_Bocca_di_Vezu.jpg"
+  },
+  {
+   "f": "citadelle-saint-florent-fr2b-2021-09-10-10",
+   "cap": "Citadelle - Saint-Florent (FR2B) - 2021-09-10 - 10",
+   "poi": "stflorent",
+   "by": "Chabe01",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Citadelle_-_Saint-Florent_(FR2B)_-_2021-09-10_-_10.jpg"
+  },
+  {
+   "f": "plage-de-saleccia",
+   "cap": "Plage de Saleccia",
+   "poi": "saleccia",
+   "by": "Scata2b",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Plage_de_Saleccia_.jpg"
+  },
+  {
+   "f": "etang-foce-palasca-fr2b-2021-09-10-2",
+   "cap": "Étang Foce - Palasca (FR2B) - 2021-09-10 - 2",
+   "poi": "ostriconi",
+   "by": "Chabe01",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:%C3%89tang_Foce_-_Palasca_(FR2B)_-_2021-09-10_-_2.jpg"
+  },
+  {
+   "f": "etang-de-loto",
+   "cap": "Étang de Loto",
+   "poi": "lotu",
+   "by": "Ruthven",
+   "lic": "CC0",
+   "src": "https://commons.wikimedia.org/wiki/File:%C3%89tang_de_Loto.jpg"
+  },
+  {
+   "f": "paysage-sud-bocca-vezzu-san-gavino-di-tenda-fr2b-202",
+   "cap": "Paysage Sud Bocca Vezzu - San-Gavino-di-Tenda (FR2B) - 2021-09-10 - 1",
+   "poi": "vezzu",
+   "by": "Chabe01",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Paysage_Sud_Bocca_Vezzu_-_San-Gavino-di-Tenda_(FR2B)_-_2021-09-10_-_1.jpg"
+  }
+ ],
+ "4": [
+  {
+   "f": "pigna-corsica-8132732320",
+   "cap": "Pigna, Corsica (8132732320)",
+   "poi": "pigna",
+   "by": "Michal Osmenda from Brussels, Belgium",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Pigna,_Corsica_(8132732320).jpg"
+  },
+  {
+   "f": "lozari-le-regino-en-aval-de-son-embouchure",
+   "cap": "Lozari le Régino en aval de son embouchure",
+   "poi": "lozari",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Lozari_le_R%C3%A9gino_en_aval_de_son_embouchure.jpg"
+  },
+  {
+   "f": "streets-of-l-ile-rousse-002",
+   "cap": "Streets of L'Île-Rousse-002",
+   "poi": "ilerousse",
+   "by": "User:Amada44",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Streets_of_L%27%C3%8Ele-Rousse-002.jpg"
+  },
+  {
+   "f": "sant-antonino-vi1jpg",
+   "cap": "Sant'Antonino Vi1JPG",
+   "poi": "santantonino",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Sant%27Antonino_Vi1JPG.jpg"
+  },
+  {
+   "f": "plage-bodri-corbara-fr2b-2021-09-06-1",
+   "cap": "Plage Bodri - Corbara (FR2B) - 2021-09-06 - 1",
+   "poi": "bodri",
+   "by": "Chabe01",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Plage_Bodri_-_Corbara_(FR2B)_-_2021-09-06_-_1.jpg"
+  },
+  {
+   "f": "pigna-vi1a-jpg",
+   "cap": "Pigna Vi1a JPG",
+   "poi": "pigna",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Pigna_Vi1a_JPG.jpg"
+  }
+ ],
+ "5": [
+  {
+   "f": "mouflon-corsica-carrozzu",
+   "cap": "Mouflon corsica carrozzu",
+   "poi": "bonifatu",
+   "by": "Abjad",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Mouflon_corsica_carrozzu.jpg"
+  },
+  {
+   "f": "eglise-ste-restitude-calenzana-haute-corse",
+   "cap": "Eglise Ste-Restitude, Calenzana, Haute-Corse",
+   "poi": "calenzana",
+   "by": "Mario Reutenauer",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Eglise_Ste-Restitude,_Calenzana,_Haute-Corse.jpg"
+  },
+  {
+   "f": "calvi-cerca-4",
+   "cap": "Calvi Cerca 4",
+   "poi": "calvi",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Calvi_Cerca_4.jpg"
+  },
+  {
+   "f": "etape-du-mare-a-monti-a-bunifatu",
+   "cap": "Etape du Mare a Monti à Bunifatu",
+   "poi": "figarella",
+   "by": "TeletubAstyanax",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Etape_du_Mare_a_Monti_%C3%A0_Bunifatu.jpg"
+  },
+  {
+   "f": "refuge-carozzu-1",
+   "cap": "Refuge-carozzu-1",
+   "poi": "bonifatu",
+   "by": "MartinThoma",
+   "lic": "CC0",
+   "src": "https://commons.wikimedia.org/wiki/File:Refuge-carozzu-1.jpg"
+  },
+  {
+   "f": "calenzana-vallon-de-frintogna",
+   "cap": "Calenzana vallon de Frintogna",
+   "poi": "calenzana",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Calenzana_vallon_de_Frintogna.jpg"
+  }
+ ],
+ "6": [
+  {
+   "f": "corse-ota-porto-tour-genoise",
+   "cap": "Corse Ota Porto tour genoise",
+   "poi": "porto",
+   "by": "Myrabella",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corse_Ota_Porto_tour_genoise.jpg"
+  },
+  {
+   "f": "scandola-natural-reserve-corsica-8132761623",
+   "cap": "Scandola Natural Reserve, Corsica (8132761623)",
+   "poi": "scandola",
+   "by": "Michal Osmenda from Brussels, Belgium",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Scandola_Natural_Reserve,_Corsica_(8132761623).jpg"
+  },
+  {
+   "f": "girolata-corsica-8132787078",
+   "cap": "Girolata, Corsica (8132787078)",
+   "poi": "girolata",
+   "by": "Michal Osmenda from Brussels, Belgium",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Girolata,_Corsica_(8132787078).jpg"
+  },
+  {
+   "f": "galeria-delta-fango",
+   "cap": "Galeria-delta Fango",
+   "poi": "galeria",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Galeria-delta_Fango.jpg"
+  },
+  {
+   "f": "corse-ota-pont-genois-pianella",
+   "cap": "Corse Ota pont genois Pianella",
+   "poi": "pianella",
+   "by": "Myrabella",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corse_Ota_pont_genois_Pianella.jpg"
+  },
+  {
+   "f": "corse-ota-porto-genoese-tower-sunset",
+   "cap": "Corse Ota Porto genoese tower sunset",
+   "poi": "porto",
+   "by": "Myrabella",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corse_Ota_Porto_genoese_tower_sunset.jpg"
+  }
+ ],
+ "7": [
+  {
+   "f": "01-calanche-piana",
+   "cap": "01 Calanche Piana",
+   "poi": "calanches",
+   "by": "Myrabella",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:01_Calanche_Piana.jpg"
+  },
+  {
+   "f": "calanques-de-piana-01",
+   "cap": "Calanques de piana 01",
+   "poi": "piana",
+   "by": "Seb collet",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Calanques_de_piana_01.jpg"
+  },
+  {
+   "f": "plage-d-arone",
+   "cap": "Plage d'Arone",
+   "poi": "arone",
+   "by": "Nivora",
+   "lic": "CC0",
+   "src": "https://commons.wikimedia.org/wiki/File:Plage_d%27Arone.jpg"
+  },
+  {
+   "f": "vue-depuis-la-tour-de-capo-rosso",
+   "cap": "Vue depuis la tour de Capo Rosso",
+   "poi": "caporosso",
+   "by": "Hervédelapalette",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Vue_depuis_la_tour_de_Capo_Rosso.jpg"
+  },
+  {
+   "f": "010-calanques-de-piana-jpg",
+   "cap": "010 Calanques de Piana JPG",
+   "poi": "calanches",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:010_Calanques_de_Piana_JPG.jpg"
+  },
+  {
+   "f": "flickr-lo-tangelini-calanche-di-piana",
+   "cap": "Flickr - lo.tangelini - Calanche di PIana",
+   "poi": "piana",
+   "by": "lo.tangelini from Soliera / Modena, Italia",
+   "lic": "CC BY-SA 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Flickr_-_lo.tangelini_-_Calanche_di_PIana.jpg"
+  }
+ ],
+ "8": [
+  {
+   "f": "corse-du-sud-evisa",
+   "cap": "Corse-du-Sud Evisa",
+   "poi": "evisa",
+   "by": "Myrabella",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corse-du-Sud_Evisa.jpg"
+  },
+  {
+   "f": "cristinacce-chp1jpg",
+   "cap": "Cristinacce Chp1JPG",
+   "poi": "cristinacce",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Cristinacce_Chp1JPG.jpg"
+  },
+  {
+   "f": "lac-de-nino-2011",
+   "cap": "Lac de Nino 2011",
+   "poi": "nino",
+   "by": "Gonzolito",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Lac_de_Nino_2011.JPG"
+  },
+  {
+   "f": "calacuccia-dam-002",
+   "cap": "Calacuccia dam 002",
+   "poi": "calacuccia",
+   "by": "User:Amada44",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Calacuccia_dam_002.jpg"
+  },
+  {
+   "f": "castel-de-vergio-camping",
+   "cap": "Castel de Vergio camping",
+   "poi": "vergio",
+   "by": "Rémih",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Castel_de_Vergio_camping.jpg"
+  },
+  {
+   "f": "ota-corsica-8132735947",
+   "cap": "Ota, Corsica (8132735947)",
+   "poi": "ota",
+   "by": "Michal Osmenda from Brussels, Belgium",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Ota,_Corsica_(8132735947).jpg"
+  }
+ ],
+ "9": [
+  {
+   "f": "scala-di-santa-regina-8132729539",
+   "cap": "Scala di Santa Regina (8132729539)",
+   "poi": "scala",
+   "by": "Michal Osmenda from Brussels, Belgium",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Scala_di_Santa_Regina_(8132729539).jpg"
+  },
+  {
+   "f": "houses-in-corte-002",
+   "cap": "Houses in Corte 002",
+   "poi": "corte",
+   "by": "Amada44",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Houses_in_Corte_002.jpg"
+  },
+  {
+   "f": "haut-asco-punta-stranciacone-punta-culaghia",
+   "cap": "Haut Asco Punta Stranciacone Punta Culaghia",
+   "poi": "hautasco",
+   "by": "Rémih",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Haut_Asco_Punta_Stranciacone_Punta_Culaghia.jpg"
+  },
+  {
+   "f": "france-corse-haute-corse-scala-di-santa-regina-prise",
+   "cap": "France : Corse : Haute-Corse : Scala di Santa Regina : prise de vue 2/4",
+   "poi": "scala",
+   "by": "Emmanuel de Martonne",
+   "lic": "Licence Ouverte",
+   "src": "https://commons.wikimedia.org/wiki/File:France_-_Corse_-_Haute-Corse_-_Scala_di_Santa_Regina_-_prise_de_vue_2-4_(M%C3%A9diHAL_1272643).jpg"
+  },
+  {
+   "f": "citadelle-de-corte-corte-corsica-france",
+   "cap": "Citadelle de Corte, Corte, Corsica, France",
+   "poi": "corte",
+   "by": "Bj.schoenmakers",
+   "lic": "CC0",
+   "src": "https://commons.wikimedia.org/wiki/File:Citadelle_de_Corte,_Corte,_Corsica,_France.jpg"
+  },
+  {
+   "f": "mountains-in-haut-asco",
+   "cap": "Mountains in Haut-Asco",
+   "poi": "hautasco",
+   "by": "Ymblanter",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Mountains_in_Haut-Asco.jpg"
+  }
+ ],
+ "10": [
+  {
+   "f": "gorges-restonica-corte-fr2b-2021-09-08-3",
+   "cap": "Gorges Restonica - Corte (FR2B) - 2021-09-08 - 3",
+   "poi": "restonica",
+   "by": "Chabe01",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Gorges_Restonica_-_Corte_(FR2B)_-_2021-09-08_-_3.jpg"
+  },
+  {
+   "f": "lac-melo",
+   "cap": "Lac Melo",
+   "poi": "melo",
+   "by": "Ju2kiwi",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Lac_Melo.jpg"
+  },
+  {
+   "f": "chapelle-notre-dame-de-la-foret-vizzavona2",
+   "cap": "Chapelle Notre-Dame de la Forêt Vizzavona2",
+   "poi": "vizzavona",
+   "by": "Rémih",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Chapelle_Notre-Dame_de_la_For%C3%AAt_Vizzavona2.jpg"
+  },
+  {
+   "f": "monte-leonardo-corte-fr2b-2021-09-08-2",
+   "cap": "Monte Leonardo - Corte (FR2B) - 2021-09-08 - 2",
+   "poi": "restonica",
+   "by": "Chabe01",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Monte_Leonardo_-_Corte_(FR2B)_-_2021-09-08_-_2.jpg"
+  },
+  {
+   "f": "lac-de-capitello-lombarduccio",
+   "cap": "Lac de Capitello Lombarduccio",
+   "poi": "melo",
+   "by": "Rémih",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Lac_de_Capitello_Lombarduccio.jpg"
+  },
+  {
+   "f": "grand-hotel-vizzavona2",
+   "cap": "Grand Hôtel Vizzavona2",
+   "poi": "vizzavona",
+   "by": "Rémih",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Grand_H%C3%B4tel_Vizzavona2.jpg"
+  }
+ ],
+ "11": [
+  {
+   "f": "ajaccio-phare-citadelle",
+   "cap": "Ajaccio phare citadelle",
+   "poi": "ajaccio",
+   "by": "Myrabella",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Ajaccio_phare_citadelle.jpg"
+  },
+  {
+   "f": "tolla-lac1-jpg",
+   "cap": "Tolla Lac1 JPG",
+   "poi": "tolla",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Tolla_Lac1_JPG.jpg"
+  },
+  {
+   "f": "corsica-ajaccio-iles-sanguinaires",
+   "cap": "Corsica Ajaccio Îles Sanguinaires",
+   "poi": "sanguinaires",
+   "by": "Isiwal",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corsica_Ajaccio_%C3%8Eles_Sanguinaires.jpg"
+  },
+  {
+   "f": "bocognano-ruisseau-de-trotto",
+   "cap": "Bocognano ruisseau de Trotto",
+   "poi": "spusata",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Bocognano_ruisseau_de_Trotto.jpg"
+  },
+  {
+   "f": "corsica-ajaccio-bibliotheque-fesch-2014",
+   "cap": "Corsica Ajaccio Bibliothèque Fesch 2014",
+   "poi": "ajaccio",
+   "by": "Isiwal",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corsica_Ajaccio_Biblioth%C3%A8que_Fesch_2014.jpg"
+  },
+  {
+   "f": "corsica-lac-de-tolla-2019-by-raboe-271",
+   "cap": "Corsica -Lac de Tolla- 2019 by-RaBoe 271",
+   "poi": "tolla",
+   "by": "© Ra Boe / Wikipedia",
+   "lic": "CC BY-SA 3.0 de",
+   "src": "https://commons.wikimedia.org/wiki/File:Corsica_-Lac_de_Tolla-_2019_by-RaBoe_271.jpg"
+  }
+ ],
+ "12": [
+  {
+   "f": "sartene-paoli-jpg1",
+   "cap": "Sartène Paoli JPG1",
+   "poi": "sartene",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Sart%C3%A8ne_Paoli_JPG1.jpg"
+  },
+  {
+   "f": "roccapina-lion-jpg",
+   "cap": "Roccapina Lion JPG",
+   "poi": "roccapina",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Roccapina_Lion_JPG.jpg"
+  },
+  {
+   "f": "corse-du-sud-bonifacio-109-la-halle-devant-l-eglise-",
+   "cap": "Corse du Sud, Bonifacio 109 la Halle devant l'église Sainte-Marie Majeur",
+   "poi": "bonifacio",
+   "by": "Pascal POGGI",
+   "lic": "CC BY-SA 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corse_du_Sud,_Bonifacio_109_la_Halle_devant_l%27%C3%A9glise_Sainte-Marie_Majeur.jpg"
+  },
+  {
+   "f": "filitosa-jpg2",
+   "cap": "Filitosa JPG2",
+   "poi": "filitosa",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Filitosa_JPG2.jpg"
+  },
+  {
+   "f": "sainte-lucie-de-tallano-eglise-paroissiale-sainte-lu",
+   "cap": "Sainte-Lucie-de-Tallano église paroissiale Sainte-Lucie",
+   "poi": "stelucie",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Sainte-Lucie-de-Tallano_%C3%A9glise_paroissiale_Sainte-Lucie.jpg"
+  },
+  {
+   "f": "corsica-sartene-place-du-maggiu",
+   "cap": "Corsica Sartene Place du Maggiu",
+   "poi": "sartene",
+   "by": "Isiwal",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Corsica_Sartene_Place_du_Maggiu.jpg"
+  }
+ ],
+ "13": [
+  {
+   "f": "plage-de-sta-giulia-8132718542",
+   "cap": "Plage de Sta-Giulia (8132718542)",
+   "poi": "santagiulia",
+   "by": "Michal Osmenda from Brussels, Belgium",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Plage_de_Sta-Giulia_(8132718542).jpg"
+  },
+  {
+   "f": "aerial-view-of-the-tyrrhenian-sea-at-palombaggia-bea",
+   "cap": "Aerial view of the Tyrrhenian Sea at Palombaggia Beach, Corsica, France (52723806786)",
+   "poi": "palombaggia",
+   "by": "dronepicr",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Tyrrhenian_Sea_at_Palombaggia_Beach,_Corsica,_France_(52723806786).jpg"
+  },
+  {
+   "f": "porto-vecchio-harbour-2584366649",
+   "cap": "Porto-Vecchio Harbour (2584366649)",
+   "poi": "portovecchio",
+   "by": "Antony Stanley from Gloucester, UK",
+   "lic": "CC BY-SA 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Porto-Vecchio_Harbour_(2584366649).jpg"
+  },
+  {
+   "f": "rondinara-beach-and-bay-france-52724277938",
+   "cap": "Rondinara Beach and Bay, France (52724277938)",
+   "poi": "rondinara",
+   "by": "dronepicr",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Rondinara_Beach_and_Bay,_France_(52724277938).jpg"
+  },
+  {
+   "f": "bonifacio-isola-di-lavezzi-01",
+   "cap": "Bonifacio - Isola di Lavezzi (01)",
+   "poi": "lavezzi",
+   "by": "Gianni Careddu",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Bonifacio_-_Isola_di_Lavezzi_(01).JPG"
+  },
+  {
+   "f": "etang-de-santa-giulia-01",
+   "cap": "Etang de Santa Giulia 01",
+   "poi": "santagiulia",
+   "by": "TeletubAstyanax",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Etang_de_Santa_Giulia_01.JPG"
+  }
+ ],
+ "14": [
+  {
+   "f": "l-ospedale-lac1-jpg",
+   "cap": "L'Ospédale Lac1 JPG",
+   "poi": "ospedale",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:L%27Osp%C3%A9dale_Lac1_JPG.jpg"
+  },
+  {
+   "f": "bavella-cross",
+   "cap": "Bavella cross",
+   "poi": "bavella",
+   "by": "JAn Dudík",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Bavella_cross.jpg"
+  },
+  {
+   "f": "aiguilles-de-bavelle-jpg1",
+   "cap": "Aiguilles de Bavelle JPG1",
+   "poi": "aiguilles",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Aiguilles_de_Bavelle_JPG1.jpg"
+  },
+  {
+   "f": "eglise-de-zonza",
+   "cap": "Église de Zonza",
+   "poi": "zonza",
+   "by": "Telperion",
+   "lic": "CC BY-SA 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:%C3%89glise_de_Zonza.jpg"
+  },
+  {
+   "f": "cucuruzzu-capula-jpg1",
+   "cap": "Cucuruzzu Capula JPG1",
+   "poi": "cucuruzzu",
+   "by": "Jean-Pol GRANDMONT",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Cucuruzzu_Capula_JPG1.jpg"
+  },
+  {
+   "f": "entre-carbini-et-orone",
+   "cap": "Entre Carbini et Orone",
+   "poi": "carbini",
+   "by": "meuh",
+   "lic": "CC BY-SA 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Entre_Carbini_et_Orone.jpg"
+  }
+ ],
+ "15": [
+  {
+   "f": "le-village-de-ghisoni",
+   "cap": "Le village de Ghisoni",
+   "poi": "ghisoni",
+   "by": "Bonachera jf",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Le_village_de_Ghisoni.jpg"
+  },
+  {
+   "f": "campi-eglise-sainte-marie",
+   "cap": "Campi église Sainte-Marie",
+   "poi": "campi",
+   "by": "cremona daniel from MIOMO, France",
+   "lic": "CC BY 2.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Campi_%C3%A9glise_Sainte-Marie.jpg"
+  },
+  {
+   "f": "port-de-plaisance-de-solenzara-corsica",
+   "cap": "Port de plaisance de Solenzara Corsica",
+   "poi": "solenzara",
+   "by": "Herbert wie",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Port_de_plaisance_de_Solenzara_Corsica.jpg"
+  },
+  {
+   "f": "ville-antique-d-aleria",
+   "cap": "Ville Antique d'Aléria",
+   "poi": "aleria",
+   "by": "Léo Forté Nîmes",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Ville_Antique_d%27Al%C3%A9ria.jpg"
+  },
+  {
+   "f": "couvent-saint-francois-d-orezza-261544779",
+   "cap": "Couvent Saint François D Orezza",
+   "poi": "orezza",
+   "by": "Oliver Griebl",
+   "lic": "CC BY 3.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Couvent_Saint_Fran%C3%A7ois_D_Orezza_(261544779).jpeg"
+  },
+  {
+   "f": "ghisoni-eglise-santa-maria",
+   "cap": "Ghisoni église Santa Maria",
+   "poi": "ghisoni",
+   "by": "Pierre Bona",
+   "lic": "CC BY-SA 4.0",
+   "src": "https://commons.wikimedia.org/wiki/File:Ghisoni_%C3%A9glise_Santa_Maria.jpg"
+  }
+ ]
+}

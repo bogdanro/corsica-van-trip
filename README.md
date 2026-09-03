@@ -16,7 +16,8 @@ Leaflet and the map tiles; everything else works offline.
 | Section | Contents |
 |---|---|
 | Map | Leaflet map, 15 selectable day-routes drawn on real road geometry, 111 filterable pins across 11 categories, terrain/street basemap switch |
-| Itinerary | 15 days, each with its stops, a hike, a van hazard and the campsite it sleeps at |
+| Itinerary | 15 days, each with a photo gallery, its stops, a hike, a van hazard and the campsite it sleeps at |
+| Photos | 88 Creative-Commons photos from Wikimedia Commons, 6 per day, with a keyboard/swipe lightbox that credits every photographer |
 | Hotels | 5 mid-budget hotels (+1 mountain bonus), each tied to the night it makes sense on |
 | Camping | 30 van-friendly campsites with coordinates, price bands and websites, plus the Corsican wild-camping law |
 | Hikes | 17 hikes and walks with distance, ascent, time and grade |
@@ -43,6 +44,16 @@ Leaflet and the map tiles; everything else works offline.
   day's waypoints, so the lines follow actual roads and the distances and times
   are real. Geometry simplified with Ramer–Douglas–Peucker (55,249 → 6,067
   points) to keep `data.js` at ~163 KB.
+- **Photos** — [Wikimedia Commons](https://commons.wikimedia.org/), selected per stop by
+  geosearch around its coordinates plus a name search, then scored on licence,
+  resolution, aspect ratio and title relevance. Candidates carrying coordinates
+  outside the Corsica bounding box are rejected outright, which is what caught a
+  Slovak tunnel, a Normandy forest and a Tuscan town hall matching on place-name
+  alone. Each day keeps its 6 best, one per stop before any stop gets a second.
+  Downloaded and re-encoded locally to WebP (1200 px full, 560 px thumb, 16 MB
+  total) so the site serves its own images. Photographer and licence are recorded
+  per photo in `data/photos.json` and shown in the lightbox, as CC-BY/CC-BY-SA
+  require.
 - **Restonica access** — verified by web search: the D623 has been closed beyond
   the Pont de Tragone since the November 2023 storms; the trailhead is now the
   A Frasseta car park, served by the Navetta Restonica C13 shuttle from Corte
@@ -54,7 +65,8 @@ Leaflet and the map tiles; everything else works offline.
 ```
 index.html                 the page
 assets/css/style.css       styles
-assets/js/data.js          generated: pois, camps, stays, days (+route geometry)
+assets/js/data.js          generated: pois, camps, stays, days (+route geometry, +photos)
+assets/photos/             88 CC photos, WebP, full + thumb
 assets/js/app.js           map, filters and section renderers
 gen_data.py                regenerates assets/js/data.js
 data/                      raw research: routes, geocodes, campsites, transcript
@@ -65,6 +77,8 @@ verify.py, shots.py        headless-Chromium checks and screenshots
 ## Regenerating
 
 ```bash
+python3 fetch_photos.py                   # re-curate photo picks from Commons
+python3 download_photos.py                # download + re-encode them
 python3 gen_data.py                       # rewrite assets/js/data.js
 python3 -m http.server 8765               # then open http://127.0.0.1:8765
 .venv/bin/python verify.py                # DOM/console/interaction checks + screenshots

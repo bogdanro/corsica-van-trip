@@ -32,6 +32,17 @@
                t: s.t, w: s.w, price: s.price, why: s.why, rank: s.rank, f: [] });
   });
   var byId = {}; PTS.forEach(function (p) { byId[p.id] = p; });
+
+  /* first photo per stop, for the map popups */
+  var photoByPoi = {}, allPhotos = [];
+  T.days.forEach(function (d) {
+    (d.photos || []).forEach(function (ph) {
+      ph.day = d.day;
+      allPhotos.push(ph);
+      if (!photoByPoi[ph.poi]) photoByPoi[ph.poi] = ph;
+    });
+  });
+  var PDIR = 'assets/photos/';
   var poisByDay = {};
   PTS.forEach(function (p) { (poisByDay[p.d] = poisByDay[p.d] || []).push(p); });
 
@@ -76,6 +87,11 @@
 
   function popupHtml(p) {
     var c = CATS[p.c] || CATS.town, h = '';
+    var ph = photoByPoi[p.id];
+    if (ph) {
+      h += '<div class="pp-img"><img loading="lazy" alt="" src="' + PDIR + esc(ph.f) + '-t.webp">' +
+           '<span>© ' + esc(ph.by) + ' · ' + esc(ph.lic) + '</span></div>';
+    }
     h += '<div class="pp">';
     h += '<div class="pp-cat" style="color:' + c.color + '">' + esc(c.label) +
          (p.d ? ' &middot; Day ' + p.d : '') + '</div>';
@@ -269,6 +285,20 @@
            '<div class="theme">' + esc(d.theme) + '</div>' +
            '<p class="intro">' + esc(d.intro) + '</p>';
 
+      if (d.photos && d.photos.length) {
+        h += '<div class="gal" role="list" aria-label="Photos from day ' + d.day + '">';
+        d.photos.forEach(function (ph, i) {
+          var stop = byId[ph.poi];
+          var label = (stop ? stop.n : ph.cap);
+          h += '<button class="gal-i" type="button" role="listitem" ' +
+               'data-day="' + d.day + '" data-i="' + i + '" ' +
+               'aria-label="Open photo: ' + esc(label) + '">' +
+               '<img loading="lazy" decoding="async" alt="' + esc(label) + '" ' +
+               'src="' + PDIR + esc(ph.f) + '-t.webp">' +
+               '<span class="gal-cap">' + esc(label) + '</span></button>';
+        });
+        h += '</div>';
+      }
       h += '<ul class="stoplist">';
       stops.forEach(function (p) {
         var c = CATS[p.c] || CATS.town;
@@ -322,6 +352,96 @@
         map.setView([p.lat, p.lon], 13, { animate: true });
         markers[p.id].openPopup();
       }, 480);
+    });
+  }
+
+  /* ------------------------------------------------ lightbox */
+  var lb = { day: null, i: 0, opener: null };
+
+  function lbEl() { return document.getElementById('lightbox'); }
+
+  function lbRender() {
+    var day = T.days.filter(function (d) { return d.day === lb.day; })[0];
+    if (!day) return;
+    var ph = day.photos[lb.i];
+    var stop = byId[ph.poi];
+    var el = lbEl();
+    el.querySelector('.lb-img').src = PDIR + ph.f + '.webp';
+    el.querySelector('.lb-img').alt = (stop ? stop.n : ph.cap);
+    el.querySelector('.lb-title').textContent = stop ? stop.n : ph.cap;
+    el.querySelector('.lb-sub').textContent =
+      'Day ' + day.day + ' · ' + day.title + '  ·  ' + (lb.i + 1) + ' / ' + day.photos.length;
+    var cr = el.querySelector('.lb-credit');
+    cr.innerHTML = 'Photo © ' + esc(ph.by) + ' — ' + esc(ph.lic) +
+      (ph.src ? ' · <a target="_blank" rel="noopener" href="' + esc(ph.src) + '">Wikimedia Commons ↗</a>' : '');
+  }
+
+  function lbOpen(dayNum, i, opener) {
+    lb.day = dayNum; lb.i = i; lb.opener = opener || null;
+    var el = lbEl();
+    el.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbRender();
+    el.querySelector('.lb-close').focus();
+  }
+
+  function lbClose() {
+    lbEl().hidden = true;
+    document.body.style.overflow = '';
+    if (lb.opener) { try { lb.opener.focus(); } catch (e) {} }
+  }
+
+  function lbStep(n) {
+    var day = T.days.filter(function (d) { return d.day === lb.day; })[0];
+    if (!day) return;
+    lb.i = (lb.i + n + day.photos.length) % day.photos.length;
+    lbRender();
+  }
+
+  function initLightbox() {
+    var el = document.createElement('div');
+    el.id = 'lightbox'; el.hidden = true;
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-modal', 'true');
+    el.setAttribute('aria-label', 'Photo viewer');
+    el.innerHTML =
+      '<div class="lb-back"></div>' +
+      '<figure class="lb-box">' +
+        '<img class="lb-img" alt="">' +
+        '<figcaption>' +
+          '<div class="lb-title"></div>' +
+          '<div class="lb-sub"></div>' +
+          '<div class="lb-credit"></div>' +
+        '</figcaption>' +
+        '<button class="lb-close" type="button" aria-label="Close photo viewer">✕</button>' +
+        '<button class="lb-prev" type="button" aria-label="Previous photo">‹</button>' +
+        '<button class="lb-next" type="button" aria-label="Next photo">›</button>' +
+      '</figure>';
+    document.body.appendChild(el);
+    el.querySelector('.lb-back').onclick = lbClose;
+    el.querySelector('.lb-close').onclick = lbClose;
+    el.querySelector('.lb-prev').onclick = function (e) { e.stopPropagation(); lbStep(-1); };
+    el.querySelector('.lb-next').onclick = function (e) { e.stopPropagation(); lbStep(1); };
+    document.addEventListener('keydown', function (e) {
+      if (lbEl().hidden) return;
+      if (e.key === 'Escape') { e.preventDefault(); lbClose(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); lbStep(-1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); lbStep(1); }
+    });
+    /* swipe on touch */
+    var x0 = null;
+    el.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 45) lbStep(dx < 0 ? 1 : -1);
+      x0 = null;
+    }, { passive: true });
+    /* open from any gallery thumb */
+    document.getElementById('itinerary').addEventListener('click', function (e) {
+      var b = e.target.closest('.gal-i');
+      if (!b) return;
+      lbOpen(+b.dataset.day, +b.dataset.i, b);
     });
   }
 
@@ -434,6 +554,7 @@
     buildCampTable();
     buildHikeTable();
     buildBeachList();
+    initLightbox();
     navSpy();
     if (window.L) {
       initMap();

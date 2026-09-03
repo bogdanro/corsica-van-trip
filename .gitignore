@@ -8,3 +8,6 @@ shots/
 
 # unsimplified OSRM output (1.1 MB); routes_simplified.json is what gen_data.py uses
 data/routes.json
+
+# Commons API response cache (regenerate with fetch_photos.py)
+data/commons_cache.json
