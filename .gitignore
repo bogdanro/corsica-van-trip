@@ -1,0 +1,10 @@
+# local tooling / session state
+.venv/
+.remember/
+__pycache__/
+
+# rendered verification screenshots (13 MB, regenerate with shots.py)
+shots/
+
+# unsimplified OSRM output (1.1 MB); routes_simplified.json is what gen_data.py uses
+data/routes.json
