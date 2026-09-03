@@ -1,0 +1,134 @@
+{
+ "Hotel des Gouverneurs Bastia": [
+  42.69327,
+  9.4522,
+  "hotel",
+  "H\u00f4tel des Gouverneurs, 3 bis, Rue des Turquines, Bastia"
+ ],
+ "Hotel Central Bastia": [
+  42.69944,
+  9.44922,
+  "hotel",
+  "H\u00f4tel Central Bastia, Rue Miot, Capanelle, Bastia, Haut"
+ ],
+ "Hotel Ostella Bastia": [
+  42.66765,
+  9.44077,
+  "hotel",
+  "H\u00f4tel Ostella, Avenue Sampiero Corso, Erbajolo, Bastia,"
+ ],
+ "Hotel Bellevue Bastia": null,
+ "Dolce Notte Saint-Florent": [
+  42.68489,
+  9.30655,
+  "hotel",
+  "Dolce Notte, Rue Principale, Saint-Florent, Calvi, Haut"
+ ],
+ "Hotel Maxime Saint-Florent": null,
+ "Hotel Bellevue Saint-Florent": [
+  42.68287,
+  9.30482,
+  "hotel",
+  "Bellevue, Rue Ernest Bonacoscia, Saint-Florent, Calvi, "
+ ],
+ "Hotel Le Lodge Ile-Rousse": null,
+ "Hotel Liberata Ile-Rousse": [
+  42.63339,
+  8.94172,
+  "hotel",
+  "H\u00f4tel Liberata & Spa, Boulevard Charles-Marie Savelli, "
+ ],
+ "Hotel Cala di l'Oru Ile-Rousse": [
+  42.63251,
+  8.93082,
+  "hotel",
+  "Cala Di L'Oru, Chemin Costa \u00e0 I Peri, L'\u00cele-Rousse, Cal"
+ ],
+ "Hotel L'Amiraute Bonifacio": null,
+ "Hotel Solemare Bonifacio": null,
+ "Hotel Centre Nautique Bonifacio": [
+  41.38971,
+  9.16431,
+  "hotel",
+  "Centre Nautique, Quai No\u00ebl Beretti, Bonifacio / Bunifaz"
+ ],
+ "Hotel Le Colomba Bonifacio": null,
+ "Hotel Kissing Pigs Bonifacio": [
+  41.38865,
+  9.16052,
+  "restaurant",
+  "Kissing Pigs, Quai Banda del Ferro, les hauts du port, "
+ ],
+ "Hotel Le Golfe Porto": [
+  42.26763,
+  8.69375,
+  "hotel",
+  "Le Golfe, D 84, Porto, Ota, Ajaccio, Corse-du-Sud, Cors"
+ ],
+ "Hotel Capo Rosso Piana": [
+  42.24022,
+  8.64359,
+  "hotel",
+  "Capo Rosso, Corsu Nicolas Alfonsi, Vistale, Piana, Ajac"
+ ],
+ "Hotel Continental Piana": [
+  42.13666,
+  8.59666,
+  "hotel",
+  "Continental, Route de Piana, Frimicaghiola, Carg\u00e8se, Aj"
+ ],
+ "Hotel Scandola Piana": [
+  42.2379,
+  8.63352,
+  "hotel",
+  "La Scandola Hotel, Corsu Nicolas Alfonsi, Vistale, Pian"
+ ],
+ "Hotel de la Poste Corte": [
+  42.30877,
+  9.15208,
+  "hotel",
+  "H\u00f4tel de la Paix, 15, Avenue G\u00e9n\u00e9ral de Gaulle, E Quatt"
+ ],
+ "Hotel du Nord Corte": [
+  42.30729,
+  9.15066,
+  "hotel",
+  "H\u00f4tel du Nord, 22, Cours Paoli, E Quattre Funtane, Faub"
+ ],
+ "Casa Corsa Corte": [
+  42.3232,
+  9.53781,
+  "guest_house",
+  "Casa Corsa - Chambres d'H\u00f4tes de charme (Haute Corse), "
+ ],
+ "Hotel Kalliste Ajaccio": [
+  41.9243,
+  8.73773,
+  "hotel",
+  "HOTEL KALLISTE, 51, Cours Napol\u00e9on, Vieille Ville, Ajac"
+ ],
+ "Hotel San Carlu Ajaccio": [
+  41.91727,
+  8.73899,
+  "hotel",
+  "San Carlu, Rue Sainte-Claire, Vieille Ville, Ajaccio, C"
+ ],
+ "Hotel Marengo Ajaccio": [
+  41.91366,
+  8.72446,
+  "hotel",
+  "Hotel Marengo, 2, Rue de Marengo, Parc Berthault, Ajacc"
+ ],
+ "Hotel Mariana Calvi": [
+  42.56445,
+  8.75301,
+  "hotel",
+  "Le Mariana, Lotissement Les Collines, Donateo, Calvi, H"
+ ],
+ "Hotel Christophe Colomb Calvi": [
+  42.56828,
+  8.7575,
+  "hotel",
+  "H\u00f4tel Christophe Colomb, Avenue de L'Uruguay, Basse Vil"
+ ]
+}

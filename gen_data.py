@@ -427,7 +427,7 @@ STAYS = [
       price="€120–170 B&B", w="https://www.hotel-san-giovanni.com",
       t="Three hectares of garden with a pool, 3 km outside Porto-Vecchio, halfway to Palombaggia. Calm, green, and far cheaper than anything on the beach road.",
       why="The beach-lazing night. Van in the shade, hammock, pool, and Santa Giulia and Palombaggia both 15 min away."),
- dict(id="s-bavella", n="Auberge du Col de Bavella", lat=41.79483, lon=9.22903, d=14, rank=6,
+ dict(id="s-bavella", n="Auberge du Col de Bavella", lat=41.79483, lon=9.22903, d=14, rank=6, bonus=True,
       price="€75–110 half-board / dorms from €25", w=None,
       t="A wooden mountain inn at the pass itself, doing charcuterie, wild boar stew and hikers' breakfasts. Rooms are basic; the position is priceless.",
       why="Bonus pick: if you want to be at the Aiguilles for sunrise without a 5 a.m. drive, sleep at 1,218 m."),

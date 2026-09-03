@@ -400,3 +400,21 @@ footer li{padding:.16rem 0}
   .gal-i::after{opacity:1}
 }
 @media print{.gal{grid-template-columns:repeat(3,1fr)}#lightbox{display:none}}
+
+/* ---------------------------------------------------- version switcher */
+.ver{
+  display:inline-flex;margin-left:1rem;background:var(--paper-2);border:1px solid var(--line);
+  border-radius:99px;padding:2px;flex:none
+}
+.ver a{
+  padding:.3rem .78rem;border-radius:99px;font-size:.82rem;font-weight:560;color:var(--slate);
+  white-space:nowrap;line-height:1.35;transition:.14s
+}
+.ver a:hover{color:var(--ink);text-decoration:none}
+.ver a.on{background:#fff;color:var(--ink);font-weight:640;box-shadow:var(--shadow)}
+@media (max-width:760px){
+  .ver{margin-left:auto;order:3}
+  .ver a{padding:.28rem .6rem;font-size:.78rem}
+  .nav-links{order:4;width:100%}
+  .nav-in{flex-wrap:wrap;height:auto;padding-top:.5rem;padding-bottom:.4rem;gap:.6rem}
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corsica by Car &amp; Hotel — a 15-day route from seven bases</title>
+<meta name="description" content="The same Corsica route done by car, sleeping only in hotels: 15 days from seven bases, 1,472 km of real road routes, 64 mapped stops, 17 hikes and 7 mid-budget hotels.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://a.tile.opentopomap.org">
+<link rel="preconnect" href="https://tile.openstreetmap.org">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="brand">CORSICA <b>·</b> by car</span>
+    <div class="ver" role="group" aria-label="Trip version">
+      <a href="index.html">🚐 Van</a><a href="hotels.html" class="on" aria-current="page">🛏 Hotels</a>
+    </div>
+    <div class="nav-links">
+      <a href="#map-section">Map</a>
+      <a href="#itinerary-section">Itinerary</a>
+      <a href="#stay">Hotels</a>
+      <a href="#hikes">Hikes</a>
+      <a href="#water">Beaches</a>
+      <a href="#logistics">Car logistics</a>
+      <a href="#money">Budget</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================================================= HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="hero-tag">🛏 Same island, same stops · re-planned around hotel beds</span>
+    <h1>Corsica from <em>seven</em> hotel beds.</h1>
+    <p class="big">
+      The same route, the same stops, a car instead of a van and not a tent in sight. Sleeping in
+      seven bases instead of moving every night turns most days into loops — you unpack once and come
+      back to the same bed. It costs you more money, a little more driving, and a handful of stops
+      the van version reaches.
+    </p>
+    <div class="stats">
+      <div class="stat"><b id="sDays">15</b><span>days</span></div>
+      <div class="stat"><b id="sKm">1,472</b><span>km driving</span></div>
+      <div class="stat"><b id="sDrive">35 h</b><span>behind the wheel</span></div>
+      <div class="stat"><b id="sStops">64</b><span>mapped stops</span></div>
+      <div class="stat"><b>7</b><span>hotel bases</span></div>
+      <div class="stat"><b id="sHikes">17</b><span>hikes</span></div>
+    </div>
+    <p class="hero-src">
+      This is the hotel-only cut of the <a href="index.html">van version ↗</a> — same source film,
+      same verified coordinates and real road routing, re-planned around beds instead of pitches.
+      Source: <a href="https://www.youtube.com/watch?v=BVLl3bvjSQw" target="_blank" rel="noopener">Corsica | An Incredible 10-Day Road Trip ↗</a>.
+    </p>
+  </div>
+</header>
+
+<!-- ================================================= MAP -->
+<section id="map-section">
+  <div class="wrap">
+    <p class="eyebrow">The route</p>
+    <h2>Fifteen days, seven bases</h2>
+    <p class="lede">
+      Notice the shape: six of the fifteen days are closed loops that start and finish at the same
+      hotel. That is the whole point of this version. Pick a day to isolate it, and filter the pins by
+      what you feel like doing. Every line is the actual road, so the distances are honest — Corsica
+      averages about 42 km/h once you are basing rather than pushing on.
+    </p>
+
+    <div class="map-shell">
+      <aside class="map-side">
+        <div class="map-side-hd">
+          <h4>Filter the pins</h4>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="day-list" id="dayList"></div>
+      </aside>
+      <div class="map-main">
+        <div id="map" role="application" aria-label="Map of the Corsica van route"></div>
+        <button class="map-reset" id="mapReset" type="button">Whole route · 15 days</button>
+        <div class="map-legend">
+          <b>Legend</b>
+          <div><s></s> selected day's drive</div>
+          <div><s class="ghost"></s> the other 14 days</div>
+          <div style="margin-top:.35rem;opacity:.7">Click any line, pin or cluster for detail. Switch to the plain basemap top-right.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================= ITINERARY -->
+<section id="itinerary-section">
+  <div class="wrap">
+    <p class="eyebrow">Day by day</p>
+    <h2>The itinerary</h2>
+    <p class="lede">
+      Seven bases over fourteen nights: Bastia ×3, Calvi ×2, Porto ×2, Ajaccio ×2, Bonifacio ×2,
+      Zonza ×1, Corte ×2. Six of the fifteen days never change hotel, which means six mornings where
+      you get up, get in the car and go. Every day names its bed, its hike and its parking.
+    </p>
+    <div class="note warn" style="max-width:70ch;margin-top:1.4rem">
+      <b>What sleeping in hotels costs you.</b> Eleven stops from the van version don't survive the
+      re-plan, because they sit in valleys with no mid-budget bed within an hour: Ota, Évisa,
+      Cristinacce, Col de Vergio, Lac de Nino, Haut-Asco, the Gorge de l'Asco, Ghisoni, Campi,
+      Orezza and Sainte-Lucie-de-Tallano — most of the deep interior. You also drive
+      <b>132 km further</b> than the van version, because loops backtrack. What you get back is
+      fourteen nights of not looking for somewhere legal to sleep.
+    </div>
+    <div id="itinerary"></div>
+  </div>
+</section>
+
+<!-- ================================================= HOTELS -->
+<section id="stay">
+  <div class="wrap">
+    <p class="eyebrow">The seven beds</p>
+    <h2>Seven bases, fourteen nights</h2>
+    <p class="lede">
+      Chosen so that every one is walkable to dinner, has parking for the car, and sits inside an
+      hour of that day's stops. All are mid-budget — €80–200 a night in shoulder season — and each
+      is the reason the surrounding days are shaped the way they are.
+    </p>
+    <div class="grid g3" id="stayGrid"></div>
+    <p style="margin-top:1.4rem;font-size:.88rem;color:var(--muted);max-width:70ch">
+      Prices are shoulder-season doubles (May–June, September) and rise steeply in August, when
+      Bonifacio and Porto in particular need booking months out. Positions are OpenStreetMap-verified;
+      rates and availability are not, so check before you rely on them.
+    </p>
+  </div>
+</section>
+
+<!-- ================================================= HIKES -->
+<section id="hikes">
+  <div class="wrap">
+    <p class="eyebrow">On foot</p>
+    <h2>Fifteen hikes and walks, easy to brutal</h2>
+    <p class="lede">
+      Where the film gives its own figures — Capo Rosso, Monte Senino, Bavella, Melo, Figarella — those
+      are the numbers used here. Two of the van version's hikes go with the interior: Lac de Nino and
+      Punta Muvrella above Haut-Asco. Three of what's left are hard days out. None need ropes.
+    </p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Hike</th><th>Distance</th><th>Ascent</th><th>Time</th><th>Grade</th><th></th></tr></thead>
+        <tbody id="hikeBody"></tbody>
+      </table>
+    </div>
+    <div class="note hike" style="max-width:74ch;margin-top:1.4rem">
+      <b>Mountain rules that matter here.</b> Storms build over the Corsican interior in the early
+      afternoon almost daily in summer — start at first light and be off the ridges by 14:00.
+      There is no shade on any coastal hike: two litres of water each, minimum. Fires and off-trail
+      camping are banned island-wide in the fire season, and the maquis burns fast.
+    </div>
+  </div>
+</section>
+
+<!-- ================================================= BEACHES -->
+<section id="water">
+  <div class="wrap">
+    <p class="eyebrow">Doing nothing</p>
+    <h2>Beaches, river pools and one black shingle bay</h2>
+    <p class="lede">
+      Two kinds of swimming on this route: the white-sand postcard beaches of the south and Balagne,
+      and the cold granite plunge pools of the interior, which are free, empty and better on a
+      35-degree afternoon.
+    </p>
+    <div class="grid g3" id="beachGrid"></div>
+  </div>
+</section>
+
+<!-- ================================================= LOGISTICS -->
+<section id="logistics">
+  <div class="wrap">
+    <p class="eyebrow">Car logistics</p>
+    <h2>Getting there, and getting round</h2>
+
+    <dl class="fact" style="display:block;margin:2rem 0 0">
+      <div class="fact">
+        <dt>Ferry out<small>Toulon → Bastia</small></dt>
+        <dd>
+          Corsica Ferries, overnight, about 11–12 hours, docking in Bastia in the morning. A car plus
+          two passengers is roughly <b>€120–200 one way</b> in shoulder season — ferries price by
+          vehicle length, so this is where a car saves you real money over a van. Book a cabin.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Or don't take a car at all<small>often the cheaper answer</small></dt>
+        <dd>
+          Fly to Bastia, Calvi, Ajaccio or Figari and hire on arrival. Fifteen days of a small car in
+          shoulder season runs about <b>€450–650</b>, against roughly €300 of return ferry for your
+          own. Add flights and it's usually a wash on money and a clear win on time — you skip two
+          overnight crossings. Book the car the moment you book the flight; the island genuinely runs
+          out in August.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Ferry back<small>Bastia → Livorno</small></dt>
+        <dd>
+          If you did bring the car: <b>four hours</b> instead of twelve, usually cheaper, and it puts
+          you in Tuscany. Savona, Genoa, Nice and Marseille are the alternatives. A different port out
+          and back costs nothing extra.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Speed and distance<small>the number that ruins plans</small></dt>
+        <dd>
+          1,472 km over 15 days is <b>35 hours of moving time</b> — an average of <b>42 km/h</b>.
+          That is <b>132 km more than the van version</b>, which is the honest price of basing:
+          loops backtrack. Two hours of mapped driving is a half-day here. The heaviest days are
+          <b>12</b> (144 km, beaches then the Ospedale) and <b>13</b> (171 km, Bavella to Corte).
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>What a car changes</dt>
+        <dd>
+          Most of the van version's warnings simply evaporate. The <b>D81 through the Calanches de
+          Piana</b> — its single worst pinch point — is just a spectacular drive in a car. So are the
+          <b>D253 to Barcaggio</b>, the <b>D268 to Bavella</b> and the <b>D71 through the
+          Castagniccia</b>. Parking near beaches and in old towns gets dramatically easier.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>What a car doesn't change</dt>
+        <dd>
+          <b>Restonica (D623)</b> is still closed beyond the Pont de Tragone after the 2023 storms —
+          shuttle only, booked in advance, for everyone.<br>
+          <b>The Saleccia piste</b> is still a 12 km 4x4 track that voids hire agreements: take the
+          boat.<br>
+          <b>The Roccapina track</b> is still 3.5 km of rock and ruts, and a low-slung hire car will
+          ground out — park at the top and walk.<br>
+          Fuel in the interior is still scarce and shut on Sundays. Never cross the mountains below
+          half a tank.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Booking</dt>
+        <dd>
+          The trade-off of this version: you are committed. Fourteen nights across seven hotels have
+          to be booked in advance, and in July–August Bonifacio and Porto want months of notice.
+          A van lets you change your mind at 5 p.m.; this does not. Book the two Bonifacio nights and
+          the two Porto nights first — they are the constraints everything else bends around.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>When to go</dt>
+        <dd>
+          <b>May–June</b> is what the film shows: waterfalls at full flow, snow still on Cinto,
+          sea around 19 °C, hotels with space and shoulder rates. <b>September</b> trades the
+          waterfalls for a warm sea. <b>July–August</b> doubles every room rate on this page and
+          fills them anyway.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Three travellers, one route</dt>
+        <dd>
+          <b>Nature &amp; hiking</b> days: 5, 6, 7, 9, 13, 14. <b>Beach &amp; chill</b> days: 3, 11,
+          12, plus the afternoons of 4 and 7. <b>Towns &amp; culture</b> days: 1, 2, 8, 10.
+          Basing makes splitting up easy: on day 14 one of you can take the Restonica shuttle for
+          Melo while the other keeps Corte's citadel and a long lunch, and you meet at the hotel.
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================================================= BUDGET -->
+<section id="money">
+  <div class="wrap narrow">
+    <p class="eyebrow">What it costs</p>
+    <h2>Budget: two people, fifteen days, car and hotels</h2>
+    <p class="lede">Shoulder-season estimate, mid-budget, eating out most evenings.</p>
+    <div class="tbl-wrap money">
+      <table>
+        <thead><tr><th>Item</th><th>Assumption</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td class="n">Ferry, return</td><td>Toulon→Bastia overnight + Bastia→Livorno, car, 2 people, 1 cabin</td><td>€300</td></tr>
+          <tr><td class="n">Hotels</td><td>14 nights across 7 bases, average €125 B&amp;B</td><td>€1,750</td></tr>
+          <tr><td class="n">Fuel</td><td>≈1,600 km with detours, 6.5 L/100 km, €1.95/L</td><td>€203</td></tr>
+          <tr><td class="n">Lunches &amp; groceries</td><td>€22/day — picnics on hiking days</td><td>€330</td></tr>
+          <tr><td class="n">Dinners out</td><td>13 × €60 for two (one half-board night at Zonza)</td><td>€780</td></tr>
+          <tr><td class="n">Boats</td><td>Scandola/Girolata, Lavezzi, Saleccia shuttle</td><td>€160</td></tr>
+          <tr><td class="n">Entries, parking, shuttles</td><td>Restonica navetta, Filitosa, Aleria, Cucuruzzu, beach and town parking</td><td>€165</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>Total for two</td><td>≈ €121 per person per day</td><td>€3,688</td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <p style="margin-top:1rem;font-size:.86rem;color:var(--muted)">
+      That is <b>€1,162 more</b> than the <a href="index.html">van version</a>'s €2,526 — about
+      44% dearer, essentially all of it the difference between €28 pitches and €125 rooms. Flying in
+      and hiring a car instead of bringing your own removes the €300 ferry and adds roughly €450–650,
+      so budget a further €150–350 depending on flight prices.
+    </p>
+
+    <h3 style="margin-top:2.8rem;font-family:var(--serif);font-size:1.5rem">Pack for two climates</h3>
+    <ul class="pack">
+      <li><b>Proper hiking boots</b> — Melo, Bavella and Capo Rosso are rock, not path</li>
+      <li><b>2 × 1 L bottles each</b> plus a bladder for the long days</li>
+      <li><b>Fleece and windproof shell</b> — Bavella and Vizzavona are cold at dawn</li>
+      <li><b>Water shoes</b> for the river canyons and shingle beaches</li>
+      <li><b>Head torch</b> — for the Melo day, which starts before light</li>
+      <li><b>A day pack</b> that lives in the boot, so the suitcase stays at the hotel</li>
+      <li><b>Paper map (IGN Corse)</b> — mobile signal dies in the Niolu and the Alta Rocca</li>
+      <li><b>Offline maps downloaded</b> before you leave the coast</li>
+      <li><b>Snorkel and mask</b> — Lavezzi, Rondinara and Scandola deserve it</li>
+      <li><b>Reef-safe sun cream, hat, sunglasses</b> — no shade on any coastal hike</li>
+      <li><b>Tick remover and antihistamine</b> — maquis and grazing animals</li>
+      <li><b>One smart-ish outfit</b> — Bonifacio and Ajaccio have real restaurants</li>
+      <li><b>All seven bookings printed or offline</b> — see the signal note above</li>
+      <li><b>Cash</b> — small mountain places still prefer it</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Built from</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=BVLl3bvjSQw" target="_blank" rel="noopener">The source film ↗</a> — stop list, narration and hike figures</li>
+          <li>Its auto-generated transcript, for the details the timestamps don't carry</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Data</h4>
+        <ul>
+          <li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap ↗</a> — every coordinate on this page</li>
+          <li><a href="https://overpass-api.de/" target="_blank" rel="noopener">Overpass API ↗</a> — the 254 Corsican campsites this list was curated from</li>
+          <li><a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM ↗</a> — real road geometry, distances and driving times</li>
+          <li><a href="https://opentopomap.org/" target="_blank" rel="noopener">OpenTopoMap ↗</a> — terrain tiles (relief matters on this island)</li>
+          <li><a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons ↗</a> — all 88 photos, freely licensed. Each one credits its photographer and licence in the viewer; open a photo to see them.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Check before you go</h4>
+        <ul>
+          <li><a href="https://www.corsica-ferries.co.uk/" target="_blank" rel="noopener">Corsica Ferries ↗</a> — sailings and vehicle rates</li>
+          <li>Your seven hotels — reconfirm a week out; small Corsican hotels do cancel</li>
+          <li><a href="https://www.corte-tourisme.com/" target="_blank" rel="noopener">Corte tourist office ↗</a> — Restonica road and Navetta C13 status</li>
+          <li><a href="https://meteofrance.com/previsions-meteo-france/corse/10" target="_blank" rel="noopener">Météo-France Corse ↗</a> — check it every morning before a ridge</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-b">
+      Coordinates, road routes and campsite existence are machine-verified. Opening hours, prices,
+      shuttle timetables and road closures change — treat every number here as a plan, not a promise,
+      and confirm the Restonica situation locally. Hotel rates in particular are indicative only.
+      Prefer to sleep in a van? <a href="index.html">The same route with 30 campsites ↗</a>.
+    </p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="assets/js/data-hotels.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

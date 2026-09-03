@@ -238,6 +238,7 @@
   /* ============================================================ UI build */
   function buildChips() {
     var box = document.getElementById('chips');
+    if (!box) return;
     Object.keys(CATS).forEach(function (k) {
       if (!PTS.some(function (p) { return p.c === k; })) return;
       var n = PTS.filter(function (p) { return p.c === k; }).length;
@@ -259,6 +260,7 @@
 
   function buildDayList() {
     var box = document.getElementById('dayList');
+    if (!box) return;
     T.days.forEach(function (d) {
       var b = document.createElement('button');
       b.className = 'day-btn'; b.type = 'button'; b.dataset.day = d.day;
@@ -272,6 +274,7 @@
 
   function buildItinerary() {
     var box = document.getElementById('itinerary');
+    if (!box) return;
     T.days.forEach(function (d) {
       var stops = (poisByDay[d.day] || []).filter(function (p) { return p.kind === 'poi'; });
       var camps = (poisByDay[d.day] || []).filter(function (p) { return p.kind === 'camp'; });
@@ -438,7 +441,9 @@
       x0 = null;
     }, { passive: true });
     /* open from any gallery thumb */
-    document.getElementById('itinerary').addEventListener('click', function (e) {
+    var itin = document.getElementById('itinerary');
+    if (!itin) return;
+    itin.addEventListener('click', function (e) {
       var b = e.target.closest('.gal-i');
       if (!b) return;
       lbOpen(+b.dataset.day, +b.dataset.i, b);
@@ -447,12 +452,17 @@
 
   function buildStays() {
     var box = document.getElementById('stayGrid');
+    if (!box) return;
     T.stays.forEach(function (s) {
-      var bonus = s.rank > 5;
+      var bonus = !!s.bonus;
       var h = '<div class="card">';
       h += '<span class="rank' + (bonus ? ' alt' : '') + '">' + (bonus ? 'Bonus' : 'No. ' + s.rank) + '</span>';
       h += '<h3>' + esc(s.n) + '</h3>';
-      h += '<div class="sub">Night ' + s.d + ' &middot; <span class="price">' + esc(s.price) + '</span></div>';
+      var nightLbl = s.nights
+        ? (/[–-]/.test(s.nights) ? 'Nights ' : 'Night ') + esc(s.nights)
+        : 'Night ' + s.d;
+      h += '<div class="sub">' + nightLbl +
+           ' &middot; <span class="price">' + esc(s.price) + '</span></div>';
       h += '<p>' + esc(s.t) + '</p>';
       h += '<div class="why"><b>Why here, on this night</b>' + esc(s.why) + '</div>';
       var links = ['<a href="#map-section" data-focus="' + s.id + '">Show on map →</a>'];
@@ -475,6 +485,7 @@
 
   function buildCampTable() {
     var tb = document.getElementById('campBody');
+    if (!tb || !T.camps.length) return;
     T.camps.slice().sort(function (a, b) { return a.d - b.d; }).forEach(function (c) {
       var d = T.days.filter(function (x) { return x.day === c.d; })[0];
       tb.insertAdjacentHTML('beforeend',
@@ -491,6 +502,7 @@
 
   function buildHikeTable() {
     var tb = document.getElementById('hikeBody');
+    if (!tb) return;
     var hikes = T.pois.filter(function (p) { return p.hike; }).sort(function (a, b) { return a.d - b.d; });
     hikes.forEach(function (p) {
       var g = p.hike.grade, cls = /^Hard/i.test(g) ? 'b-hard' : /^Easy/i.test(g) ? 'b-easy' : 'b-mod';
@@ -506,6 +518,7 @@
 
   function buildBeachList() {
     var box = document.getElementById('beachGrid');
+    if (!box) return;
     T.pois.filter(function (p) { return p.c === 'beach' || p.c === 'swim'; })
       .sort(function (a, b) { return a.d - b.d; })
       .forEach(function (p) {

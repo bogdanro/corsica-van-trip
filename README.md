@@ -1,6 +1,6 @@
 # Corsica by Van — a 15-day trip plan
 
-### → **[bogdanro.github.io/corsica-van-trip](https://bogdanro.github.io/corsica-van-trip/)**
+### → **[Van version](https://bogdanro.github.io/corsica-van-trip/)** · **[Hotel version](https://bogdanro.github.io/corsica-van-trip/hotels.html)**
 
 A single-page trip-planning site built from the road-trip film
 **[Corsica | An Incredible 10-Day Road Trip](https://www.youtube.com/watch?v=BVLl3bvjSQw)**,
@@ -10,6 +10,22 @@ No build step and no framework. Open `index.html` in any browser, or use
 `corsica-van-trip.html` — the same site inlined into one 223 KB file you can
 email or open offline. Either way the interactive map needs internet access for
 Leaflet and the map tiles; everything else works offline.
+
+## Two versions of the same trip
+
+The same stops, coordinates, photos and routing engine, re-planned around a
+different constraint — a demonstration that changing *how you sleep* changes the
+whole shape of a trip, not just one line of it.
+
+| | Van (`index.html`) | Car + hotels (`hotels.html`) |
+|---|---|---|
+| Sleeps | 14 different campsites | 7 hotel bases, 14 nights |
+| Shape | one continuous anticlockwise loop | 6 of 15 days are closed loops from a base |
+| Driving | 1,340 km / 32 h | 1,472 km / 35 h — loops backtrack |
+| Stops | 75 | 64 |
+| Cost, 2 people | ≈ €2,526 (€84 pp/day) | ≈ €3,688 (€121 pp/day) |
+| Gives up | comfort, laundry, a flat bed | the deep interior: Vergio, Nino, Asco, Ghisoni, Ota, Évisa, Orezza and four more |
+| Wins | flexibility, cost, sleeping at altitude | no wild-camping law to worry about, unpack once |
 
 ## What's in it
 
@@ -68,7 +84,9 @@ assets/css/style.css       styles
 assets/js/data.js          generated: pois, camps, stays, days (+route geometry, +photos)
 assets/photos/             88 CC photos, WebP, full + thumb
 assets/js/app.js           map, filters and section renderers
-gen_data.py                regenerates assets/js/data.js
+gen_data.py                regenerates assets/js/data.js (van)
+gen_hotels.py              regenerates assets/js/data-hotels.js (car + hotels)
+build_routes_hotels.py     OSRM routing for the hotel version's day loops
 data/                      raw research: routes, geocodes, campsites, transcript
 shots/                     rendered screenshots from the verification run
 verify.py, shots.py        headless-Chromium checks and screenshots
@@ -80,6 +98,7 @@ verify.py, shots.py        headless-Chromium checks and screenshots
 python3 fetch_photos.py                   # re-curate photo picks from Commons
 python3 download_photos.py                # download + re-encode them
 python3 gen_data.py                       # rewrite assets/js/data.js
+python3 gen_hotels.py                     # rewrite assets/js/data-hotels.js
 python3 -m http.server 8765               # then open http://127.0.0.1:8765
 .venv/bin/python verify.py                # DOM/console/interaction checks + screenshots
 ```
