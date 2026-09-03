@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Corsica by Car &amp; Hotel — a 15-day route from seven bases</title>
-<meta name="description" content="The same Corsica route done by car, sleeping only in hotels: 15 days from seven bases, 1,472 km of real road routes, 64 mapped stops, 17 hikes and 7 mid-budget hotels.">
+<title>Corsica by Car &amp; Hotel — a 16-day route from seven bases</title>
+<meta name="description" content="The same Corsica route done by car, sleeping only in hotels: 16 days from seven bases, 1,582 km of real road routes, 64 mapped stops, 17 hikes and 7 mid-budget hotels.">
 <meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://unpkg.com">
 <link rel="preconnect" href="https://a.tile.opentopomap.org">
@@ -48,7 +48,7 @@
       the van version reaches.
     </p>
     <div class="stats">
-      <div class="stat"><b id="sDays">15</b><span>days</span></div>
+      <div class="stat"><b id="sDays">15</b><span>days (15 + buffer)</span></div>
       <div class="stat"><b id="sKm">1,472</b><span>km driving</span></div>
       <div class="stat"><b id="sDrive">35 h</b><span>behind the wheel</span></div>
       <div class="stat"><b id="sStops">64</b><span>mapped stops</span></div>
@@ -67,9 +67,9 @@
 <section id="map-section">
   <div class="wrap">
     <p class="eyebrow">The route</p>
-    <h2>Fifteen days, seven bases</h2>
+    <h2>Sixteen days, seven bases</h2>
     <p class="lede">
-      Notice the shape: six of the fifteen days are closed loops that start and finish at the same
+      Notice the shape: six of the sixteen days are closed loops that start and finish at the same
       hotel. That is the whole point of this version. Pick a day to isolate it, and filter the pins by
       what you feel like doing. Every line is the actual road, so the distances are honest — Corsica
       averages about 42 km/h once you are basing rather than pushing on.
@@ -85,7 +85,7 @@
       </aside>
       <div class="map-main">
         <div id="map" role="application" aria-label="Map of the Corsica van route"></div>
-        <button class="map-reset" id="mapReset" type="button">Whole route · 15 days</button>
+        <button class="map-reset" id="mapReset" type="button">Whole route · 16 days</button>
         <div class="map-legend">
           <b>Legend</b>
           <div><s></s> selected day's drive</div>
@@ -103,17 +103,25 @@
     <p class="eyebrow">Day by day</p>
     <h2>The itinerary</h2>
     <p class="lede">
-      Seven bases over fourteen nights: Bastia ×3, Calvi ×2, Porto ×2, Ajaccio ×2, Bonifacio ×2,
-      Zonza ×1, Corte ×2. Six of the fifteen days never change hotel, which means six mornings where
+      Seven bases over fifteen nights: Bastia ×3 + a fourth on the buffer night, Calvi ×2, Porto ×2, Ajaccio ×2, Bonifacio ×2,
+      Zonza ×1, Corte ×2. Six of the sixteen days never change hotel, which means six mornings where
       you get up, get in the car and go. Every day names its bed, its hike and its parking.
     </p>
+    <div class="note time" style="max-width:74ch;margin-top:1.4rem">
+      <b>How the days are timed.</b> Every day names the time you should be checked in — usually
+      18:00 — and the driving is sized to hit it, because campsite receptions shut around 19:30 and
+      hotel check-in doesn't open until 15:00. Where the evening is the point (the Calanches, the
+      Sanguinaires), the day checks in first and goes back out. And day 16 is a deliberate buffer:
+      night 15 is 20 minutes from the ferry, so nothing that goes wrong in the mountains can cost you
+      the crossing.
+    </div>
     <div class="note warn" style="max-width:70ch;margin-top:1.4rem">
       <b>What sleeping in hotels costs you.</b> Eleven stops from the van version don't survive the
       re-plan, because they sit in valleys with no mid-budget bed within an hour: Ota, Évisa,
       Cristinacce, Col de Vergio, Lac de Nino, Haut-Asco, the Gorge de l'Asco, Ghisoni, Campi,
       Orezza and Sainte-Lucie-de-Tallano — most of the deep interior. You also drive
-      <b>132 km further</b> than the van version, because loops backtrack. What you get back is
-      fourteen nights of not looking for somewhere legal to sleep.
+      <b>134 km further</b> than the van version, because loops backtrack. What you get back is
+      fifteen nights of not looking for somewhere legal to sleep.
     </div>
     <div id="itinerary"></div>
   </div>
@@ -123,7 +131,7 @@
 <section id="stay">
   <div class="wrap">
     <p class="eyebrow">The seven beds</p>
-    <h2>Seven bases, fourteen nights</h2>
+    <h2>Seven bases, fifteen nights</h2>
     <p class="lede">
       Chosen so that every one is walkable to dinner, has parking for the car, and sits inside an
       hour of that day's stops. All are mid-budget — €80–200 a night in shoulder season — and each
@@ -213,8 +221,8 @@
       <div class="fact">
         <dt>Speed and distance<small>the number that ruins plans</small></dt>
         <dd>
-          1,472 km over 15 days is <b>35 hours of moving time</b> — an average of <b>42 km/h</b>.
-          That is <b>132 km more than the van version</b>, which is the honest price of basing:
+          1,582 km over 16 days is <b>37 hours of moving time</b> — an average of <b>43 km/h</b>.
+          That is <b>134 km more than the van version</b>, which is the honest price of basing:
           loops backtrack. Two hours of mapped driving is a half-day here. The heaviest days are
           <b>12</b> (144 km, beaches then the Ospedale) and <b>13</b> (171 km, Bavella to Corte).
         </dd>
@@ -251,6 +259,39 @@
         </dd>
       </div>
       <div class="fact">
+        <dt>The buffer day<small>day 16 does nothing on purpose</small></dt>
+        <dd>
+          The plan is fifteen days of content and <b>sixteen days away</b>. Night 15 is spent 20
+          minutes from the ferry gate, and day 16 has nothing in it that matters. Corsica will take a
+          day off you sooner or later — a storm on the Bavella road, a puncture on the D81, a hike
+          that runs three hours over, a ferry that reschedules — and the alternative to a buffer is
+          that the missing day comes out of the crossing you already paid for. If nothing goes wrong,
+          you get the Castagniccia and a calm morning. That is not a wasted day; it is the cheapest
+          insurance on the trip.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Check-in windows<small>the constraint most plans ignore</small></dt>
+        <dd>
+          Corsican campsite receptions typically run <b>08:00–12:00 and 15:00–19:30</b>, and close
+          earlier at altitude and outside July–August; hotels check in <b>from 15:00</b> and out by
+          10:00–11:00. So two rules shape every day here. <b>Don't plan to arrive late:</b> every day
+          carries a "be at your bed by" time, generally 18:00, and the driving is sized to hit it.
+          <b>Don't plan to arrive early either:</b> your room is not ready at 09:00, which is why day
+          one leaves the bags at reception and goes walking. These windows are typical, not promises —
+          confirm yours, especially if you will land after 19:00.
+        </dd>
+      </div>
+      <div class="fact">
+        <dt>Sunsets need checking in first</dt>
+        <dd>
+          Three of the best hours of this trip are after 20:30: the Calanches de Piana, the Îles
+          Sanguinaires and the tower at Nonza. Late May sunset is around 21:00 and no reception is
+          taking an arrival then. Each of those days is built to <b>check in first and go back
+          out</b> — the pitch or the room is already yours, so coming back at 22:00 costs nothing.
+        </dd>
+      </div>
+      <div class="fact">
         <dt>When to go</dt>
         <dd>
           <b>May–June</b> is what the film shows: waterfalls at full flow, snow still on Cinto,
@@ -276,28 +317,28 @@
 <section id="money">
   <div class="wrap narrow">
     <p class="eyebrow">What it costs</p>
-    <h2>Budget: two people, fifteen days, car and hotels</h2>
+    <h2>Budget: two people, sixteen days, car and hotels</h2>
     <p class="lede">Shoulder-season estimate, mid-budget, eating out most evenings.</p>
     <div class="tbl-wrap money">
       <table>
         <thead><tr><th>Item</th><th>Assumption</th><th>Total</th></tr></thead>
         <tbody>
           <tr><td class="n">Ferry, return</td><td>Toulon→Bastia overnight + Bastia→Livorno, car, 2 people, 1 cabin</td><td>€300</td></tr>
-          <tr><td class="n">Hotels</td><td>14 nights across 7 bases, average €125 B&amp;B</td><td>€1,750</td></tr>
-          <tr><td class="n">Fuel</td><td>≈1,600 km with detours, 6.5 L/100 km, €1.95/L</td><td>€203</td></tr>
-          <tr><td class="n">Lunches &amp; groceries</td><td>€22/day — picnics on hiking days</td><td>€330</td></tr>
-          <tr><td class="n">Dinners out</td><td>13 × €60 for two (one half-board night at Zonza)</td><td>€780</td></tr>
+          <tr><td class="n">Hotels</td><td>15 nights across 7 bases, average €125 B&amp;B</td><td>€1,875</td></tr>
+          <tr><td class="n">Fuel</td><td>≈1,700 km with detours, 6.5 L/100 km, €1.95/L</td><td>€215</td></tr>
+          <tr><td class="n">Lunches &amp; groceries</td><td>€22/day × 16 — picnics on hiking days</td><td>€352</td></tr>
+          <tr><td class="n">Dinners out</td><td>14 × €60 for two (one half-board night at Zonza)</td><td>€840</td></tr>
           <tr><td class="n">Boats</td><td>Scandola/Girolata, Lavezzi, Saleccia shuttle</td><td>€160</td></tr>
           <tr><td class="n">Entries, parking, shuttles</td><td>Restonica navetta, Filitosa, Aleria, Cucuruzzu, beach and town parking</td><td>€165</td></tr>
         </tbody>
         <tfoot>
-          <tr><td>Total for two</td><td>≈ €121 per person per day</td><td>€3,688</td></tr>
+          <tr><td>Total for two</td><td>≈ €122 per person per day</td><td>€3,907</td></tr>
         </tfoot>
       </table>
     </div>
     <p style="margin-top:1rem;font-size:.86rem;color:var(--muted)">
-      That is <b>€1,162 more</b> than the <a href="index.html">van version</a>'s €2,526 — about
-      44% dearer, essentially all of it the difference between €28 pitches and €125 rooms. Flying in
+      That is <b>€1,302 more</b> than the <a href="index.html">van version</a>'s €2,605 — about
+      50% dearer, essentially all of it the difference between €28 pitches and €125 rooms. Flying in
       and hiring a car instead of bringing your own removes the €300 ferry and adds roughly €450–650,
       so budget a further €150–350 depending on flight prices.
     </p>

@@ -34,39 +34,45 @@ HOTEL_DAYS = {
  13: ["cucuruzzu","carbini","bavella","aiguilles","solenzara","aleria"],
  14: ["restonica","melo","corte"],
  15: ["scala","calacuccia","aruda"],
+ 16: ["orezza"],
 }
 
 DAY_META = {
  1:  dict(base="Bastia", theme="Land, drop the bags, walk the old port", vid="00:00–01:29",
-          intro="The ferry docks in the morning. Check in, leave the car, and spend the day on foot between Bastia's old port and the first villages up the Cap."),
+          bed="18:00", tip='Your room will not be ready when the ferry docks at 08:00 — hotel check-in here is from 15:00. Leave the bags at reception, take the day on foot, and collect the key at six.', intro="The ferry docks in the morning. Check in, leave the car, and spend the day on foot between Bastia's old port and the first villages up the Cap."),
  2:  dict(base="Bastia", theme="The whole Cap in one loop", vid="01:29–08:32",
-          intro="The big advantage of a base: today is a 137 km circuit of the entire peninsula and you come back to the same bed. No packing."),
+          bed="18:00", intro="The big advantage of a base: today is a 137 km circuit of the entire peninsula and you come back to the same bed. No packing."),
  3:  dict(base="Bastia", theme="The Agriates, mostly by boat", vid="08:32",
-          intro="Saint-Florent in the morning, then a boat to the beaches you cannot drive to. Back in Bastia for the third and last night."),
+          bed="18:00", intro="Saint-Florent in the morning, then a boat to the beaches you cannot drive to. Back in Bastia for the third and last night."),
  4:  dict(base="Calvi", theme="Along the Balagne to Calvi", vid="08:32–12:08",
-          intro="The one long transfer of the first week, broken by a wild beach, a market town and two perched villages."),
+          bed="18:00", intro="The one long transfer of the first week, broken by a wild beach, a market town and two perched villages."),
  5:  dict(base="Calvi", theme="Citadel, chestnut villages and a river", vid="12:08–13:07",
-          intro="Old town in the morning, mountains in the afternoon, and back to Calvi for dinner on the quay."),
+          bed="18:30", intro="Old town in the morning, mountains in the afternoon, and back to Calvi for dinner on the quay."),
  6:  dict(base="Porto", theme="The wild west coast", vid="13:07–16:22",
-          intro="105 km that takes over three hours. The most spectacular driving on the island, and the day you understand Corsican distances."),
+          bed="18:00", tip='3¼ hours of driving and a 4-hour hike up Monte Senino do not fit in one day. Leave Calvi at 07:00 or move Senino to tomorrow.', intro="105 km that takes over three hours. The most spectacular driving on the island, and the day you understand Corsican distances."),
  7:  dict(base="Porto", theme="Red granite and a beach", vid="18:27–19:03",
-          intro="A loop from Porto: the Calanches early, Capo Rosso before it gets hot, Arone all afternoon."),
+          bed="17:30", tip='Check in at Porto first, then drive the 15 minutes back for the Calanches at sunset. The hotel is not going anywhere; the light is.', intro="A loop from Porto: the Calanches early, Capo Rosso before it gets hot, Arone all afternoon."),
  8:  dict(base="Ajaccio", theme="South to the capital", vid="36:42–37:21",
-          intro="Down the coast through the Greek village of Cargèse, into Ajaccio by mid-afternoon, and out to the Sanguinaires for sunset."),
+          bed="16:00", tip='Check in, then go out to the Sanguinaires. Check the Parata car park barrier time before committing to sunset.', intro="Down the coast through the Greek village of Cargèse, into Ajaccio by mid-afternoon, and out to the Sanguinaires for sunset."),
  9:  dict(base="Ajaccio", theme="A mountain day, then back to the city", vid="35:45–38:16",
-          intro="The day a hotel base really pays: a 136 km mountain circuit with no luggage in the car, and a restaurant waiting at the end."),
+          bed="18:30", intro="The day a hotel base really pays: a 136 km mountain circuit with no luggage in the car, and a restaurant waiting at the end."),
  10: dict(base="Bonifacio", theme="Menhirs, granite towns, a lion", vid="30:45–31:19",
-          intro="The long run south, broken by the best prehistoric site on the island and a beach under a lion-shaped rock."),
+          bed="18:00", intro="The long run south, broken by the best prehistoric site on the island and a beach under a lion-shaped rock."),
  11: dict(base="Bonifacio", theme="Cliffs, and a boat to the Lavezzi", vid="31:19–33:32",
-          intro="Almost no driving. The Haute Ville on foot, a boat out to the granite islands, and a swim at Rondinara."),
+          tip='No move today — you are already checked in, which is why this is the day for a boat.', intro="Almost no driving. The Haute Ville on foot, a boat out to the granite islands, and a swim at Rondinara."),
  12: dict(base="Zonza", theme="White sand in the morning, pine forest by dusk", vid="29:19",
-          intro="Three of Europe's best beaches, then 900 m up into the Ospedale forest. The longest day of the trip — start early."),
+          bed="18:30", tip='The longest day: 144 km, three beaches and a waterfall walk. Zonza is a village inn that serves dinner at 19:30, so leave Bonifacio by 08:30.', intro="Three of Europe's best beaches, then 900 m up into the Ospedale forest. The longest day of the trip — start early."),
  13: dict(base="Corte", theme="Bronze Age, then the needles", vid="26:30–29:56 / 25:23",
-          intro="A fortified site in an oak wood, the Bavella needles at their best in the morning light, then down to the sea and across to Corte."),
+          bed="18:00", intro="A fortified site in an oak wood, the Bavella needles at their best in the morning light, then down to the sea and across to Corte."),
  14: dict(base="Corte", theme="Restonica — the big one", vid="40:00–44:38",
-          intro="The hike people come to Corsica for, reached by shuttle since the road collapsed. Corte's citadel in the evening if your legs allow."),
- 15: dict(base="ferry", theme="The Niolu, then home", vid="21:28–23:32 / 46:20",
-          intro="A last mountain valley on the way north — a red granite gorge and a turquoise reservoir under Monte Cinto — then the ferry gate at Bastia."),
+          tip='No move tonight. That is deliberate: the Melo day runs eight hours and cannot also carry a check-in deadline.', intro="The hike people come to Corsica for, reached by shuttle since the road collapsed. Corte's citadel in the evening if your legs allow."),
+ 15: dict(base="Bastia", theme="The Niolu, then down to the coast", vid="21:28–23:32 / 46:20",
+          bed="18:00",
+          tip="You are not catching a boat today. Check in at Bastia and leave the crossing a clear day away.",
+          intro="A last mountain valley on the way north — a red granite gorge and a turquoise reservoir under Monte Cinto — then back to Bastia for the final night."),
+ 16: dict(base="ferry", theme="The day you hope you don't need", vid="23:32",
+          tip="The buffer. If everything ran to plan, take the D71 into the chestnut forests of the Castagniccia and be back for the boat. If it did not — a closed road, a storm, a hike that overran — this is the day that absorbs it, and you still sail.",
+          intro="Nothing load-bearing. Fifteen days of mountain roads and ferries will eat one of them sooner or later; this is the one they get to eat."),
 }
 
 # ---------------------------------------------------------------- car notes
@@ -111,10 +117,10 @@ CAR = {
 # ---------------------------------------------------------------- hotels
 STAYS = [
  dict(id="h-gouverneurs", n="Hôtel des Gouverneurs, Bastia", lat=42.69327, lon=9.4522,
-      d=1, nights="1–3", rank=1, price="€95–135 B&B",
+      d=1, nights="1–3 & 15", rank=1, price="€95–135 B&B",
       w="https://www.hotel-desgouverneurs.com",
       t="A restored 16th-century house inside the Bastia citadel, with a roof terrace over the old port and rooms in the thick original walls.",
-      why="Three nights here cover the whole north-east: the old town on foot, the Cap Corse circuit, and the Agriates by boat — without moving your bags once."),
+      why="Three nights here cover the whole north-east — old town on foot, the Cap Corse circuit, the Agriates by boat — without moving your bags once. You come back for night 15, so the ferry is 15 minutes away on the buffer morning."),
  dict(id="h-mariana", n="Le Mariana, Calvi", lat=42.56445, lon=8.75301,
       d=4, nights="4–5", rank=2, price="€110–160 B&B",
       w="https://www.hotel-mariana.com",
@@ -172,8 +178,10 @@ for r in routes:
         if len(ph) >= 6: break
     days.append(dict(day=r["day"], title=r["title"], km=r["km"], min=r["min"],
                      geometry=r["geometry"], base=m["base"], theme=m["theme"],
-                     vid=m["vid"], intro=m["intro"], photos=ph))
+                     vid=m["vid"], intro=m["intro"],
+                     bed=m.get("bed"), tip=m.get("tip"), photos=ph))
 
+for _s in STAYS: _s.setdefault("checkin", "Check-in from 15:00, checkout 10:00–11:00 (typical).")
 out = dict(pois=pois_out, camps=[], stays=STAYS, days=days)
 with open("assets/js/data-hotels.js", "w") as f:
     f.write("// Generated by gen_hotels.py — hotel/car variant of the Corsica route.\n")

@@ -418,3 +418,16 @@ footer li{padding:.16rem 0}
   .nav-links{order:4;width:100%}
   .nav-in{flex-wrap:wrap;height:auto;padding-top:.5rem;padding-bottom:.4rem;gap:.6rem}
 }
+
+/* ---------------------------------------------------- timing */
+.bedby{display:inline-block;margin-top:.35rem;color:var(--sea-d);font-weight:600}
+.note.time{border-color:var(--sea);background:#e9f4f6;color:#0f4a54}
+.sleep-row .ci{
+  flex-basis:100%;font-size:.78rem;color:rgba(255,255,255,.5);
+  border-top:1px solid var(--line-d);padding-top:.5rem;margin-top:.1rem
+}
+.cicard{
+  margin-top:.7rem;font-size:.8rem;color:var(--muted);
+  border-top:1px dashed var(--line);padding-top:.6rem
+}
+@media (max-width:900px){ .day-rail .bedby{display:inline;margin:0 0 0 .4rem} }

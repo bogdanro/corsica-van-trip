@@ -25,11 +25,12 @@
   T.pois.forEach(function (p) { PTS.push(Object.assign({ kind: 'poi' }, p)); });
   T.camps.forEach(function (c) {
     PTS.push({ kind: 'camp', c: 'camp', id: c.id, n: c.n, lat: c.lat, lon: c.lon, d: c.d,
-               t: c.t, w: c.w, price: c.price, f: [] });
+               t: c.t, w: c.w, price: c.price, checkin: c.checkin, f: [] });
   });
   T.stays.forEach(function (s) {
     PTS.push({ kind: 'stay', c: 'stay', id: s.id, n: s.n, lat: s.lat, lon: s.lon, d: s.d,
-               t: s.t, w: s.w, price: s.price, why: s.why, rank: s.rank, f: [] });
+               t: s.t, w: s.w, price: s.price, why: s.why, rank: s.rank,
+               nights: s.nights, checkin: s.checkin, bonus: s.bonus, f: [] });
   });
   var byId = {}; PTS.forEach(function (p) { byId[p.id] = p; });
 
@@ -198,7 +199,7 @@
     applyFilters();
     map.fitBounds(allBounds(), { padding: [26, 26] });
     document.querySelectorAll('.day-btn').forEach(function (b) { b.classList.remove('on'); });
-    var rb = document.getElementById('mapReset'); if (rb) rb.textContent = 'Whole route · 15 days';
+    var rb = document.getElementById('mapReset'); if (rb) rb.textContent = 'Whole route · ' + T.days.length + ' days';
   }
 
   function selectDay(n) {
@@ -216,7 +217,13 @@
     r.halo.bringToFront(); r.hi.bringToFront();
     applyFilters();
     var day = T.days.filter(function (d) { return d.day === n; })[0];
-    map.fitBounds(L.latLngBounds(day.geometry), { padding: [46, 46] });
+    /* fit the road route AND that day's stops — several (Lac de Melo, Saleccia,
+       the Lavezzi) are reached on foot or by boat and sit well off the driven line */
+    var bounds = L.latLngBounds(day.geometry);
+    PTS.forEach(function (p) {
+      if (p.d === n && !offSet[p.c]) bounds.extend([p.lat, p.lon]);
+    });
+    map.fitBounds(bounds, { padding: [56, 56] });
     document.querySelectorAll('.day-btn').forEach(function (b) {
       b.classList.toggle('on', +b.dataset.day === n);
     });
@@ -283,11 +290,14 @@
       var h = '<article class="day" id="day' + d.day + '">';
       h += '<div class="day-rail"><div class="n">' + d.day + '</div><div class="l">Day</div>' +
            '<div class="drive"><b>' + d.km + ' km</b>' + hrs(d.min) + ' moving<br>' +
-           '<span style="color:var(--muted)">video ' + esc(d.vid) + '</span></div></div>';
+           '<span style="color:var(--muted)">video ' + esc(d.vid) + '</span>' +
+           (d.bed ? '<br><span class="bedby">at your bed by ' + esc(d.bed) + '</span>' : '') +
+           '</div></div>';
       h += '<div class="day-body"><h3>' + esc(d.title) + '</h3>' +
            '<div class="theme">' + esc(d.theme) + '</div>' +
            '<p class="intro">' + esc(d.intro) + '</p>';
 
+      if (d.tip) h += '<div class="note time"><b>Timing:</b> ' + esc(d.tip) + '</div>';
       if (d.photos && d.photos.length) {
         h += '<div class="gal" role="list" aria-label="Photos from day ' + d.day + '">';
         d.photos.forEach(function (ph, i) {
@@ -335,7 +345,10 @@
         }).concat(stays.map(function (s) {
           return '🛏️ ' + (s.w ? '<a target="_blank" rel="noopener" href="' + esc(s.w) + '">' + esc(s.n) + '</a>' : esc(s.n));
         }));
-        h += '<span>' + parts.join(' &nbsp;·&nbsp; ') + '</span></div>';
+        h += '<span>' + parts.join(' &nbsp;·&nbsp; ') + '</span>';
+        var ci = (camps[0] || stays[0] || {}).checkin;
+        if (ci) h += '<span class="ci">' + esc(ci) + '</span>';
+        h += '</div>';
       }
       h += '</div></article>';
       box.insertAdjacentHTML('beforeend', h);
@@ -465,6 +478,7 @@
            ' &middot; <span class="price">' + esc(s.price) + '</span></div>';
       h += '<p>' + esc(s.t) + '</p>';
       h += '<div class="why"><b>Why here, on this night</b>' + esc(s.why) + '</div>';
+      if (s.checkin) h += '<div class="cicard">' + esc(s.checkin) + '</div>';
       var links = ['<a href="#map-section" data-focus="' + s.id + '">Show on map →</a>'];
       if (s.w) links.push('<a target="_blank" rel="noopener" href="' + esc(s.w) + '">Website ↗</a>');
       h += '<div class="meta" style="display:flex;gap:.9rem;font-size:.82rem;margin-top:.7rem">' + links.join('') + '</div>';
@@ -491,7 +505,8 @@
       tb.insertAdjacentHTML('beforeend',
         '<tr><td class="n">' + esc(c.n) + '<small>' + esc(c.t) + '</small></td>' +
         '<td><span class="badge b-d">Day ' + c.d + '</span><small>' + esc(d ? d.base : '') + '</small></td>' +
-        '<td><span class="price">' + esc(c.price) + '</span></td>' +
+        '<td><span class="price">' + esc(c.price) + '</span>' +
+        (c.checkin ? '<small>' + esc(c.checkin) + '</small>' : '') + '</td>' +
         '<td>' + (c.w ? '<a target="_blank" rel="noopener" href="' + esc(c.w) + '">' + esc(host(c.w)) + ' ↗</a>' : '<span style="color:var(--muted)">—</span>') +
         '<br><a href="#map-section" data-focus="' + c.id + '">map →</a></td>' +
         '<td><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + c.lat + ',' + c.lon + '">' +

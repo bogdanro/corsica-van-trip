@@ -19,11 +19,11 @@ whole shape of a trip, not just one line of it.
 
 | | Van (`index.html`) | Car + hotels (`hotels.html`) |
 |---|---|---|
-| Sleeps | 14 different campsites | 7 hotel bases, 14 nights |
-| Shape | one continuous anticlockwise loop | 6 of 15 days are closed loops from a base |
-| Driving | 1,340 km / 32 h | 1,472 km / 35 h — loops backtrack |
-| Stops | 75 | 64 |
-| Cost, 2 people | ≈ €2,526 (€84 pp/day) | ≈ €3,688 (€121 pp/day) |
+| Sleeps | 13 campsites + 2 hotels | 7 hotel bases, 15 nights |
+| Shape | one continuous anticlockwise loop | 6 of 16 days are closed loops from a base |
+| Driving | 1,448 km / 34 h | 1,582 km / 37 h — loops backtrack |
+| Stops | 75 | 65 |
+| Cost, 2 people | ≈ €2,605 (€81 pp/day) | ≈ €3,907 (€122 pp/day) |
 | Gives up | comfort, laundry, a flat bed | the deep interior: Vergio, Nino, Asco, Ghisoni, Ota, Évisa, Orezza and four more |
 | Wins | flexibility, cost, sleeping at altitude | no wild-camping law to worry about, unpack once |
 
@@ -33,6 +33,7 @@ whole shape of a trip, not just one line of it.
 |---|---|
 | Map | Leaflet map, 15 selectable day-routes drawn on real road geometry, 111 filterable pins across 11 categories, terrain/street basemap switch |
 | Itinerary | 15 days, each with a photo gallery, its stops, a hike, a van hazard and the campsite it sleeps at |
+| Timing | Every day carries a "be at your bed by" time; day 16 is a deliberate buffer before the ferry |
 | Photos | 88 Creative-Commons photos from Wikimedia Commons, 6 per day, with a keyboard/swipe lightbox that credits every photographer |
 | Hotels | 5 mid-budget hotels (+1 mountain bonus), each tied to the night it makes sense on |
 | Camping | 30 van-friendly campsites with coordinates, price bands and websites, plus the Corsican wild-camping law |
@@ -106,6 +107,23 @@ python3 -m http.server 8765               # then open http://127.0.0.1:8765
 `verify.py` asserts the day list, chips, itinerary, tables, pins and popups all
 render, that day- and category-filtering actually changes the visible pin count,
 and that the page throws no console errors or failed requests.
+
+## Why 16 days for 15 days of content
+
+Both versions are **15 days of plan plus a buffer day**, and night 15 is spent
+20 minutes from the ferry gate. Ferries, mountain weather and hire cars will
+take a day off you sooner or later; without a buffer that day comes out of the
+crossing you already paid for.
+
+The same realism drives the per-day timing. Corsican campsite receptions run
+roughly 08:00–12:00 and 15:00–19:30 (earlier at altitude, earlier out of
+season) and hotels check in from 15:00 — so every day states a target arrival,
+generally 18:00, and the driving is sized to hit it. Days whose payoff is a
+sunset (the Calanches, the Sanguinaires, Nonza) check in *first* and go back
+out. Van day 10 sleeps in Corte a second time for the same reason: an
+eight-hour hike and a 19:30 reception deadline cannot share a day.
+
+These windows are typical, not per-property facts, and the page says so.
 
 ## Caveats
 

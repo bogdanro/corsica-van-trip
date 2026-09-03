@@ -3,9 +3,14 @@ import json
 
 routes = json.load(open("data/routes_simplified.json"))
 try:
-    PHOTOS = json.load(open("data/photos.json"))
+    _PH = json.load(open("data/photos.json"))
 except FileNotFoundError:
-    PHOTOS = {}
+    _PH = {}
+# index photos by stop, so they follow a stop when it moves between days
+PHOTO_BY_POI = {}
+for _d, _lst in _PH.items():
+    for _x in _lst:
+        PHOTO_BY_POI.setdefault(_x["poi"], []).append(_x)
 
 # ---------------------------------------------------------------- POIs
 # cat: town | hike | beach | view | swim | heritage | camp | stay | port
@@ -335,13 +340,15 @@ P(id="aleria", n="Situ Archeologicu d'Aleria", c="heritage", d=15, lat=42.11357,
 P(id="campi", n="Campi", c="town", d=15, lat=42.27125, lon=9.42283, vid="24:56",
   f=["culture"], t="One street on a hilltop in the east, with a 17th-century church at the end of it and a view over the ridges. Half the houses are shuttered and empty — the quiet crisis of inland Corsica, and part of why the place still feels unspoilt.",
   van="Park at the village entrance; the street is one van wide and there is nowhere to turn.", time="45 min"),
-P(id="orezza", n="Couvent d'Orezza & the Castagniccia", c="heritage", d=15, lat=42.37439, lon=9.36813, vid="23:32",
+P(id="orezza", n="Couvent d'Orezza & the Castagniccia", c="heritage", d=16, lat=42.37439, lon=9.36813, vid="23:32",
   f=["culture","nature"], t="Founded in 1485 and for centuries the spiritual centre of the Castagniccia, damaged and rebuilt again and again, then abandoned at the French Revolution. The roofless shell standing in chestnut forest is genuinely eerie. The D71 through the Castagniccia is a slow, green, wonderful detour if you have a spare half day before the ferry.",
   van="The D71 is genuinely narrow and twisty; only worth it in a smaller van, and allow twice the time the map suggests.",
   time="half day"),
 ]
 
 # ---------------------------------------------------------------- CAMPSITES (curated from OSM, verified coords)
+CHECKIN_CAMP = "Reception typically 08:00–12:00 and 15:00–19:30; earlier at altitude and out of season."
+
 CAMPS = [
  dict(id="c-stazzu", n="Camping U Stazzu", lat=42.96439, lon=9.44788, d=1, w="https://camping-u-stazzu.jimdo.com",
       t="Simple, shaded, 400 m from Macinaggio harbour and the start of the Sentier des Douaniers.", price="€€", mh=True),
@@ -401,6 +408,9 @@ CAMPS = [
       t="Cheap, plain municipal site with a service point — the budget mountain night.", price="€", mh=True),
  dict(id="c-nacres", n="Camping Côte des Nacres", lat=41.86349, lon=9.39739, d=15, w="https://www.campingdesnacres.fr/",
       t="At Solenzara where the Bavella road meets the sea; last beach night before the drive north.", price="€€", mh=True),
+ dict(id="c-sandamiano", n="Camping San Damiano", lat=42.62938, lon=9.46835, d=15,
+      w="https://www.campingsandamiano.com",
+      t="Pine and eucalyptus behind a long sand beach on the Marana, 15 minutes from the Bastia ferry gate. The right last night: close enough that nothing can go wrong in the morning.", price="€€", mh=True),
  dict(id="c-marinaaleria", n="Camping Marina d'Aleria", lat=42.10879, lon=9.54928, d=15, w="https://www.marina-aleria.com/",
       t="Huge sandy site on the east-coast plain — flat, easy, and 90 min from the Bastia ferry gate.", price="€€", mh=True),
 ]
@@ -436,36 +446,52 @@ STAYS = [
 # ---------------------------------------------------------------- DAYS
 DAY_META = {
  1:  dict(base="Macinaggio", theme="Arrival & the east side of Cap Corse", vid="00:00–01:29",
-          intro="Roll off the ferry, resist the motorway, and turn left up the Cap. Tonight you sleep at the end of the road."),
+          bed="18:00", tip='Everything today hangs off the ferry. If the crossing runs late, drop Sisco and go straight up the Cap — the campsite is the fixed point, not the sightseeing.', intro="Roll off the ferry, resist the motorway, and turn left up the Cap. Tonight you sleep at the end of the road."),
  2:  dict(base="Patrimonio / St-Florent", theme="Round the tip: towers, cows, and a black beach", vid="01:29–08:32",
-          intro="A coastal walk in the morning, the northernmost sand in Corsica at lunch, and Nonza's black shingle in the evening light."),
+          bed="18:00", tip="Nonza's tower at sunset is one of the best hours on the Cap. Check in at Patrimonio first — it is 12 minutes away, and you can go back out with the pitch already yours.", intro="A coastal walk in the morning, the northernmost sand in Corsica at lunch, and Nonza's black shingle in the evening light."),
  3:  dict(base="Ostriconi", theme="The Désert des Agriates", vid="08:32–09:55",
-          intro="Corsica's empty quarter. You cannot drive to the good beaches — that's exactly why they're good."),
+          bed="18:00", intro="Corsica's empty quarter. You cannot drive to the good beaches — that's exactly why they're good."),
  4:  dict(base="Bodri / Balagne", theme="Balagne: market town, hill villages, easy sand", vid="09:55–11:08",
-          intro="The gentlest day of the trip. A market, three perched villages, and a beach you walk to through the maquis."),
+          bed="18:00", intro="The gentlest day of the trip. A market, three perched villages, and a beach you walk to through the maquis."),
  5:  dict(base="Calvi", theme="Citadel, river pools and a mountain cirque", vid="12:08–13:07",
-          intro="Old town in the morning, granite plunge pools at midday, and as much of the Bonifatu cirque as your legs want."),
+          bed="18:30", intro="Old town in the morning, granite plunge pools at midday, and as much of the Bonifatu cirque as your legs want."),
  6:  dict(base="Porto", theme="The wild west coast", vid="13:07–16:22",
-          intro="The most spectacular driving day and, at 105 km in over 3 hours of moving time, a lesson in Corsican distances."),
+          bed="18:00", tip='This day does not fit as written: 3¼ hours of driving plus a 4-hour hike up Monte Senino. Either leave Calvi at 07:00, or do Senino tomorrow morning and reach Porto in daylight. Do not arrive at 20:30 hoping someone is on reception.', intro="The most spectacular driving day and, at 105 km in over 3 hours of moving time, a lesson in Corsican distances."),
  7:  dict(base="Porto / Arone", theme="Red granite at dawn, sand by lunchtime", vid="18:27–19:03",
-          intro="UNESCO granite at dawn, a cliff-top Genoese tower by late morning, and the rest of the day horizontal on a beach."),
+          bed="17:30", tip='The Calanches at sunset is the whole point of today — so check into Arone by 17:30 first, then drive the 20 minutes back. Sunset in late May is around 21:00; no Corsican campsite is taking a new arrival then.', intro="UNESCO granite at dawn, a cliff-top Genoese tower by late morning, and the rest of the day horizontal on a beach."),
  8:  dict(base="Calacuccia", theme="Over the top into the Niolu", vid="20:51–22:02",
-          intro="Leave the sea behind. Chestnut villages, the highest pass on the island, and a swim under a 2,700 m mountain."),
+          bed="18:00", tip='Calacuccia sits at 800 m and its receptions shut earlier than the coast. Aim for 17:30.', intro="Leave the sea behind. Chestnut villages, the highest pass on the island, and a swim under a 2,700 m mountain."),
  9:  dict(base="Corte", theme="Asco gorge & the old capital", vid="44:38–46:20 / 40:00",
-          intro="A dead-end valley in the morning, a citadel and a proper dinner in the evening."),
+          bed="18:00", intro="A dead-end valley in the morning, a citadel and a proper dinner in the evening."),
  10: dict(base="Corte / Vizzavona", theme="Restonica — the big one, and it got bigger", vid="40:00–44:38",
-          intro="The hike people come to Corsica for. Since the 2023 storms wrecked the valley road it is a 25 km, eight-hour mountain day reached by shuttle — plan it as the hardest day of the trip, then drop south into the beech forest to cool off."),
+          tip='No move tonight — you are already checked in. That is precisely why day 10 sleeps in Corte a second time: an eight-hour hike and a 19:00 reception deadline cannot share a day.', intro="The hike people come to Corsica for. Since the 2023 storms wrecked the valley road it is a 25 km, eight-hour mountain day reached by shuttle — plan it as the hardest day of the trip, then drop south into the beech forest to cool off."),
  11: dict(base="Ajaccio", theme="Waterfalls, a lake, and the capital", vid="35:45–38:16",
-          intro="Snowmelt in the morning, an empty reservoir at lunch, Napoleon's old town in the afternoon, red islands at sunset — and the D1/D4 pass if you want one more mountain road."),
+          bed="17:30", tip='Check in at Ajaccio, then go out to the Sanguinaires. Also check when the Parata car park barrier closes before you commit to sunset — it is earlier than sunset for much of the year.', intro="Snowmelt in the morning, an empty reservoir at lunch, Napoleon's old town in the afternoon, red islands at sunset — and the D1/D4 pass if you want one more mountain road."),
  12: dict(base="Bonifacio", theme="South through prehistory to the cliffs", vid="30:45–31:19",
-          intro="The longest drive of the trip (180 km), broken by menhirs, granite towns and a lion-shaped rock, ending on the most dramatic clifftop in the Mediterranean."),
+          bed="18:00", tip='181 km, the longest drive of the trip. Leave Ajaccio by 09:00 and treat Roccapina as optional, not assumed.', intro="The longest drive of the trip (180 km), broken by menhirs, granite towns and a lion-shaped rock, ending on the most dramatic clifftop in the Mediterranean."),
  13: dict(base="Porto-Vecchio", theme="A day off: sand, shallow water, a boat", vid="29:19",
-          intro="A pure relax day. Three of the best beaches in Europe and a boat out to the Lavezzi if you want one."),
+          bed="18:00", intro="A pure relax day. Three of the best beaches in Europe and a boat out to the Lavezzi if you want one."),
  14: dict(base="Zonza", theme="Up to the needles of Bavella", vid="26:30–29:56",
-          intro="From sea level to 1,218 m: a waterfall, a Pisan church, and the granite spires that close the island's spine."),
- 15: dict(base="Bastia (ferry)", theme="The D69 and the road home", vid="33:32 / 25:23",
-          intro="One last mountain road nobody drives, oysters on a lagoon, and the ferry gate at Bastia."),
+          bed="18:00", intro="From sea level to 1,218 m: a waterfall, a Pisan church, and the granite spires that close the island's spine."),
+ 15: dict(base="near Bastia", theme="The D69, and down to the coast", vid="33:32 / 25:23",
+          bed="18:00",
+          tip="You are not catching a boat today. Get to the coast, check in, and sleep 20 minutes from the port.",
+          intro="One last mountain road nobody drives, oysters on a lagoon, and a pitch 20 minutes from the ferry gate — with the crossing still a whole day away."),
+ 16: dict(base="ferry", theme="The day you hope you don't need", vid="23:32",
+          tip="The buffer. If the last two weeks went to plan, spend the morning in the Castagniccia and roll up to the ferry relaxed. If they did not — a breakdown, a closed road, a day lost to weather, a hike that ran three hours over — this is the day you spend it, and you still make the boat.",
+          intro="A day with nothing load-bearing in it. That is the entire point: fifteen days of mountain roads, ferries and weather will eat one of them sooner or later, and this is the one they get to eat."),
 }
+
+_seen_photo = set()
+def _photos_for(day):
+    out = []
+    for p in POIS:
+        if p["d"] != day: continue
+        for x in PHOTO_BY_POI.get(p["id"], []):
+            if x["f"] in _seen_photo: continue
+            _seen_photo.add(x["f"]); out.append(x)
+            if len(out) >= 6: return out
+    return out
 
 days=[]
 for r in routes:
@@ -473,8 +499,11 @@ for r in routes:
     days.append(dict(day=r["day"], title=r["title"], km=r["km"], min=r["min"],
                      geometry=r["geometry"], base=m["base"], theme=m["theme"],
                      vid=m["vid"], intro=m["intro"],
-                     photos=PHOTOS.get(str(r["day"]), [])))
+                     bed=m.get("bed"), tip=m.get("tip"),
+                     photos=_photos_for(r["day"])))
 
+for _c in CAMPS: _c.setdefault("checkin", CHECKIN_CAMP)
+for _s in STAYS: _s.setdefault("checkin", "Check-in from 15:00, checkout 10:00–11:00 (typical).")
 out = dict(pois=POIS, camps=CAMPS, stays=STAYS, days=days)
 with open("assets/js/data.js","w") as f:
     f.write("// Generated. Coordinates from OpenStreetMap/Nominatim; routes from OSRM (real road geometry).\n")
