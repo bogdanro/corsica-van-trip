@@ -1,10 +1,15 @@
 # Corsica by Van — a 15-day trip plan
 
-A single-page, self-contained trip-planning site built from the road-trip film
-**[Corsica | An Incredible 10-Day Road Trip](https://www.youtube.com/watch?v=BVLl3bvjSQw)**.
+### → **[bogdanro.github.io/corsica-van-trip](https://bogdanro.github.io/corsica-van-trip/)**
 
-Open `index.html` in a browser. No build step, no server required (though the
-interactive map needs internet access for Leaflet and map tiles).
+A single-page trip-planning site built from the road-trip film
+**[Corsica | An Incredible 10-Day Road Trip](https://www.youtube.com/watch?v=BVLl3bvjSQw)**,
+re-paced from the film's 10 days to 15 for van travel while keeping every stop.
+
+No build step and no framework. Open `index.html` in any browser, or use
+`corsica-van-trip.html` — the same site inlined into one 223 KB file you can
+email or open offline. Either way the interactive map needs internet access for
+Leaflet and the map tiles; everything else works offline.
 
 ## What's in it
 
