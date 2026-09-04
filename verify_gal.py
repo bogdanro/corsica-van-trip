@@ -1,4 +1,27 @@
 from playwright.sync_api import sync_playwright
+
+def click_top_marker(pg, timeout=6000):
+    """Click the first marker that is genuinely the top element at its own centre.
+
+    Map pins overlap by nature, so picking `.first` in DOM order can land on one
+    that is underneath another. This keeps Playwright's real hit-testing (so a
+    genuine overlay bug would still fail) while tolerating normal pin overlap.
+    """
+    pg.wait_for_timeout(1200)                      # let fitBounds settle
+    idx = pg.evaluate("""() => {
+      const ms=[...document.querySelectorAll('.leaflet-marker-icon')];
+      for (let i=0;i<ms.length;i++){
+        const r=ms[i].getBoundingClientRect();
+        const el=document.elementFromPoint(r.left+r.width/2, r.top+r.height/2);
+        if (el && (el===ms[i] || ms[i].contains(el))) return i;
+      }
+      return -1;
+    }""")
+    if idx < 0: return False
+    pg.locator(".leaflet-marker-icon").nth(idx).click(timeout=timeout)
+    return True
+
+
 import json
 errs=[];fails=[]
 with sync_playwright() as p:
@@ -35,9 +58,8 @@ with sync_playwright() as p:
     y=pg.evaluate("()=>document.getElementById('map-section').getBoundingClientRect().top+window.scrollY")
     pg.evaluate(f"window.scrollTo(0,{y}-60)"); pg.wait_for_timeout(2500)
     pg.click(".day-btn[data-day='12']"); pg.wait_for_timeout(2500)
-    ms=pg.query_selector_all(".leaflet-marker-icon")
-    if ms:
-        ms[0].click(); pg.wait_for_timeout(1500)
+    if click_top_marker(pg):
+        pg.wait_for_timeout(1500)
         print("popup has photo:", pg.evaluate("()=>!!document.querySelector('.pp-img img')"),
               "| loaded:", pg.evaluate("()=>{const i=document.querySelector('.pp-img img');return i?i.naturalWidth:0}"))
         pg.screenshot(path="shots/19-popup-photo.png")

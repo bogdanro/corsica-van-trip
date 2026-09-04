@@ -23,7 +23,7 @@ whole shape of a trip, not just one line of it.
 | Sleeps | 13 campsites + 2 hotels | 7 hotel bases, 15 nights |
 | Shape | one continuous anticlockwise loop | 6 of 16 days are closed loops from a base |
 | Days | 16 (15 planned + a buffer) | 16 |
-| Driving | 1,447 km / 34 h | 1,582 km / 37 h — loops backtrack |
+| Driving | 1,448 km / 34 h | 1,582 km / 37 h — loops backtrack |
 | Stops | 75 (104 map pins with food) | 65 (94 pins) |
 | Cost, 2 people | ≈ €2,605 (€81 pp/day) | ≈ €3,907 (€122 pp/day) |
 | Gives up | comfort, laundry, a flat bed | the deep interior: Vergio, Nino, Asco, Ghisoni, Ota, Évisa, Orezza and four more |

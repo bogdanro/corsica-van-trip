@@ -522,6 +522,11 @@ footer li{padding:.16rem 0}
 .eat-l:empty+.eat-note{border-top:0;padding-top:0;margin-top:0}
 @media print{.eat{break-inside:avoid}}
 
+/* The pin graphic and its glyph are decoration — let clicks and taps land on
+   the marker root, so the whole pin is the hit target, not just the emoji. */
+.pin,.pin span,.cl{pointer-events:none}
+.leaflet-marker-icon.pin-w,.marker-cluster{cursor:pointer}
+
 </style>
 </head>
 <body>
