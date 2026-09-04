@@ -16,9 +16,16 @@
     culture:  { label: 'Wine & food',          color: '#9a7b2f', icon: '🍷' },
     port:     { label: 'Ports',                color: '#5b6b78', icon: '⚓' },
     camp:     { label: 'Campsites',            color: '#2f6b2a', icon: '⛺' },
-    stay:     { label: 'Hotels (mid-budget)',  color: '#b5305e', icon: '🛏️' }
+    stay:     { label: 'Hotels (mid-budget)',  color: '#b5305e', icon: '🛏️' },
+    food:     { label: 'Vegan-friendly food',  color: '#4a8a2b', icon: '🌱' }
   };
   var TRAV = { nature: 'Nature & hiking', relax: 'Beach & chill', culture: 'Towns & culture' };
+  var VEG = {
+    vegan:   { l: 'Fully vegan',        c: '#2f6b2a' },
+    options: { l: 'Vegan options',      c: '#4a8a2b' },
+    ask:     { l: 'Veg-friendly — ask', c: '#8a6a3a' },
+    shop:    { l: 'Shop / market',      c: '#5b6b78' }
+  };
 
   /* --------------------------------------------- unified point list */
   var PTS = [];
@@ -98,6 +105,10 @@
          (p.d ? ' &middot; Day ' + p.d : '') + '</div>';
     h += '<h5>' + esc(p.n) + '</h5>';
     if (p.t) h += '<p>' + esc(p.t) + '</p>';
+    if (p.eatv && VEG[p.eatv]) {
+      h += '<div class="hk" style="border-color:' + VEG[p.eatv].c + ';background:#eef6ea;color:#2a4d27">' +
+           '<b>🌱 ' + esc(VEG[p.eatv].l) + '</b></div>';
+    }
     if (p.hike) {
       h += '<div class="hk"><b>Hike &mdash; ' + esc(p.hike.grade) + '</b><br>' +
            esc(p.hike.dist) + ' &middot; ' + esc(p.hike.up) + ' ascent &middot; ' + esc(p.hike.dur) + '</div>';
@@ -312,6 +323,25 @@
         h += '</ol><p class="flow-ft">Soft blocks, not a schedule — everything here has slack in it. ' +
              'Only the <b>marked</b> times are fixed: boats, shuttles, receptions, sunset and the ferry.</p>' +
              '</div>';
+      }
+      if (d.eat && ((d.eat.places && d.eat.places.length) || d.eat.note)) {
+        h += '<div class="eat"><div class="eat-hd">Eating vegan today</div>';
+        if (d.eat.places && d.eat.places.length) {
+          h += '<ul class="eat-l">';
+          d.eat.places.forEach(function (e) {
+            var g = VEG[e.v] || VEG.ask;
+            h += '<li><div class="eat-n">' + esc(e.n) +
+                 '<span class="eat-b" style="background:' + g.c + '">' + esc(g.l) + '</span>' +
+                 '<span class="eat-t">' + esc(e.town) + '</span></div>' +
+                 '<div class="eat-x">' + esc(e.t) +
+                 (e.lat ? ' <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' +
+                          e.lat + ',' + e.lon + '">map ↗</a>' : '') +
+                 '</div></li>';
+          });
+          h += '</ul>';
+        }
+        if (d.eat.note) h += '<p class="eat-note">' + esc(d.eat.note) + '</p>';
+        h += '</div>';
       }
       if (d.photos && d.photos.length) {
         h += '<div class="gal" role="list" aria-label="Photos from day ' + d.day + '">';

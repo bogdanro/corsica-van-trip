@@ -480,3 +480,28 @@ footer li{padding:.16rem 0}
   .fw{font-size:.78rem}
 }
 @media print{.flow{break-inside:avoid;box-shadow:none}}
+
+/* ---------------------------------------------------- eating vegan */
+.eat{
+  margin:1.3rem 0 .2rem;background:#f4f8f1;border:1px solid #d9e6d2;
+  border-radius:var(--r);padding:1.1rem 1.3rem 1rem
+}
+.eat-hd{
+  font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#3f7d3a;margin-bottom:.85rem
+}
+.eat-l{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
+.eat-n{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;font-weight:640;font-size:.95rem;line-height:1.35}
+.eat-b{
+  font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:#fff;padding:.13rem .42rem;border-radius:4px;white-space:nowrap
+}
+.eat-t{font-size:.8rem;font-weight:500;color:var(--muted)}
+.eat-x{font-size:.88rem;color:var(--ink-2);margin-top:.2rem;line-height:1.55}
+.eat-x a{font-size:.8rem;font-weight:600;white-space:nowrap}
+.eat-note{
+  margin:.9rem 0 0;padding-top:.8rem;border-top:1px solid #d9e6d2;
+  font-size:.89rem;color:#3a5233;line-height:1.6
+}
+.eat-l:empty+.eat-note{border-top:0;padding-top:0;margin-top:0}
+@media print{.eat{break-inside:avoid}}

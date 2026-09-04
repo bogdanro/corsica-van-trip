@@ -33,6 +33,7 @@ whole shape of a trip, not just one line of it.
 |---|---|
 | Map | Leaflet map, 15 selectable day-routes drawn on real road geometry, 111 filterable pins across 11 categories, terrain/street basemap switch |
 | Itinerary | 15 days, each with a photo gallery, its stops, a hike, a van hazard and the campsite it sleeps at |
+| Eating vegan | Per-day vegan-friendly places, evidence-labelled, plus a strategy section — Corsica is genuinely hard for vegans and the page says so |
 | The day, roughly | A guide-style running order per day — soft blocks ("Morning", "After lunch") with slack, and hard clock times only where something won't wait |
 | Timing | Every day carries a "be at your bed by" time; day 16 is a deliberate buffer before the ferry |
 | Photos | 88 Creative-Commons photos from Wikimedia Commons, 6 per day, with a keyboard/swipe lightbox that credits every photographer |
@@ -86,6 +87,7 @@ assets/css/style.css       styles
 assets/js/data.js          generated: pois, camps, stays, days (+route geometry, +photos)
 assets/photos/             88 CC photos, WebP, full + thumb
 assets/js/app.js           map, filters and section renderers
+eats.py                    vegan places + per-day eating notes
 flows_van.py               per-day running order, van version
 flows_hotel.py             per-day running order, car + hotel version
 gen_data.py                regenerates assets/js/data.js (van)
@@ -126,6 +128,35 @@ Restonica shuttle, campsite receptions, sunset, and the ferry. They are marked
 
 Flows live in `flows_van.py` and `flows_hotel.py`, separate from the stop data,
 so the narrative can be rewritten without touching coordinates or routing.
+
+## Eating vegan
+
+Corsican cuisine is charcuterie, brocciu, wild boar and fish, and there are
+exactly **three fully plant-based or all-vegetarian kitchens on the island** —
+VG in Bastia, and Green Farmer's and A Cantali in Ajaccio. The site does not
+pretend otherwise.
+
+Every day carries an "Eating vegan today" block. 32 places are named, all of
+them existing in OpenStreetMap or HappyCow at the coordinates given — none
+invented — and each carries an evidence badge, because the strength of the
+source varies a lot:
+
+| Badge | Means |
+|---|---|
+| **Fully vegan** | plant-based kitchen |
+| **Vegan options** | vegan dishes confirmed (OSM `diet:vegan=yes`, or a HappyCow listing) |
+| **Veg-friendly — ask** | OSM `diet:vegetarian=yes`; vegan is a conversation |
+| **Shop / market** | organic supermarket, greengrocer or market |
+
+On the days where the honest answer is "carry your own" — Saleccia, Piana and
+Arone, the Lavezzi, the day-15 east coast — the block says that instead of
+inventing a restaurant. The `#vegan` section covers the strategy: pizza
+marinara as a floor, self-catering, saying *végétalien* rather than
+*végétarien*, and phoning mountain auberges in the morning.
+
+Sourced from an Overpass query for `diet:vegan` / `diet:vegetarian` across
+Corsica (`data/vegan_raw.json`, 72 results) plus HappyCow. Data lives in
+`eats.py`.
 
 ## Why 16 days for 15 days of content
 

@@ -16,7 +16,7 @@ FLOW = {
  F("Up at seven", "137 km round the whole peninsula today, and the walk wants doing before the heat."),
  F("Morning", "Drive to Macinaggio and walk the Sentier des Douaniers — the full 10 km loop, or turn at Plage de Tamarone for a swim and be back sooner."),
  F("Midday", "Round to Barcaggio for the cows on the sand, then the Moulin Mattei for both coasts at once."),
- F("Lunch", "Port de Centuri. Lobster. Do not economise here."),
+ F("Lunch", "Centuri is the lobster village, which does you no good — so picnic on the harbour wall out of what you brought from Bastia. Come for the green-serpentine houses round the doll's-house port."),
  F("Afternoon", "South down the west side. Nonza's square tower and black shingle beach — 300 steps down, and worth every one."),
  F("Late afternoon", "Patrimonio on the way home for a tasting at one of the domaines. One glass for the driver."),
  F("By 18:00", "Back in Bastia. Same room, no bags to move.", True),
@@ -106,7 +106,7 @@ FLOW = {
  F("Lunch", "Porto-Vecchio's walled upper town."),
  F("Afternoon", "Climb the D368 into the Ospedale forest — pines, granite boulders and fifteen degrees off the temperature. Piscia di Gallu is a 3.5 km round trip over slabs to a 60 m fall. Proper shoes."),
  F("By 18:30", "On to Zonza and check in. L'Aiglon serves dinner at half seven, so do not dawdle on the last stretch.", True),
- F("Evening", "Wild boar, chestnut, river trout, a log fire out of season."),
+ F("Evening", "The kitchen here is wild boar and river trout, so ring in the morning and tell them — with notice they cook properly for vegans, without it they will not. Log fire out of season either way."),
 ],
 13: [
  F("Early", "Bavella at first light is the best hour of the trip, and afternoon storms build here from about two."),
@@ -114,7 +114,7 @@ FLOW = {
  F("The hike", "Trou de la Bombe — 6 km, 300 m, two and a half hours — or the Alpine GR20 variant on fixed chains, 12 km and 1,000 m in about four hours. Either way, be down by two."),
  F("Optional first", "If you would rather not hike: Cucuruzzu near Levie, a Bronze Age fort in an oak wood, and Carbini's banded Romanesque church standing alone in its field."),
  F("Lunch", "The auberge at the col, or a picnic under the needles."),
- F("Afternoon", "Down the hairpins to Solenzara, then north up the coast to Aleria — Greek, then Roman, then capital of the province. Oysters on the Étang de Diane if there is time."),
+ F("Afternoon", "Down the hairpins to Solenzara, then north up the coast to Aleria — Greek, then Roman, then capital of the province. The Étang de Diane nearby is oyster country; worth the look, not the lunch."),
  F("By 18:00", "West to Corte and check in. Book the Restonica shuttle tonight in the M-Ticket Via Corsica app.", True),
 ],
 14: [
@@ -138,7 +138,7 @@ FLOW = {
  F("The buffer", "If everything ran to plan, today is a gift. If it did not — a closed road, a storm, a car in a garage — this is the day that absorbed it and you still sail."),
  F("Morning, if all is well", "The D71 into the Castagniccia: chestnut forest, half-empty hill villages, and the roofless Couvent d'Orezza, founded 1485 and abandoned at the Revolution. Narrow and slow; allow twice the map's time."),
  F("Lunch", "A terrace somewhere. The last one."),
- F("Afternoon", "Back to Bastia. Fuel, return the hire car if that is the plan, and buy the charcuterie and wine you kept meaning to."),
+ F("Afternoon", "Back to Bastia. Fuel, return the hire car if that is the plan, and do the taking-home shop at Eau Vive or the market: chestnut flour, olive oil, clementines, canistrelli, myrtle liqueur."),
  F("Ferry check-in", "Two hours before sailing with a vehicle, an hour on foot. Booking on paper as well as phone.", True),
 ],
 }

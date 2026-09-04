@@ -1,0 +1,39 @@
+{
+ "1001 Saveurs Sauvages": null,
+ "Le Cafe Colomb": [
+  42.56785,
+  8.76093,
+  "coffee",
+  "Le caf\u00e9 Colomb, Strette Sant' Antone, Haute Vill"
+ ],
+ "Cafe la Marine PV": [
+  41.5903,
+  9.28264,
+  "restaurant",
+  "Caf\u00e9 La Marine, Molu Pasquale Paoli, Vignola, Po"
+ ],
+ "Biocoop Ajaccio": [
+  41.92897,
+  8.73769,
+  "supermarket",
+  "Biocoop, Rue Docteur Fran\u00e7ois del Pellegrino, Pi"
+ ],
+ "La Vie Claire Ile-Rousse": null,
+ "Spar Zonza": null,
+ "Marche Bastia": [
+  42.69722,
+  9.45096,
+  "parking",
+  "Place du March\u00e9, Bastia, Haute-Corse, Corse, Fra"
+ ],
+ "Marche Ajaccio": null,
+ "Supermarche Porto Ota": null,
+ "Supermarche Calacuccia": null,
+ "Supermarche Bonifacio": null,
+ "Supermarche Corte": [
+  42.30074,
+  9.1584,
+  "supermarket",
+  "Auchan Supermarch\u00e9, Route d'Ajaccio, Strenna, Qu"
+ ]
+}
