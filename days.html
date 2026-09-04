@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Corsica, day by day — swipe through the trip</title>
+<meta name="description" content="The Corsica route one day at a time: a per-day map with start and finish flags, the day's running order, photos, and the detail folded away.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://a.tile.opentopomap.org">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/days.css">
+</head>
+<body class="deckpage">
+
+<div class="shell">
+  <aside class="rail">
+    <div class="rail-hd">
+      <span class="brand">CORSICA <b>·</b> day by day</span>
+      <div id="deckver" role="group" aria-label="Trip version"></div>
+    </div>
+    <nav class="rail-list" id="rail" aria-label="Days"></nav>
+    <div class="rail-ft">
+      <h4>Reference</h4>
+      <a href="#" data-ref="stay">Hotels</a><a href="#" data-ref="camping">Camping</a>
+      <a href="#" data-ref="hikes">Hikes</a><a href="#" data-ref="water">Beaches</a>
+      <a href="#" data-ref="vegan">Vegan food</a><a href="#" data-ref="logistics">Logistics</a>
+      <a href="#" data-ref="money">Budget</a><a href="#" data-ref="map-section">Whole map</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="deck" id="deck" tabindex="0" aria-label="Days, swipe or use arrow keys"></div>
+    <div class="bar">
+      <button id="prev" type="button" aria-label="Previous day">‹</button>
+      <button id="next" type="button" aria-label="Next day">›</button>
+      <span class="pos" id="poslbl">1 / 16</span>
+      <span class="track"><i id="prog"></i></span>
+      <span class="hint">swipe, or ← →</span>
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+  // pick the dataset before the renderer runs
+  (function () {
+    var v = (location.search.match(/[?&]v=([a-z]+)/) || [])[1];
+    document.write('<scr' + 'ipt src="assets/js/' +
+      (v === 'hotels' ? 'data-hotels.js' : 'data.js') + '"><\/scr' + 'ipt>');
+  })();
+</script>
+<script src="assets/js/days.js"></script>
+</body>
+</html>

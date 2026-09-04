@@ -1,6 +1,6 @@
 # Corsica by Van — a 16-day trip plan, two ways
 
-### → **[Van version](https://bogdanro.github.io/corsica-van-trip/)** · **[Hotel version](https://bogdanro.github.io/corsica-van-trip/hotels.html)**
+### → **[Van](https://bogdanro.github.io/corsica-van-trip/)** · **[Hotels](https://bogdanro.github.io/corsica-van-trip/hotels.html)** · **[Day view](https://bogdanro.github.io/corsica-van-trip/days.html)**
 
 A single-page trip-planning site built from the road-trip film
 **[Corsica | An Incredible 10-Day Road Trip](https://www.youtube.com/watch?v=BVLl3bvjSQw)**,
@@ -11,6 +11,25 @@ No build step and no framework. Open `index.html` in any browser, or use
 `corsica-van-trip.html` — the same site inlined into one 316 KB file you can
 email or open offline. Either way the interactive map needs internet access for
 Leaflet and the map tiles; everything else works offline.
+
+## Three views
+
+| View | File | For |
+|---|---|---|
+| Long page | `index.html`, `hotels.html` | reading the whole trip, planning, reference tables |
+| **Day view** | `days.html` | one day at a time — swipe or arrow through a carousel |
+
+The **day view** is the low-clutter reading mode: a left rail of days, and a
+carousel where each slide is one day — hero photo, a **mini map of just that
+day with start ⚑ and finish 🏁 flags** (a single flag when the day is a loop),
+the running order, a photo strip, and stops / eating folded into `<details>`.
+
+Mini maps are deliberately non-interactive (no drag, no wheel zoom) so they
+never fight the swipe gesture, and they initialise lazily — only the current
+day and its two neighbours, rather than 16 Leaflet instances at once.
+
+It serves both datasets: `days.html` for the van, `days.html?v=hotels` for the
+car-and-hotels variant.
 
 ## Two versions of the same trip
 
@@ -113,7 +132,9 @@ index.html                 the page
 assets/css/style.css       styles
 assets/js/data.js          generated: pois, camps, stays, days (+route geometry, +photos)
 assets/photos/             88 CC photos, WebP, full + thumb
-assets/js/app.js           map, filters and section renderers
+assets/js/app.js           map, filters and section renderers (long pages)
+assets/js/days.js          the day-by-day carousel view
+assets/css/days.css        carousel styles
 eats.py                    vegan places + per-day eating notes
 flows_van.py               per-day running order, van version
 flows_hotel.py             per-day running order, car + hotel version
@@ -123,6 +144,7 @@ build_routes_hotels.py     OSRM routing for the hotel version's day loops
 data/                      raw research: routes, geocodes, campsites, transcript
 shots/                     rendered screenshots from the verification run
 verify.py, shots.py        headless-Chromium checks and screenshots
+verify_days.py             checks for the carousel view (run: `.venv/bin/python verify_days.py`)
 ```
 
 ## Regenerating
