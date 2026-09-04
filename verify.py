@@ -30,7 +30,7 @@ with sync_playwright() as p:
     pg.on("console", lambda m: console.append((m.type, m.text[:200])))
     pg.on("pageerror", lambda e: errs.append(str(e)[:300]))
     pg.on("requestfailed", lambda r: reqfail.append(r.url[:120]+" :: "+str(r.failure)[:80]))
-    pg.goto("http://127.0.0.1:8765/index.html", wait_until="load", timeout=60000)
+    pg.goto("http://127.0.0.1:8765/van.html", wait_until="load", timeout=60000)
     pg.wait_for_timeout(6000)
     res = pg.evaluate("""() => ({
       days: document.querySelectorAll('.day-btn').length,
@@ -87,7 +87,7 @@ with sync_playwright() as p:
     pg.screenshot(path="shots/10-budget.png")
     # mobile
     m = b.new_page(viewport={"width":390,"height":844}, device_scale_factor=2, is_mobile=True)
-    m.goto("http://127.0.0.1:8765/index.html", wait_until="load"); m.wait_for_timeout(5000)
+    m.goto("http://127.0.0.1:8765/van.html", wait_until="load"); m.wait_for_timeout(5000)
     m.screenshot(path="shots/11-mobile.png")
     m.evaluate("document.querySelector('#map-section').scrollIntoView()"); m.wait_for_timeout(2500)
     m.screenshot(path="shots/12-mobile-map.png")

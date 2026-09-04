@@ -7,6 +7,9 @@
   'use strict';
   var T = window.TRIP;
   var PDIR = 'assets/photos/';
+  /* which long reference page this variant belongs to */
+  var VARIANT = (location.search.match(/[?&]v=([a-z]+)/) || [])[1];
+  var LONG = VARIANT === 'hotels' ? 'hotels.html' : 'van.html';
 
   var CATS = {
     town:     { c: '#c4562f', i: '🏘️' }, hike:  { c: '#3f7d3a', i: '🥾' },
@@ -65,7 +68,7 @@
         return s.w ? '<a target="_blank" rel="noopener" href="' + esc(s.w) + '">' + esc(s.n) + '</a>' : esc(s.n);
       }).join(' · ') + '</p>';
     }
-    h += '<a class="sl-full" href="index.html#day' + d.day + '">Full detail for this day ↗</a>';
+    h += '<a class="sl-full" href="' + LONG + '#day' + d.day + '">Full detail for this day ↗</a>';
     h += '</div><div class="sl-right">';
 
     h += '<p class="sl-intro">' + esc(d.intro) + '</p>';
@@ -194,15 +197,14 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    var v = (location.search.match(/[?&]v=([a-z]+)/) || [])[1];
-    var other = v === 'hotels' ? '' : 'hotels';
+    var v = VARIANT;
     var sw = document.getElementById('deckver');
     if (sw) {
-      sw.innerHTML = '<a href="days.html"' + (v === 'hotels' ? '' : ' class="on"') + '>🚐 Van</a>' +
-                     '<a href="days.html?v=hotels"' + (v === 'hotels' ? ' class="on"' : '') + '>🛏 Hotels</a>';
+      sw.innerHTML = '<a href="./"' + (v === 'hotels' ? '' : ' class="on"') + '>🚐 Van</a>' +
+                     '<a href="?v=hotels"' + (v === 'hotels' ? ' class="on"' : '') + '>🛏 Hotels</a>';
     }
     document.querySelectorAll('[data-ref]').forEach(function (a) {
-      a.href = (v === 'hotels' ? 'hotels.html' : 'index.html') + '#' + a.dataset.ref;
+      a.href = LONG + '#' + a.dataset.ref;
     });
 
     deck = document.getElementById('deck');

@@ -2,7 +2,7 @@
 """Inline CSS + JS into one self-contained HTML file."""
 import io, re
 
-html = io.open("index.html", encoding="utf-8").read()
+html = io.open("van.html", encoding="utf-8").read()
 css  = io.open("assets/css/style.css", encoding="utf-8").read()
 data = io.open("assets/js/data.js", encoding="utf-8").read()
 app  = io.open("assets/js/app.js", encoding="utf-8").read()

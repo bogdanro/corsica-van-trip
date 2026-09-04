@@ -1,4 +1,4 @@
-"""Checks for the day-by-day carousel view (days.html)."""
+"""Checks for the day-by-day carousel view — now the landing page."""
 from playwright.sync_api import sync_playwright
 import json, sys
 
@@ -16,7 +16,7 @@ with sync_playwright() as p:
         pg = b.new_page(viewport={"width": 1440, "height": 900})
         pg.on("pageerror", lambda e: errs.append(str(e)[:200]))
         pg.on("requestfailed", lambda r: reqfail.append(r.url.split("/")[-1][:40]))
-        pg.goto(f"{BASE}/days.html{q}#d7", wait_until="load", timeout=60000)
+        pg.goto(f"{BASE}/index.html{q}#d7", wait_until="load", timeout=60000)
         pg.wait_for_timeout(7000)
         print(f"\n=== {variant} ===")
         r = pg.evaluate("""()=>({
@@ -61,7 +61,7 @@ with sync_playwright() as p:
 
     # narrow viewport
     m = b.new_page(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True)
-    m.goto(f"{BASE}/days.html#d7", wait_until="load"); m.wait_for_timeout(6000)
+    m.goto(f"{BASE}/index.html#d7", wait_until="load"); m.wait_for_timeout(6000)
     print("\n=== mobile 390 ===")
     r = m.evaluate("""()=>({ovf:document.documentElement.scrollWidth<=innerWidth,
         w:Math.round(document.querySelector('#d7').getBoundingClientRect().width), vw:innerWidth,

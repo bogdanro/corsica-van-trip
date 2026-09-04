@@ -28,7 +28,7 @@ with sync_playwright() as p:
     b=p.chromium.launch(); pg=b.new_page(viewport={"width":1440,"height":950}, device_scale_factor=2)
     pg.on("pageerror", lambda e: errs.append(str(e)[:220]))
     pg.on("requestfailed", lambda r: fails.append(r.url.split('/')[-1][:60]+" :: "+str(r.failure)[:50]))
-    pg.goto("http://127.0.0.1:8765/index.html", wait_until="load"); pg.wait_for_timeout(6000)
+    pg.goto("http://127.0.0.1:8765/van.html", wait_until="load"); pg.wait_for_timeout(6000)
     pg.add_style_tag(content="html{scroll-behavior:auto!important}")
     print(json.dumps(pg.evaluate("""()=>({
       galleries:document.querySelectorAll('.gal').length,

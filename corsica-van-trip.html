@@ -527,6 +527,14 @@ footer li{padding:.16rem 0}
 .pin,.pin span,.cl{pointer-events:none}
 .leaflet-marker-icon.pin-w,.marker-cluster{cursor:pointer}
 
+/* link across to the day-by-day carousel view */
+.deckbtn{
+  margin-left:.7rem;padding:.32rem .72rem;border-radius:99px;font-size:.8rem;font-weight:600;
+  color:var(--ink);background:var(--paper-2);border:1px solid var(--line);white-space:nowrap;flex:none
+}
+.deckbtn:hover{background:#fff;text-decoration:none;box-shadow:var(--shadow)}
+@media (max-width:760px){.deckbtn{margin-left:.4rem;padding:.28rem .55rem;font-size:.76rem}}
+
 </style>
 </head>
 <body>
@@ -535,8 +543,9 @@ footer li{padding:.16rem 0}
   <div class="nav-in">
     <span class="brand">CORSICA <b>·</b> by van</span>
     <div class="ver" role="group" aria-label="Trip version">
-      <a href="index.html" class="on" aria-current="page">🚐 Van</a><a href="hotels.html">🛏 Hotels</a>
+      <a href="van.html" class="on" aria-current="page">🚐 Van</a><a href="hotels.html">🛏 Hotels</a>
     </div>
+    <a class="deckbtn" href="index.html">▤ Day view</a>
     <div class="nav-links">
       <a href="#map-section">Map</a>
       <a href="#itinerary-section">Itinerary</a>

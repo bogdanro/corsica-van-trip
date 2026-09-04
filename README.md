@@ -1,6 +1,10 @@
-# Corsica by Van — a 16-day trip plan, two ways
+# Corsica — a 16-day trip plan, two ways, three views
 
-### → **[Van](https://bogdanro.github.io/corsica-van-trip/)** · **[Hotels](https://bogdanro.github.io/corsica-van-trip/hotels.html)** · **[Day view](https://bogdanro.github.io/corsica-van-trip/days.html)**
+### → **[Open the trip](https://bogdanro.github.io/corsica-van-trip/)**
+
+Day-by-day view is the front page. The long reference pages are
+**[van](https://bogdanro.github.io/corsica-van-trip/van.html)** and
+**[hotels](https://bogdanro.github.io/corsica-van-trip/hotels.html)**.
 
 A single-page trip-planning site built from the road-trip film
 **[Corsica | An Incredible 10-Day Road Trip](https://www.youtube.com/watch?v=BVLl3bvjSQw)**,
@@ -16,8 +20,8 @@ Leaflet and the map tiles; everything else works offline.
 
 | View | File | For |
 |---|---|---|
-| Long page | `index.html`, `hotels.html` | reading the whole trip, planning, reference tables |
-| **Day view** | `days.html` | one day at a time — swipe or arrow through a carousel |
+| **Day view** (landing) | `index.html` | one day at a time — swipe or arrow through a carousel |
+| Long reference page | `van.html`, `hotels.html` | reading the whole trip, planning, the reference tables |
 
 The **day view** is the low-clutter reading mode: a left rail of days, and a
 carousel where each slide is one day — hero photo, a **mini map of just that
@@ -28,8 +32,14 @@ Mini maps are deliberately non-interactive (no drag, no wheel zoom) so they
 never fight the swipe gesture, and they initialise lazily — only the current
 day and its two neighbours, rather than 16 Leaflet instances at once.
 
-It serves both datasets: `days.html` for the van, `days.html?v=hotels` for the
-car-and-hotels variant.
+It serves both datasets: `/` for the van, `/?v=hotels` for the car-and-hotels
+variant, and the rail's Reference links point at whichever long page matches.
+
+`days.html` remains as a redirect (it was the URL before the day view was
+promoted), and `index.html` remaps the long page's old anchors — `#day7`
+becomes the carousel's `#d7`, and `#camping` and friends go to `van.html` or
+`hotels.html`. Slides carry `id="dN"`, so hash deep links scroll the deck
+natively.
 
 ## Two versions of the same trip
 
@@ -37,7 +47,7 @@ The same stops, coordinates, photos and routing engine, re-planned around a
 different constraint — a demonstration that changing *how you sleep* changes the
 whole shape of a trip, not just one line of it.
 
-| | Van (`index.html`) | Car + hotels (`hotels.html`) |
+| | Van (`van.html`) | Car + hotels (`hotels.html`) |
 |---|---|---|
 | Sleeps | 13 campsites + 2 hotels | 7 hotel bases, 15 nights |
 | Shape | one continuous anticlockwise loop | 6 of 16 days are closed loops from a base |
@@ -105,7 +115,7 @@ whole shape of a trip, not just one line of it.
 Both are generated from **one stop dataset** by two generators:
 
 ```
-gen_data.py    ──┐                      ┌── assets/js/data.js        → index.html
+gen_data.py    ──┐                      ┌── assets/js/data.js        → van.html
                  ├─ shared POI list ────┤
 gen_hotels.py  ──┘  (exec'd from        └── assets/js/data-hotels.js → hotels.html
                      gen_data.py)
@@ -128,7 +138,9 @@ camping section.
 ## Files
 
 ```
-index.html                 the page
+index.html                 the day-by-day carousel (landing page)
+van.html, hotels.html      the two long reference pages
+days.html                  redirect, kept so older links still resolve
 assets/css/style.css       styles
 assets/js/data.js          generated: pois, camps, stays, days (+route geometry, +photos)
 assets/photos/             88 CC photos, WebP, full + thumb
