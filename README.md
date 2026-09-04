@@ -1,13 +1,14 @@
-# Corsica by Van — a 15-day trip plan
+# Corsica by Van — a 16-day trip plan, two ways
 
 ### → **[Van version](https://bogdanro.github.io/corsica-van-trip/)** · **[Hotel version](https://bogdanro.github.io/corsica-van-trip/hotels.html)**
 
 A single-page trip-planning site built from the road-trip film
 **[Corsica | An Incredible 10-Day Road Trip](https://www.youtube.com/watch?v=BVLl3bvjSQw)**,
-re-paced from the film's 10 days to 15 for van travel while keeping every stop.
+re-paced from the film's 10 days to 15 of content over 16 days away — keeping every
+stop, and adding a buffer day before the ferry.
 
 No build step and no framework. Open `index.html` in any browser, or use
-`corsica-van-trip.html` — the same site inlined into one 223 KB file you can
+`corsica-van-trip.html` — the same site inlined into one 316 KB file you can
 email or open offline. Either way the interactive map needs internet access for
 Leaflet and the map tiles; everything else works offline.
 
@@ -21,8 +22,9 @@ whole shape of a trip, not just one line of it.
 |---|---|---|
 | Sleeps | 13 campsites + 2 hotels | 7 hotel bases, 15 nights |
 | Shape | one continuous anticlockwise loop | 6 of 16 days are closed loops from a base |
-| Driving | 1,448 km / 34 h | 1,582 km / 37 h — loops backtrack |
-| Stops | 75 | 65 |
+| Days | 16 (15 planned + a buffer) | 16 |
+| Driving | 1,447 km / 34 h | 1,582 km / 37 h — loops backtrack |
+| Stops | 75 (104 map pins with food) | 65 (94 pins) |
 | Cost, 2 people | ≈ €2,605 (€81 pp/day) | ≈ €3,907 (€122 pp/day) |
 | Gives up | comfort, laundry, a flat bed | the deep interior: Vergio, Nino, Asco, Ghisoni, Ota, Évisa, Orezza and four more |
 | Wins | flexibility, cost, sleeping at altitude | no wild-camping law to worry about, unpack once |
@@ -31,18 +33,18 @@ whole shape of a trip, not just one line of it.
 
 | Section | Contents |
 |---|---|
-| Map | Leaflet map, 15 selectable day-routes drawn on real road geometry, 111 filterable pins across 11 categories, terrain/street basemap switch |
-| Itinerary | 15 days, each with a photo gallery, its stops, a hike, a van hazard and the campsite it sleeps at |
+| Map | Leaflet map, 16 selectable day-routes drawn on real road geometry, 104 clustered pins across 12 categories, terrain/street basemap switch |
+| Itinerary | 16 days, each with a running order, photo gallery, stops, hikes, a van hazard, vegan food and the campsite it sleeps at |
 | Eating vegan | Per-day vegan-friendly places, evidence-labelled, plus a strategy section — Corsica is genuinely hard for vegans and the page says so |
 | The day, roughly | A guide-style running order per day — soft blocks ("Morning", "After lunch") with slack, and hard clock times only where something won't wait |
 | Timing | Every day carries a "be at your bed by" time; day 16 is a deliberate buffer before the ferry |
 | Photos | 88 Creative-Commons photos from Wikimedia Commons, 6 per day, with a keyboard/swipe lightbox that credits every photographer |
-| Hotels | 5 mid-budget hotels (+1 mountain bonus), each tied to the night it makes sense on |
-| Camping | 30 van-friendly campsites with coordinates, price bands and websites, plus the Corsican wild-camping law |
+| Hotels | 5 mid-budget hotels (+1 mountain bonus) in the van version, 7 bases in the hotel version |
+| Camping | 31 van-friendly campsites with coordinates, price bands, check-in windows and websites, plus the Corsican wild-camping law |
 | Hikes | 17 hikes and walks with distance, ascent, time and grade |
 | Beaches | 21 beaches and freshwater swim spots |
 | Van logistics | Ferries, real driving speeds, the roads a van should respect, water/waste/gas, when to go |
-| Budget | Itemised estimate for two people over 15 days |
+| Budget | Itemised estimate for two people over 16 days, arithmetic self-checked |
 
 ## Where the data came from
 
@@ -79,6 +81,31 @@ whole shape of a trip, not just one line of it.
   (2 May – 30 Sep, €4 return, app booking only). This materially changes day 10
   and the page says so.
 
+## How the two versions relate
+
+Both are generated from **one stop dataset** by two generators:
+
+```
+gen_data.py    ──┐                      ┌── assets/js/data.js        → index.html
+                 ├─ shared POI list ────┤
+gen_hotels.py  ──┘  (exec'd from        └── assets/js/data-hotels.js → hotels.html
+                     gen_data.py)
+```
+
+`gen_hotels.py` imports the POI list out of `gen_data.py` (by exec'ing the file
+up to the DAYS marker, so importing does not trigger a write), then re-groups the
+stops into 16 different days, re-routes them, overrides the 34 stop notes that
+assumed a van, and drops the 10 stops with no mid-budget bed within an hour.
+
+That is the interesting part of this repo: **changing the accommodation
+constraint is a re-plan, not a filter.** Route topology changes (6 of 16 days
+become closed loops from a base), coverage changes, and total driving goes *up*
+by 135 km because loops backtrack.
+
+The same page renderer (`assets/js/app.js`) drives both; section builders no-op
+when a variant omits their section, which is how `hotels.html` simply has no
+camping section.
+
 ## Files
 
 ```
@@ -111,7 +138,14 @@ python3 -m http.server 8765               # then open http://127.0.0.1:8765
 
 `verify.py` asserts the day list, chips, itinerary, tables, pins and popups all
 render, that day- and category-filtering actually changes the visible pin count,
-and that the page throws no console errors or failed requests.
+and that the page throws no console errors or failed requests. `verify_gal.py`
+exercises the gallery and lightbox; `verify_live.py` runs the same checks
+against the deployed GitHub Pages URL rather than localhost.
+
+Driving the UI rather than reading the code caught bugs that review would not
+have — most notably that selecting a day fitted the map to the *driven route*
+only, so stops reached on foot or by boat (Lac de Melo, Saleccia, the Lavezzi)
+fell outside the viewport.
 
 ## The running order
 
