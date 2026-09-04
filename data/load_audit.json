@@ -1,0 +1,506 @@
+{
+ "van": [
+  {
+   "day": 1,
+   "title": "Bastia & Cap Corse East",
+   "drive": 50,
+   "act": 255,
+   "stops": 4,
+   "total": 480,
+   "hikes": [],
+   "longest": 0,
+   "base": "Macinaggio"
+  },
+  {
+   "day": 2,
+   "title": "The Tip of Cap Corse",
+   "drive": 113,
+   "act": 690,
+   "stops": 6,
+   "total": 1028,
+   "hikes": [
+    [
+     "Sentier des Douaniers (Customs Officers' Path)",
+     150
+    ]
+   ],
+   "longest": 150,
+   "base": "Patrimonio / St-Florent"
+  },
+  {
+   "day": 3,
+   "title": "Agriates Desert & Ostriconi",
+   "drive": 68,
+   "act": 980,
+   "stops": 5,
+   "total": 1248,
+   "hikes": [
+    [
+     "Plage de l'Ostriconi",
+     35
+    ]
+   ],
+   "longest": 35,
+   "base": "Ostriconi"
+  },
+  {
+   "day": 4,
+   "title": "Balagne: Lozari, Ile-Rousse, Pigna",
+   "drive": 45,
+   "act": 810,
+   "stops": 5,
+   "total": 1055,
+   "hikes": [],
+   "longest": 0,
+   "base": "Bodri / Balagne"
+  },
+  {
+   "day": 5,
+   "title": "Calvi & the Bonifatu Forest",
+   "drive": 85,
+   "act": 960,
+   "stops": 4,
+   "total": 1220,
+   "hikes": [
+    [
+     "A Figarella river pools, Bonifatu",
+     135
+    ],
+    [
+     "Cirque de Bonifatu / Refuge de Carrozzu",
+     330
+    ]
+   ],
+   "longest": 330,
+   "base": "Calvi"
+  },
+  {
+   "day": 6,
+   "title": "Wild West: Galeria to Porto",
+   "drive": 194,
+   "act": 1050,
+   "stops": 6,
+   "total": 1469,
+   "hikes": [
+    [
+     "Monte Senino viewpoint",
+     240
+    ],
+    [
+     "Girolata",
+     180
+    ],
+    [
+     "Pont de Pianella & Gorges de la Spelunca",
+     210
+    ]
+   ],
+   "longest": 240,
+   "base": "Porto"
+  },
+  {
+   "day": 7,
+   "title": "Calanches de Piana & Capo Rosso",
+   "drive": 35,
+   "act": 810,
+   "stops": 4,
+   "total": 1020,
+   "hikes": [
+    [
+     "Les Calanches de Piana",
+     90
+    ],
+    [
+     "Capo Rosso / Tour de Turghiu",
+     210
+    ]
+   ],
+   "longest": 210,
+   "base": "Porto / Arone"
+  },
+  {
+   "day": 8,
+   "title": "Into the Niolu: Vergio & Calacuccia",
+   "drive": 121,
+   "act": 1005,
+   "stops": 7,
+   "total": 1376,
+   "hikes": [
+    [
+     "Lac de Nino",
+     270
+    ]
+   ],
+   "longest": 270,
+   "base": "Calacuccia"
+  },
+  {
+   "day": 9,
+   "title": "Gorge de l'Asco & down to Corte",
+   "drive": 138,
+   "act": 825,
+   "stops": 4,
+   "total": 1138,
+   "hikes": [
+    [
+     "Haut-Asco (1,450 m) & Punta Muvrella",
+     300
+    ]
+   ],
+   "longest": 300,
+   "base": "Corte"
+  },
+  {
+   "day": 10,
+   "title": "Restonica: Lac de Melo & Capitello",
+   "drive": 26,
+   "act": 900,
+   "stops": 3,
+   "total": 1076,
+   "hikes": [
+    [
+     "Lac de Melo & Lac de Capitello",
+     420
+    ],
+    [
+     "Vizzavona & the Cascade des Anglais",
+     120
+    ]
+   ],
+   "longest": 420,
+   "base": "Corte / Vizzavona"
+  },
+  {
+   "day": 11,
+   "title": "Vizzavona, Tolla & Ajaccio sunset",
+   "drive": 246,
+   "act": 900,
+   "stops": 5,
+   "total": 1346,
+   "hikes": [
+    [
+     "Cascata di u Velu di a Spusata (Bridal Veil Falls)",
+     40
+    ],
+    [
+     "\u00celes Sanguinaires & Pointe de la Parata",
+     45
+    ]
+   ],
+   "longest": 45,
+   "base": "Ajaccio"
+  },
+  {
+   "day": 12,
+   "title": "Prehistory, Sartene & Bonifacio",
+   "drive": 213,
+   "act": 990,
+   "stops": 5,
+   "total": 1403,
+   "hikes": [],
+   "longest": 0,
+   "base": "Bonifacio"
+  },
+  {
+   "day": 13,
+   "title": "Bonifacio cliffs & the white beaches",
+   "drive": 98,
+   "act": 1320,
+   "stops": 5,
+   "total": 1618,
+   "hikes": [],
+   "longest": 0,
+   "base": "Porto-Vecchio"
+  },
+  {
+   "day": 14,
+   "title": "Ospedale, Carbini & Aiguilles de Bavella",
+   "drive": 293,
+   "act": 1185,
+   "stops": 7,
+   "total": 1728,
+   "hikes": [
+    [
+     "Piscia di Gallu waterfall",
+     105
+    ],
+    [
+     "Aiguilles de Bavella & the Trou de la Bombe",
+     195
+    ]
+   ],
+   "longest": 195,
+   "base": "Zonza"
+  },
+  {
+   "day": 15,
+   "title": "Ghisoni, Aleria & down to the coast",
+   "drive": 207,
+   "act": 525,
+   "stops": 4,
+   "total": 907,
+   "hikes": [],
+   "longest": 0,
+   "base": "near Bastia"
+  },
+  {
+   "day": 16,
+   "title": "Buffer day \u2014 Castagniccia, then the ferry",
+   "drive": 121,
+   "act": 240,
+   "stops": 1,
+   "total": 461,
+   "hikes": [],
+   "longest": 0,
+   "base": "ferry"
+  }
+ ],
+ "hotels": [
+  {
+   "day": 1,
+   "title": "Bastia & the near Cap",
+   "drive": 44,
+   "act": 255,
+   "stops": 3,
+   "total": 449,
+   "hikes": [],
+   "longest": 0,
+   "base": "Bastia"
+  },
+  {
+   "day": 2,
+   "title": "The whole Cap Corse loop",
+   "drive": 188,
+   "act": 690,
+   "stops": 7,
+   "total": 1128,
+   "hikes": [
+    [
+     "Sentier des Douaniers (Customs Officers' Path)",
+     150
+    ]
+   ],
+   "longest": 150,
+   "base": "Bastia"
+  },
+  {
+   "day": 3,
+   "title": "Saint-Florent & the Agriates",
+   "drive": 125,
+   "act": 800,
+   "stops": 4,
+   "total": 1100,
+   "hikes": [],
+   "longest": 0,
+   "base": "Bastia"
+  },
+  {
+   "day": 4,
+   "title": "Balagne: Ostriconi to Calvi",
+   "drive": 179,
+   "act": 990,
+   "stops": 6,
+   "total": 1394,
+   "hikes": [
+    [
+     "Plage de l'Ostriconi",
+     35
+    ]
+   ],
+   "longest": 35,
+   "base": "Calvi"
+  },
+  {
+   "day": 5,
+   "title": "Calvi, Calenzana & Bonifatu",
+   "drive": 75,
+   "act": 960,
+   "stops": 4,
+   "total": 1210,
+   "hikes": [
+    [
+     "A Figarella river pools, Bonifatu",
+     135
+    ],
+    [
+     "Cirque de Bonifatu / Refuge de Carrozzu",
+     330
+    ]
+   ],
+   "longest": 330,
+   "base": "Calvi"
+  },
+  {
+   "day": 6,
+   "title": "West coast: Galeria, Senino, Porto",
+   "drive": 189,
+   "act": 1050,
+   "stops": 6,
+   "total": 1464,
+   "hikes": [
+    [
+     "Monte Senino viewpoint",
+     240
+    ],
+    [
+     "Girolata",
+     180
+    ],
+    [
+     "Pont de Pianella & Gorges de la Spelunca",
+     210
+    ]
+   ],
+   "longest": 240,
+   "base": "Porto"
+  },
+  {
+   "day": 7,
+   "title": "Calanches, Capo Rosso & Arone",
+   "drive": 71,
+   "act": 810,
+   "stops": 4,
+   "total": 1056,
+   "hikes": [
+    [
+     "Les Calanches de Piana",
+     90
+    ],
+    [
+     "Capo Rosso / Tour de Turghiu",
+     210
+    ]
+   ],
+   "longest": 210,
+   "base": "Porto"
+  },
+  {
+   "day": 8,
+   "title": "Down the west coast to Ajaccio",
+   "drive": 147,
+   "act": 420,
+   "stops": 2,
+   "total": 692,
+   "hikes": [
+    [
+     "\u00celes Sanguinaires & Pointe de la Parata",
+     45
+    ]
+   ],
+   "longest": 45,
+   "base": "Ajaccio"
+  },
+  {
+   "day": 9,
+   "title": "Mountain day loop from Ajaccio",
+   "drive": 212,
+   "act": 720,
+   "stops": 4,
+   "total": 1107,
+   "hikes": [
+    [
+     "Cascata di u Velu di a Spusata (Bridal Veil Falls)",
+     40
+    ],
+    [
+     "Vizzavona & the Cascade des Anglais",
+     120
+    ]
+   ],
+   "longest": 120,
+   "base": "Ajaccio"
+  },
+  {
+   "day": 10,
+   "title": "South-west: Filitosa, Sartene, Bonifacio",
+   "drive": 165,
+   "act": 480,
+   "stops": 3,
+   "total": 795,
+   "hikes": [],
+   "longest": 0,
+   "base": "Bonifacio"
+  },
+  {
+   "day": 11,
+   "title": "Bonifacio & the Lavezzi",
+   "drive": 63,
+   "act": 1080,
+   "stops": 3,
+   "total": 1293,
+   "hikes": [],
+   "longest": 0,
+   "base": "Bonifacio"
+  },
+  {
+   "day": 12,
+   "title": "White beaches & up to the Ospedale",
+   "drive": 307,
+   "act": 1020,
+   "stops": 6,
+   "total": 1552,
+   "hikes": [
+    [
+     "Piscia di Gallu waterfall",
+     105
+    ]
+   ],
+   "longest": 105,
+   "base": "Zonza"
+  },
+  {
+   "day": 13,
+   "title": "Alta Rocca, Bavella & across to Corte",
+   "drive": 197,
+   "act": 1065,
+   "stops": 6,
+   "total": 1487,
+   "hikes": [
+    [
+     "Aiguilles de Bavella & the Trou de la Bombe",
+     195
+    ]
+   ],
+   "longest": 195,
+   "base": "Corte"
+  },
+  {
+   "day": 14,
+   "title": "Restonica: Melo & Capitello",
+   "drive": 26,
+   "act": 900,
+   "stops": 3,
+   "total": 1076,
+   "hikes": [
+    [
+     "Lac de Melo & Lac de Capitello",
+     420
+    ]
+   ],
+   "longest": 420,
+   "base": "Corte"
+  },
+  {
+   "day": 15,
+   "title": "The Niolu, then down to Bastia",
+   "drive": 121,
+   "act": 435,
+   "stops": 3,
+   "total": 706,
+   "hikes": [],
+   "longest": 0,
+   "base": "Bastia"
+  },
+  {
+   "day": 16,
+   "title": "Buffer day \u2014 the Castagniccia, then the ferry",
+   "drive": 122,
+   "act": 240,
+   "stops": 1,
+   "total": 462,
+   "hikes": [],
+   "longest": 0,
+   "base": "ferry"
+  }
+ ]
+}

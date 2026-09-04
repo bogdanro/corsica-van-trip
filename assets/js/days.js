@@ -9,7 +9,8 @@
   var PDIR = 'assets/photos/';
   /* which long reference page this variant belongs to */
   var VARIANT = (location.search.match(/[?&]v=([a-z]+)/) || [])[1];
-  var LONG = VARIANT === 'hotels' ? 'hotels.html' : 'van.html';
+  var LONG = VARIANT === 'hotels' ? 'hotels.html'
+           : VARIANT === 'paced'  ? 'paced.html' : 'van.html';
 
   var CATS = {
     town:     { c: '#c4562f', i: '🏘️' }, hike:  { c: '#3f7d3a', i: '🥾' },
@@ -200,8 +201,11 @@
     var v = VARIANT;
     var sw = document.getElementById('deckver');
     if (sw) {
-      sw.innerHTML = '<a href="./"' + (v === 'hotels' ? '' : ' class="on"') + '>🚐 Van</a>' +
-                     '<a href="?v=hotels"' + (v === 'hotels' ? ' class="on"' : '') + '>🛏 Hotels</a>';
+      var VARIANTS = [['', '🚐 Van'], ['hotels', '🛏 Hotels'], ['paced', '🐢 Unrushed']];
+      sw.innerHTML = VARIANTS.map(function (x) {
+        var on = (v || '') === x[0] ? ' class="on"' : '';
+        return '<a href="' + (x[0] ? '?v=' + x[0] : './') + '"' + on + '>' + x[1] + '</a>';
+      }).join('');
     }
     document.querySelectorAll('[data-ref]').forEach(function (a) {
       a.href = LONG + '#' + a.dataset.ref;
