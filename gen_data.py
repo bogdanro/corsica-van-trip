@@ -529,6 +529,14 @@ for r in routes:
 
 for _c in CAMPS: _c.setdefault("checkin", CHECKIN_CAMP)
 for _s in STAYS: _s.setdefault("checkin", "Check-in from 15:00, checkout 10:00–11:00 (typical).")
+# how many of 10 independent guides mention each stop; `None` = not checked
+try:
+    CORROB = json.load(open("data/corroboration.json"))
+except FileNotFoundError:
+    CORROB = {}
+for _p in (POIS if "POIS" in dir() else pois_out):
+    if _p.get("c") != "food" and _p["id"] in CORROB:
+        _p["src"] = CORROB[_p["id"]]
 out = dict(pois=POIS + EAT_PINS, camps=CAMPS, stays=STAYS, days=days)
 with open("assets/js/data.js","w") as f:
     f.write("// Generated. Coordinates from OpenStreetMap/Nominatim; routes from OSRM (real road geometry).\n")

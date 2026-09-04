@@ -33,6 +33,13 @@
     return (h ? h + ' h ' : '') + (r ? r + ' min' : (h ? '' : '0 min'));
   };
 
+  function srcChip(p) {
+    if (typeof p.src !== 'number') return '';
+    var cls = p.src >= 7 ? 'hi' : p.src >= 4 ? 'mid' : 'lo';
+    var txt = p.src >= 1 ? p.src + '/10' : (p.vid ? "film's find" : 'unlisted');
+    return '<span class="srcchip ' + cls + '">' + esc(txt) + '</span>';
+  }
+
   /* stops belonging to each day, in the categories we want on a mini map */
   var byDay = {};
   T.pois.forEach(function (p) { (byDay[p.d] = byDay[p.d] || []).push(p); });
@@ -101,7 +108,8 @@
       stops.forEach(function (p) {
         var c = CATS[p.c] || CATS.town;
         h += '<li><span class="ic" style="background:' + c.c + '">' + c.i + '</span><div>' +
-             '<b>' + esc(p.n) + '</b>' + (p.time ? ' <i>' + esc(p.time) + '</i>' : '') +
+             '<b>' + esc(p.n) + '</b>' + srcChip(p) +
+             (p.time ? ' <i>' + esc(p.time) + '</i>' : '') +
              '<span>' + esc(p.t) + '</span>' +
              (p.hike ? '<span class="mini hike">🥾 ' + esc(p.hike.dist) + ' · ' + esc(p.hike.up) +
                        ' · ' + esc(p.hike.dur) + ' · ' + esc(p.hike.grade) + '</span>' : '') +

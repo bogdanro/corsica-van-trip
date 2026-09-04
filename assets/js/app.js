@@ -290,6 +290,22 @@
     });
   }
 
+  /* How many of 10 independent guides mention this stop.  Low is not the same
+     as bad -- a 0 that the source film raves about is a find, not a dud -- so
+     the label says which it is. */
+  function srcChip(p) {
+    if (typeof p.src !== 'number') return '';
+    var cls = p.src >= 7 ? 'hi' : p.src >= 4 ? 'mid' : 'lo';
+    var txt = p.src >= 7 ? p.src + '/10 guides'
+            : p.src >= 4 ? p.src + '/10 guides'
+            : p.src >= 1 ? p.src + '/10 guides'
+            : (p.vid ? "the film's own find" : 'unlisted');
+    var tip = p.src === 0 && p.vid
+      ? "No guidebook we checked mentions this; it comes from the source film"
+      : p.src + ' of 10 independent Corsica guides mention this stop';
+    return '<span class="srcchip ' + cls + '" title="' + esc(tip) + '">' + esc(txt) + '</span>';
+  }
+
   function buildItinerary() {
     var box = document.getElementById('itinerary');
     if (!box) return;
@@ -361,7 +377,7 @@
       stops.forEach(function (p) {
         var c = CATS[p.c] || CATS.town;
         h += '<li><span class="ic" style="background:' + c.color + '">' + c.icon + '</span><div>';
-        h += '<div class="nm">' + esc(p.n) +
+        h += '<div class="nm">' + esc(p.n) + srcChip(p) +
              (p.f && p.f.length ? p.f.map(function (x) { return '<span class="tag">' + esc(TRAV[x] || x) + '</span>'; }).join('') : '') +
              '</div>';
         h += '<div class="tx">' + esc(p.t) + '</div>';

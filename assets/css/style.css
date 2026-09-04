@@ -518,3 +518,13 @@ footer li{padding:.16rem 0}
 }
 .deckbtn:hover{background:#fff;text-decoration:none;box-shadow:var(--shadow)}
 @media (max-width:760px){.deckbtn{margin-left:.4rem;padding:.28rem .55rem;font-size:.76rem}}
+
+/* how many independent guides corroborate a stop */
+.srcchip{
+  display:inline-block;margin-left:.45rem;font-size:.6rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;padding:.11rem .38rem;border-radius:4px;vertical-align:2px;
+  white-space:nowrap;cursor:help
+}
+.srcchip.hi{background:#e6f4e4;color:#2f6b2a}
+.srcchip.mid{background:var(--paper-2);color:var(--slate)}
+.srcchip.lo{background:#f3ecf6;color:#6b3f80}
