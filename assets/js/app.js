@@ -297,7 +297,22 @@
            '<div class="theme">' + esc(d.theme) + '</div>' +
            '<p class="intro">' + esc(d.intro) + '</p>';
 
-      if (d.tip) h += '<div class="note time"><b>Timing:</b> ' + esc(d.tip) + '</div>';
+      /* the running order below now carries the timing guidance; the standalone
+         tip is only shown when there is no flow for the day */
+      if (d.tip && !(d.flow && d.flow.length))
+        h += '<div class="note time"><b>Timing:</b> ' + esc(d.tip) + '</div>';
+
+      if (d.flow && d.flow.length) {
+        h += '<div class="flow"><div class="flow-hd">The day, roughly</div><ol>';
+        d.flow.forEach(function (s) {
+          h += '<li' + (s.fix ? ' class="fix"' : '') + '>' +
+               '<span class="fw">' + esc(s.w) + '</span>' +
+               '<span class="ft">' + esc(s.t) + '</span></li>';
+        });
+        h += '</ol><p class="flow-ft">Soft blocks, not a schedule — everything here has slack in it. ' +
+             'Only the <b>marked</b> times are fixed: boats, shuttles, receptions, sunset and the ferry.</p>' +
+             '</div>';
+      }
       if (d.photos && d.photos.length) {
         h += '<div class="gal" role="list" aria-label="Photos from day ' + d.day + '">';
         d.photos.forEach(function (ph, i) {

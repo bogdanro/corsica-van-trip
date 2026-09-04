@@ -14,6 +14,7 @@ ns = {}
 exec(compile(src, "gen_data.py", "exec"), ns)
 POIS = {p["id"]: dict(p) for p in ns["POIS"]}
 
+from flows_hotel import FLOW
 routes = json.load(open("data/routes_hotels.json"))
 photos_van = json.load(open("data/photos.json"))
 
@@ -179,7 +180,8 @@ for r in routes:
     days.append(dict(day=r["day"], title=r["title"], km=r["km"], min=r["min"],
                      geometry=r["geometry"], base=m["base"], theme=m["theme"],
                      vid=m["vid"], intro=m["intro"],
-                     bed=m.get("bed"), tip=m.get("tip"), photos=ph))
+                     bed=m.get("bed"), tip=m.get("tip"),
+                     flow=FLOW.get(r["day"], []), photos=ph))
 
 for _s in STAYS: _s.setdefault("checkin", "Check-in from 15:00, checkout 10:00–11:00 (typical).")
 out = dict(pois=pois_out, camps=[], stays=STAYS, days=days)

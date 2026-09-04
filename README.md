@@ -33,6 +33,7 @@ whole shape of a trip, not just one line of it.
 |---|---|
 | Map | Leaflet map, 15 selectable day-routes drawn on real road geometry, 111 filterable pins across 11 categories, terrain/street basemap switch |
 | Itinerary | 15 days, each with a photo gallery, its stops, a hike, a van hazard and the campsite it sleeps at |
+| The day, roughly | A guide-style running order per day — soft blocks ("Morning", "After lunch") with slack, and hard clock times only where something won't wait |
 | Timing | Every day carries a "be at your bed by" time; day 16 is a deliberate buffer before the ferry |
 | Photos | 88 Creative-Commons photos from Wikimedia Commons, 6 per day, with a keyboard/swipe lightbox that credits every photographer |
 | Hotels | 5 mid-budget hotels (+1 mountain bonus), each tied to the night it makes sense on |
@@ -85,6 +86,8 @@ assets/css/style.css       styles
 assets/js/data.js          generated: pois, camps, stays, days (+route geometry, +photos)
 assets/photos/             88 CC photos, WebP, full + thumb
 assets/js/app.js           map, filters and section renderers
+flows_van.py               per-day running order, van version
+flows_hotel.py             per-day running order, car + hotel version
 gen_data.py                regenerates assets/js/data.js (van)
 gen_hotels.py              regenerates assets/js/data-hotels.js (car + hotels)
 build_routes_hotels.py     OSRM routing for the hotel version's day loops
@@ -107,6 +110,22 @@ python3 -m http.server 8765               # then open http://127.0.0.1:8765
 `verify.py` asserts the day list, chips, itinerary, tables, pins and popups all
 render, that day- and category-filtering actually changes the visible pin count,
 and that the page throws no console errors or failed requests.
+
+## The running order
+
+Each day carries a **"The day, roughly"** panel: a narrated order of play in the
+voice of someone who has done it — wake time, what to see before the heat, where
+lunch happens, what to skip if you are behind.
+
+It is deliberately **not** a minute-by-minute schedule. Blocks are soft
+("Early", "Late morning", "After lunch") and carry slack, because this is a
+holiday. Across both versions there are 212 blocks and only **34 fixed times** —
+and those are exactly the things that will not wait for you: boat sailings, the
+Restonica shuttle, campsite receptions, sunset, and the ferry. They are marked
+`FIXED` and everything else is a suggestion.
+
+Flows live in `flows_van.py` and `flows_hotel.py`, separate from the stop data,
+so the narrative can be rewritten without touching coordinates or routing.
 
 ## Why 16 days for 15 days of content
 

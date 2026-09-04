@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 
+from flows_van import FLOW
 routes = json.load(open("data/routes_simplified.json"))
 try:
     _PH = json.load(open("data/photos.json"))
@@ -499,7 +500,7 @@ for r in routes:
     days.append(dict(day=r["day"], title=r["title"], km=r["km"], min=r["min"],
                      geometry=r["geometry"], base=m["base"], theme=m["theme"],
                      vid=m["vid"], intro=m["intro"],
-                     bed=m.get("bed"), tip=m.get("tip"),
+                     bed=m.get("bed"), tip=m.get("tip"), flow=FLOW.get(r["day"], []),
                      photos=_photos_for(r["day"])))
 
 for _c in CAMPS: _c.setdefault("checkin", CHECKIN_CAMP)
