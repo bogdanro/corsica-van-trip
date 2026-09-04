@@ -9,7 +9,10 @@
 Durations are the *doing* time. Parking, walking in and back is added
 separately (20 min a stop), as are meals.
 """
-S = lambda m, pick, note=None: dict(m=m, pick=pick, note=note)
+# `hard` marks effortful activity -- a climb, a long walk on rock.  The
+# no-stacking rule applies only to these: two 3-hour hikes in a day is a bad
+# day, two 3-hour beaches is just a good one.
+S = lambda m, pick, note=None, hard=False: dict(m=m, pick=pick, note=note, hard=hard)
 
 STOP = {
 # --- Cap Corse
@@ -17,7 +20,7 @@ STOP = {
 "erbalunga":   S(45,  "core"),
 "sisco":       S(60,  "option", "only if it's hot and you're ahead"),
 "macinaggio":  S(0,   "core",   "you sleep here"),
-"douaniers":   S(210, "core",   "the short out-and-back is 90 min if you'd rather"),
+"douaniers":   S(210, "core",   "the short out-and-back is 90 min if you'd rather", hard=True),
 "barcaggio":   S(120, "core"),
 "mattei":      S(30,  "core"),
 "centuri":     S(90,  "core"),
@@ -37,35 +40,35 @@ STOP = {
 # --- Calvi
 "calvi":       S(180, "core"),
 "calenzana":   S(45,  "option"),
-"figarella":   S(210, "core",   "walk plus a swim"),
-"bonifatu":    S(360, "alt",    "the big cirque hike instead of the river walk — not both"),
+"figarella":   S(210, "core",   "walk plus a swim", hard=True),
+"bonifatu":    S(360, "alt",    "the big cirque hike instead of the river walk — not both", hard=True),
 # --- West coast
 "galeria":     S(90,  "core"),
-"senino":      S(240, "core",   "4 h of steep, and the whole point of this stretch"),
+"senino":      S(240, "core",   "4 h of steep, and the whole point of this stretch", hard=True),
 "scandola":    S(240, "core",   "boat from Porto, usually with a Girolata stop"),
-"girolata":    S(180, "alt",    "on foot from the Col de la Croix if you skip the boat"),
+"girolata":    S(180, "alt",    "on foot from the Col de la Croix if you skip the boat", hard=True),
 "porto":       S(90,  "core"),
-"pianella":    S(120, "core",   "the bridge and a swim; the full gorge walk is 3.5 h"),
+"pianella":    S(120, "core",   "the bridge and a swim; the full gorge walk is 3.5 h", hard=True),
 # --- Piana
-"calanches":   S(120, "core"),
+"calanches":   S(120, "core", hard=True),
 "piana":       S(60,  "core"),
-"caporosso":   S(210, "core"),
+"caporosso":   S(210, "core", hard=True),
 "arone":       S(180, "core",   "this is the afternoon off"),
 # --- Niolu
 "ota":         S(30,  "option"),
 "evisa":       S(60,  "core"),
 "cristinacce": S(20,  "option"),
 "vergio":      S(45,  "core"),
-"nino":        S(300, "core",   "a real mountain day on its own"),
+"nino":        S(300, "core",   "a real mountain day on its own", hard=True),
 "calacuccia":  S(150, "core"),
 "aruda":       S(120, "core"),
 # --- Asco & Corte
 "scala":       S(45,  "core"),
 "asco":        S(90,  "core"),
-"hautasco":    S(300, "option", "Punta Muvrella — a 5 h day, only if you want it"),
+"hautasco":    S(300, "option", "Punta Muvrella — a 5 h day, only if you want it", hard=True),
 "corte":       S(180, "core"),
 "restonica":   S(120, "core"),
-"melo":        S(480, "core",   "eight hours; nothing else fits"),
+"melo":        S(480, "core",   "eight hours; nothing else fits", hard=True),
 "vizzavona":   S(120, "core"),
 # --- Ajaccio side
 "spusata":     S(75,  "core"),
@@ -74,6 +77,7 @@ STOP = {
 "sanguinaires":S(120, "core"),
 "d1d4":        S(150, "option", "a drive for its own sake"),
 # --- South-west
+"propriano":   S(90,  "core",   "the restock and lunch stop on the way south"),
 "filitosa":    S(105, "core"),
 "sartene":     S(105, "core"),
 "stelucie":    S(75,  "option"),
@@ -81,17 +85,17 @@ STOP = {
 "bonifacio":   S(240, "core"),
 # --- Far south
 "lavezzi":     S(300, "core",   "a boat day"),
-"rondinara":   S(180, "alt"),
+"rondinara":   S(180, "core",   "7 of 10 guides rate it; the best swim in the south"),
 "santagiulia": S(180, "core"),
-"palombaggia": S(180, "alt",    "pick one white-sand beach a day, not three"),
+"palombaggia": S(180, "core",   "8 of 10 guides rate it; pair it with Porto-Vecchio"),
 "portovecchio":S(120, "core"),
 # --- Alta Rocca & Bavella
 "ospedale":    S(75,  "core"),
-"piscia":      S(120, "core"),
+"piscia":      S(120, "core", hard=True),
 "carbini":     S(45,  "option"),
 "cucuruzzu":   S(105, "option"),
 "bavella":     S(90,  "core"),
-"aiguilles":   S(240, "core",   "Trou de la Bombe is 150 min; the Alpine loop 240"),
+"aiguilles":   S(240, "core",   "Trou de la Bombe is 150 min; the Alpine loop 240", hard=True),
 "zonza":       S(0,   "core",   "you sleep here"),
 # --- East and home
 "solenzara":   S(90,  "core"),

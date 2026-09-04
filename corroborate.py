@@ -57,7 +57,7 @@ ALIAS = {
  "vergio":["vergio"], "hautasco":["asco","muvrella"], "asco":["asco"],
  "piscia":["piscia di gall","piscia"], "ospedale":["ospedale"],
  "cucuruzzu":["cucuruzzu"], "carbini":["carbini"],
- "filitosa":["filitosa"], "sartene":["sartene"], "stelucie":["sainte lucie de tallano","tallano"],
+ "filitosa":["filitosa"], "sartene":["sartene"], "propriano":["propriano","valinco"], "stelucie":["sainte lucie de tallano","tallano"],
  "bonifacio":["bonifacio"], "ajaccio":["ajaccio"], "sanguinaires":["sanguinaires","parata"],
  "corte":["corte"], "calvi":["calvi"], "ilerousse":["ile rousse","l ile rousse"],
  "pigna":["pigna"], "santantonino":["sant antonino","sant antonin"],

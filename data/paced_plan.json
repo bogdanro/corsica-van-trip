@@ -6,8 +6,8 @@
    "erbalunga"
   ],
   "act": 195,
-  "drive": 31,
-  "load": 341,
+  "drive": 30,
+  "load": 340,
   "camp": "c-pietra",
   "campname": "Camping La Pietra",
   "base": "La Pietra",
@@ -26,8 +26,8 @@
    "mattei"
   ],
   "act": 360,
-  "drive": 43,
-  "load": 538,
+  "drive": 42,
+  "load": 537,
   "camp": "c-tollare",
   "campname": "Tollare camper aire",
   "base": "Tollare camper aire",
@@ -46,8 +46,8 @@
    "stflorent"
   ],
   "act": 330,
-  "drive": 80,
-  "load": 545,
+  "drive": 84,
+  "load": 549,
   "camp": "c-kalliste",
   "campname": "Camping Kalliste",
   "base": "Kalliste",
@@ -65,8 +65,8 @@
    "saleccia"
   ],
   "act": 350,
-  "drive": 53,
-  "load": 518,
+  "drive": 58,
+  "load": 523,
   "camp": "c-ostriconi",
   "campname": "Village de l'Ostriconi",
   "base": "Ostriconi",
@@ -120,8 +120,8 @@
    "figarella"
   ],
   "act": 210,
-  "drive": 46,
-  "load": 351,
+  "drive": 45,
+  "load": 350,
   "camp": "c-paradella",
   "campname": "Camping Paradella",
   "base": "Paradella",
@@ -138,8 +138,8 @@
    "senino"
   ],
   "act": 240,
-  "drive": 39,
-  "load": 374,
+  "drive": 38,
+  "load": 373,
   "camp": "c-oliviersporto",
   "campname": "Camping Les Oliviers, Porto",
   "base": "Les Oliviers, Porto",
@@ -153,67 +153,51 @@
  {
   "n": 9,
   "ids": [
-   "scandola"
+   "scandola",
+   "porto"
   ],
-  "act": 240,
-  "drive": 21,
-  "load": 356,
-  "camp": "c-oliviersporto",
-  "campname": "Camping Les Oliviers, Porto",
-  "base": "Les Oliviers, Porto",
-  "baselat": 42.26182,
-  "baselon": 8.71235,
-  "basemin": 5,
-  "basekm": 16.3,
-  "realload": 345,
-  "realdrive": 10
- },
- {
-  "n": 10,
-  "ids": [
-   "porto",
-   "pianella"
-  ],
-  "act": 210,
-  "drive": 38,
-  "load": 363,
+  "act": 330,
+  "drive": 42,
+  "load": 487,
   "camp": "c-solevista",
   "campname": "Camping Sole e Vista",
   "base": "Sole e Vista",
   "baselat": 42.26376,
   "baselon": 8.71158,
-  "basemin": 10,
-  "basekm": 4.2,
-  "realload": 354,
-  "realdrive": 29
+  "basemin": 6,
+  "basekm": 1.3,
+  "realload": 457,
+  "realdrive": 12
  },
  {
-  "n": 11,
+  "n": 10,
   "ids": [
+   "pianella",
    "calanches",
-   "caporosso"
+   "piana"
   ],
-  "act": 330,
-  "drive": 28,
-  "load": 473,
+  "act": 300,
+  "drive": 35,
+  "load": 470,
   "camp": "c-arone",
   "campname": "Camping Plage d'Arone",
   "base": "Plage d'Arone",
   "baselat": 42.21142,
   "baselon": 8.58462,
-  "basemin": 15,
-  "basekm": 2.6,
-  "realload": 485,
-  "realdrive": 40
+  "basemin": 19,
+  "basekm": 5.3,
+  "realload": 486,
+  "realdrive": 51
  },
  {
-  "n": 12,
+  "n": 11,
   "ids": [
+   "caporosso",
    "arone"
   ],
-  "act": 180,
-  "drive": 38,
-  "load": 313,
+  "act": 390,
+  "drive": 48,
+  "load": 553,
   "camp": "c-arone",
   "campname": "Camping Plage d'Arone",
   "base": "Plage d'Arone",
@@ -221,18 +205,18 @@
   "baselon": 8.58462,
   "basemin": 2,
   "basekm": 0.6,
-  "realload": 279,
-  "realdrive": 4
+  "realload": 539,
+  "realdrive": 34
  },
  {
-  "n": 13,
+  "n": 12,
   "ids": [
    "vergio",
    "nino"
   ],
   "act": 345,
-  "drive": 55,
-  "load": 515,
+  "drive": 54,
+  "load": 514,
   "camp": "c-acquaviva",
   "campname": "Camping Acqua Viva",
   "base": "Acqua Viva",
@@ -244,13 +228,13 @@
   "realdrive": 92
  },
  {
-  "n": 14,
+  "n": 13,
   "ids": [
    "calacuccia"
   ],
   "act": 150,
-  "drive": 13,
-  "load": 258,
+  "drive": 12,
+  "load": 257,
   "camp": "c-acquaviva",
   "campname": "Camping Acqua Viva",
   "base": "Acqua Viva",
@@ -262,15 +246,14 @@
   "realdrive": 9
  },
  {
-  "n": 15,
+  "n": 14,
   "ids": [
    "aruda",
-   "scala",
    "asco"
   ],
-  "act": 255,
-  "drive": 62,
-  "load": 452,
+  "act": 210,
+  "drive": 61,
+  "load": 386,
   "camp": "c-montecinto-asco",
   "campname": "Camping Monte Cinto (Asco)",
   "base": "Monte Cinto (Asco)",
@@ -278,18 +261,18 @@
   "baselon": 8.94533,
   "basemin": 0,
   "basekm": 0.0,
-  "realload": 461,
+  "realload": 396,
   "realdrive": 71
  },
  {
-  "n": 16,
+  "n": 15,
   "ids": [
    "corte",
    "restonica"
   ],
   "act": 300,
-  "drive": 45,
-  "load": 460,
+  "drive": 44,
+  "load": 459,
   "camp": "c-restonica",
   "campname": "Camping Restonica",
   "base": "Restonica",
@@ -301,7 +284,7 @@
   "realdrive": 73
  },
  {
-  "n": 17,
+  "n": 16,
   "ids": [
    "melo"
   ],
@@ -319,61 +302,79 @@
   "realdrive": 25
  },
  {
+  "n": 17,
+  "ids": [
+   "vizzavona"
+  ],
+  "act": 120,
+  "drive": 21,
+  "load": 236,
+  "camp": "c-lesoleil",
+  "campname": "Camping Le Soleil, Vivario",
+  "base": "Le Soleil, Vivario",
+  "baselat": 42.15262,
+  "baselon": 9.15088,
+  "basemin": 6,
+  "basekm": 3.0,
+  "realload": 280,
+  "realdrive": 65
+ },
+ {
   "n": 18,
   "ids": [
-   "vizzavona",
-   "spusata"
+   "spusata",
+   "tolla"
   ],
-  "act": 195,
-  "drive": 41,
-  "load": 351,
+  "act": 225,
+  "drive": 63,
+  "load": 403,
+  "camp": "c-prunelli",
+  "campname": "Camping U Prunelli",
+  "base": "U Prunelli",
+  "baselat": 41.91078,
+  "baselon": 8.82392,
+  "basemin": 40,
+  "basekm": 13.7,
+  "realload": 475,
+  "realdrive": 135
+ },
+ {
+  "n": 19,
+  "ids": [
+   "ajaccio",
+   "sanguinaires"
+  ],
+  "act": 300,
+  "drive": 95,
+  "load": 510,
   "camp": "c-prunelli",
   "campname": "Camping U Prunelli",
   "base": "U Prunelli",
   "baselat": 41.91078,
   "baselon": 8.82392,
   "basemin": 36,
-  "basekm": 25.3,
-  "realload": 419,
-  "realdrive": 109
- },
- {
-  "n": 19,
-  "ids": [
-   "tolla",
-   "ajaccio"
-  ],
-  "act": 330,
-  "drive": 71,
-  "load": 516,
-  "camp": "c-mimosas",
-  "campname": "Camping Les Mimosas, Ajaccio",
-  "base": "Les Mimosas, Ajaccio",
-  "baselat": 41.93715,
-  "baselon": 8.72769,
-  "basemin": 5,
-  "basekm": 1.4,
-  "realload": 553,
-  "realdrive": 108
+  "basekm": 19.4,
+  "realload": 491,
+  "realdrive": 76
  },
  {
   "n": 20,
   "ids": [
-   "sanguinaires",
-   "filitosa"
+   "filitosa",
+   "propriano"
   ],
-  "act": 225,
-  "drive": 110,
-  "load": 450,
+  "act": 195,
+  "drive": 71,
+  "load": 381,
   "camp": "c-bavellavista",
   "campname": "Camping Bavella Vista",
   "base": "Bavella Vista",
   "baselat": 41.75585,
   "baselon": 9.17229,
-  "basemin": 64,
-  "basekm": 25.0,
-  "realload": 518,
-  "realdrive": 178
+  "basemin": 45,
+  "basekm": 23.9,
+  "realload": 426,
+  "realdrive": 116
  },
  {
   "n": 21,
@@ -382,8 +383,8 @@
    "bonifacio"
   ],
   "act": 345,
-  "drive": 77,
-  "load": 537,
+  "drive": 67,
+  "load": 527,
   "camp": "c-pertamina",
   "campname": "Camping Pertamina \u2014 U Farniente",
   "base": "Pertamina \u2014 U Farniente",
@@ -400,8 +401,8 @@
    "lavezzi"
   ],
   "act": 300,
-  "drive": 27,
-  "load": 422,
+  "drive": 18,
+  "load": 413,
   "camp": "c-pertamina",
   "campname": "Camping Pertamina \u2014 U Farniente",
   "base": "Pertamina \u2014 U Farniente",
@@ -415,11 +416,12 @@
  {
   "n": 23,
   "ids": [
+   "rondinara",
    "santagiulia"
   ],
-  "act": 300,
-  "drive": 87,
-  "load": 502,
+  "act": 360,
+  "drive": 31,
+  "load": 506,
   "camp": "c-pirellu",
   "campname": "Camping U Pirellu",
   "base": "U Pirellu",
@@ -427,17 +429,37 @@
   "baselon": 9.32997,
   "basemin": 19,
   "basekm": 8.3,
-  "realload": 316,
-  "realdrive": 41
+  "realload": 545,
+  "realdrive": 70
  },
  {
   "n": 24,
   "ids": [
-   "piscia"
+   "palombaggia",
+   "portovecchio"
   ],
   "act": 300,
-  "drive": 87,
-  "load": 502,
+  "drive": 40,
+  "load": 455,
+  "camp": "c-pirellu",
+  "campname": "Camping U Pirellu",
+  "base": "U Pirellu",
+  "baselat": 41.58877,
+  "baselon": 9.32997,
+  "basemin": 17,
+  "basekm": 4.2,
+  "realload": 460,
+  "realdrive": 45
+ },
+ {
+  "n": 25,
+  "ids": [
+   "ospedale",
+   "piscia"
+  ],
+  "act": 285,
+  "drive": 55,
+  "load": 475,
   "camp": "c-municipalzonza",
   "campname": "Camping Municipal de Zonza",
   "base": "Municipal de Zonza",
@@ -445,18 +467,18 @@
   "baselon": 9.19577,
   "basemin": 111,
   "basekm": 9.0,
-  "realload": 421,
-  "realdrive": 206
+  "realload": 560,
+  "realdrive": 250
  },
  {
-  "n": 25,
+  "n": 26,
   "ids": [
    "bavella",
    "aiguilles"
   ],
   "act": 330,
-  "drive": 61,
-  "load": 506,
+  "drive": 67,
+  "load": 512,
   "camp": "c-nacres",
   "campname": "Camping C\u00f4te des Nacres",
   "base": "C\u00f4te des Nacres",
@@ -468,14 +490,15 @@
   "realdrive": 49
  },
  {
-  "n": 26,
+  "n": 27,
   "ids": [
+   "solenzara",
    "ghisoni",
    "aleria"
   ],
   "act": 255,
-  "drive": 88,
-  "load": 458,
+  "drive": 64,
+  "load": 434,
   "camp": "c-marinaaleria",
   "campname": "Camping Marina d'Aleria",
   "base": "Marina d'Aleria",
@@ -483,7 +506,7 @@
   "baselon": 9.54928,
   "basemin": 5,
   "basekm": 2.9,
-  "realload": 464,
-  "realdrive": 94
+  "realload": 579,
+  "realdrive": 99
  }
 ]

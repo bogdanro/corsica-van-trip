@@ -4,9 +4,19 @@ import json, sys, math
 exec(open("optimiser_core.py").read())
 from pacing import STOP
 
-# padding I added on top of the film's trip, cut to pay for the extra days
-CUT = {"ostriconi","bodri","santantonino","galeria","evisa","portovecchio",
-       "ospedale","solenzara","piana","lotu","rondinara","palombaggia"}
+# What to leave out, decided on evidence rather than by eye: ten independent
+# guides were checked for every stop (data/corroboration.json).  Out go the
+# ones almost nobody rates; back in come four I had wrongly cut as "padding"
+# which turn out to be among the best attested on the island.
+CUT = {
+ "evisa",        # 1/10
+ "scala",        # 1/10 -- you drive the gorge anyway, you just don't stop
+ "bodri",        # 2/10
+ "galeria",      # 2/10
+ "santantonino", # 3/10
+ "ostriconi",    # 4/10, and the Agriates are already covered by Saleccia
+ "lotu",         # 6/10 but the same boat as Saleccia, which is the better beach
+}
 
 full_seq, full_legs = SEQ[:], legs[:]
 keep = [k for k,s in enumerate(SEQ) if s not in CUT]

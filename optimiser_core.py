@@ -114,7 +114,8 @@ def make_cost(budget):
         if i > 0:     drive += legs[i - 1] / 2     # finish yesterday's transfer
         if j < N - 1: drive += legs[j] / 2         # start tomorrow's
         drive = int(drive)
-        bigs    = [STOP[SEQ[k]]["m"] for k in range(i, j + 1) if STOP[SEQ[k]]["m"] >= BIG]
+        bigs    = [STOP[SEQ[k]]["m"] for k in range(i, j + 1)
+                   if STOP[SEQ[k]]["m"] >= BIG and STOP[SEQ[k]].get("hard")]
         biggest = max([STOP[SEQ[k]]["m"] for k in range(i, j + 1)] or [0])
         if len(bigs) > 1 and not globals().get('ALLOW_STACK'):
             return None, None                                   # no stacking
